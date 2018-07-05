@@ -331,7 +331,7 @@
                 
               
 
-              <time title="Created: 2018-07-05 20:13:27 / Modified: 20:20:56" itemprop="dateCreated datePublished" datetime="2018-07-05T20:13:27+08:00">2018-07-05</time>
+              <time title="Created: 2018-07-05 20:13:27 / Modified: 21:20:41" itemprop="dateCreated datePublished" datetime="2018-07-05T20:13:27+08:00">2018-07-05</time>
             
 
             
@@ -371,9 +371,10 @@
       
         
           
-            <p>#声明：本人也是菜鸟一只，写的不好的地方，大佬们指点指点。</p>
-<p>微信小程序商城，持续更新。先说说写小程序的渊源吧，我之前认识的大佬写了一个比较简单的小程序，我改了改样式于是成功的有了我的第一个小程序。然后我在找工作的时候，简历上写了这么一回事，结果进来之后，leader语重心长的对我说，公司的小程序商城就教给你了，重点是公司没有一个人会微信小程序。WTF，不是招我进来写VUE的吗? 于是就开始了我从零开始写微信小程序商城之路。微信小程序的官方文档什么的我就不说了，那是肯定要看的。说说我这几天开始写我遇到的问题。希望对将要写小程序的你能有一丝丝帮助，因为本人也很菜。</p>
-<h3 id="1、微信小程序之rpx"><a href="#1、微信小程序之rpx" class="headerlink" title="1、微信小程序之rpx"></a>1、微信小程序之rpx</h3><p>在微信官方的文档中，我们看到这样一句话：在 iPhone 6 上，屏幕宽度为 375px，共有 750 个物理像素，则 750rpx = 375px = 750 物理像素，1rpx = 0.5px = 1 物理像素。开发微信小程序时设计师可以用 iPhone 6 作为视觉稿的标准。也就是说，设计师在设计小程序时，可以这样做：直接以 iPhone 6 的屏幕尺寸（375×667）用作视觉稿尺寸，1 px = 0.5 rpx；以 1 px = 1 rpx 的标准，将设计稿尺寸设定为 750×1334。其实总的来说就是，你跟UI小姐姐说一声，然后就可以很爽的写样式了。</p>
+            <p><a href="https://user-gold-cdn.xitu.io/2018/5/29/163aa029d0951af7?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" target="_blank" rel="noopener">https://user-gold-cdn.xitu.io/2018/5/29/163aa029d0951af7?imageView2/0/w/1280/h/960/format/webp/ignore-error/1</a></p>
+<p>##声明：本人也是菜鸟一只，写的不好的地方，大佬们指点指点。<br>微信小程序商城，持续更新。先说说写小程序的渊源吧，我之前认识的大佬写了一个比较简单的小程序，我改了改样式于是成功的有了我的第一个小程序。<br>然后我在找工作的时候，简历上写了这么一回事，结果进来之后，leader语重心长的对我说，公司的小程序商城就教给你了，重点是公司没有一个人会微信小程序。WTF，不是招我进来写VUE的吗? 于是就开始了我从零开始写微信小程序商城之路。<br>微信小程序的官方文档什么的我就不说了，那是肯定要看的。说说我这几天开始写我遇到的问题。希望对将要写小程序的你能有一丝丝帮助，因为本人也很菜。</p>
+<h3 id="1、微信小程序之rpx"><a href="#1、微信小程序之rpx" class="headerlink" title="1、微信小程序之rpx"></a>1、微信小程序之rpx</h3><p>在微信官方的文档中，我们看到这样一句话：在 iPhone 6 上，屏幕宽度为 375px，共有 750 个物理像素，则 750rpx = 375px = 750 物理像素，1rpx = 0.5px = 1 物理像素。<br>开发微信小程序时设计师可以用 iPhone 6 作为视觉稿的标准。也就是说，设计师在设计小程序时，可以这样做：直接以 iPhone 6 的屏幕尺寸（375×667）用作视觉稿尺寸，1 px = 0.5 rpx；以 1 px = 1 rpx 的标准，将设计稿尺寸设定为 750×1334。<br>其实总的来说就是，你跟UI小姐姐说一声，然后就可以很爽的写样式了。</p>
+<h3 id="2、微信小程序之rpx"><a href="#2、微信小程序之rpx" class="headerlink" title="2、微信小程序之rpx"></a>2、微信小程序之rpx</h3><p>view 其实就是div，嘿嘿嘿就是这么简单粗暴的解释。<br>scroll-view 可滚动视图区域。 这个需要注意的是，横向滚动的视图区域。重要的是这两个行内样式，其他的官方文档也说的比较清楚。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;view class=<span class="string">"supply-scroll bg"</span>&gt;        &lt;scroll-view class=<span class="string">"scroll-box"</span> scroll-x=<span class="string">"true"</span> style=<span class="string">"width: 100%;white-space: nowrap; display: flex"</span> &gt;            &lt;view class=<span class="string">"scroll-items"</span>  wx:<span class="keyword">for</span>=<span class="string">"&#123;&#123;scrollList&#125;&#125;"</span> wx:key=<span class="string">"index"</span>  data-index=<span class="string">"&#123;&#123;index&#125;&#125;"</span> style=<span class="string">"display: inline-block"</span>&gt;                &lt;image src=<span class="string">"&#123;&#123;item.url&#125;&#125;"</span> class=<span class="string">"scroll-image"</span>/&gt;            &lt;/view&gt;        &lt;/scroll-view&gt;    &lt;/view&gt;</span><br></pre></td></tr></table></figure></p>
 
           
         
