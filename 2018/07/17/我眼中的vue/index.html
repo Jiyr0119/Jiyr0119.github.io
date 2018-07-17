@@ -14,7 +14,7 @@
   
 
 
-<html class="theme-next gemini use-motion" lang="">
+<html class="theme-next mist use-motion" lang="">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -64,10 +64,10 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.3.0">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon32x32.png?v=6.3.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.3.0">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon16x16.png?v=6.3.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.3.0">
 
 
   <link rel="mask-icon" href="/images/logo.svg?v=6.3.0" color="#222">
@@ -84,7 +84,7 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Gemini',
+    scheme: 'Mist',
     version: '6.3.0',
     sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: false,
@@ -129,7 +129,15 @@
 <meta property="og:image" content="http://p1.pstatp.com/large/43510002290e3ad147f9">
 <meta property="og:image" content="http://p1.pstatp.com/large/434f0002383a38ea8558">
 <meta property="og:image" content="http://p9.pstatp.com/large/435000022e723d050d08">
-<meta property="og:updated_time" content="2018-07-17T04:28:24.588Z">
+<meta property="og:image" content="http://p3.pstatp.com/large/435000022e7589d27f20">
+<meta property="og:image" content="http://p3.pstatp.com/large/43520000aed573d2d8d5">
+<meta property="og:image" content="http://p3.pstatp.com/large/4351000229112ea7b5e1">
+<meta property="og:image" content="http://p9.pstatp.com/large/43530000286ed1219ad8">
+<meta property="og:image" content="http://p1.pstatp.com/large/435000022e740f419ab7">
+<meta property="og:image" content="http://p1.pstatp.com/large/434f0002383e2c3f2341">
+<meta property="og:image" content="http://p3.pstatp.com/large/435000022e76fefaa72e">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2018/5/29/163aa02a511249dd?imageView2/0/w/1280/h/960/format/webp/ignore-error/1">
+<meta property="og:updated_time" content="2018-07-17T06:21:05.709Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="我眼中的Vue">
 <meta name="twitter:description" content="把自己的一些笔记放到这里，正好跟人知识共享，又复习了自己的 vue ～（希望大佬能多多指点指点）初识 VueVue.js 不支持 IE8 及其以下版本，因为 Vue.js 使用了 IE8 不能模拟的 ECMAScript 5 特性。 Vue.js 支持所有兼容 ECMAScript 5 的浏览器。下载完 vue.js 控制台输入 Vue 测试成功否  独立构建和运行时构建 独立构建：打包的时候用">
@@ -261,6 +269,9 @@
   
 
   
+    
+
+  
 
   
 </nav>
@@ -280,9 +291,6 @@
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
-          
-            
-
           
           <div id="content" class="content">
             
@@ -345,7 +353,7 @@
                 
               
 
-              <time title="Created: 2018-07-17 12:24:49 / Modified: 12:28:24" itemprop="dateCreated datePublished" datetime="2018-07-17T12:24:49+08:00">2018-07-17</time>
+              <time title="Created: 2018-07-17 12:24:49 / Modified: 14:21:05" itemprop="dateCreated datePublished" datetime="2018-07-17T12:24:49+08:00">2018-07-17</time>
             
 
             
@@ -406,6 +414,19 @@
 <p>watch 监听 message 的变化 es6 里面如果用 this，this 指向的是 data</p>
 <p><img src="http://p3.pstatp.com/large/434e00024fdfdb0d464f"></p>
 <h2 id="Vue-父子组件传值"><a href="#Vue-父子组件传值" class="headerlink" title="Vue 父子组件传值"></a>Vue 父子组件传值</h2><p>子组件<br><img src="http://p1.pstatp.com/large/43510002290e3ad147f9"><br>父组件<br><img src="http://p1.pstatp.com/large/434f0002383a38ea8558"><br><img src="http://p9.pstatp.com/large/435000022e723d050d08"></p>
+<h2 id="Vue生命周期"><a href="#Vue生命周期" class="headerlink" title="Vue生命周期"></a>Vue生命周期</h2><p>在页面生命周期的某一个点上执行某一个函数，叫做钩子。</p>
+<p>beforeCreate 创建虚拟dom之前执行的</p>
+<p>create 创建虚拟dom之后执行的</p>
+<p>bofoereMount 挂载，渲染dom之前执行的</p>
+<p>mounted 挂载完，页面渲染之后执行的</p>
+<p>beforeUpdate 数据改变的时候执行</p>
+<p>updated 数据改变的时候执行</p>
+<p>beforeDestroy 当你要销毁这个实例的时候执行 app.$destroy()</p>
+<p>destroyed 当你要销毁这个实例的时候执行 app.$destroy()<br><img src="http://p3.pstatp.com/large/435000022e7589d27f20"></p>
+<h2 id="Vue数组方法"><a href="#Vue数组方法" class="headerlink" title="Vue数组方法"></a>Vue数组方法</h2><p>变异方法指的的是原数组进行改变<br><img src="http://p3.pstatp.com/large/43520000aed573d2d8d5"><br>非变异方法是指不改变原数组<br><img src="http://p3.pstatp.com/large/4351000229112ea7b5e1"></p>
+<h2 id="Vue组件"><a href="#Vue组件" class="headerlink" title="Vue组件"></a>Vue组件</h2><p>子组件：定义一个变量 然后用compinents接收定义（标签名：变量名）</p>
+<p>用变量定义的局部组件<br><img src="http://p9.pstatp.com/large/43530000286ed1219ad8"><br>用Vue.component定义的全局组件<br><img src="http://p1.pstatp.com/large/435000022e740f419ab7"><br>双向绑定<br><img src="http://p1.pstatp.com/large/434f0002383e2c3f2341"><br>异步更新队列<br><img src="http://p3.pstatp.com/large/435000022e76fefaa72e"></p>
+<h3 id="我自己的小程序"><a href="#我自己的小程序" class="headerlink" title="我自己的小程序"></a>我自己的小程序</h3><p><img src="https://user-gold-cdn.xitu.io/2018/5/29/163aa02a511249dd?imageView2/0/w/1280/h/960/format/webp/ignore-error/1"></p>
 
       
     </div>
@@ -573,7 +594,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#把自己的一些笔记放到这里，正好跟人知识共享，又复习了自己的-vue-～（希望大佬能多多指点指点）"><span class="nav-number">1.</span> <span class="nav-text">把自己的一些笔记放到这里，正好跟人知识共享，又复习了自己的 vue ～（希望大佬能多多指点指点）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#初识-Vue"><span class="nav-number"></span> <span class="nav-text">初识 Vue</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Vue-常用指令"><span class="nav-number"></span> <span class="nav-text">Vue 常用指令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Vue-父子组件传值"><span class="nav-number"></span> <span class="nav-text">Vue 父子组件传值</span></a></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#把自己的一些笔记放到这里，正好跟人知识共享，又复习了自己的-vue-～（希望大佬能多多指点指点）"><span class="nav-number">1.</span> <span class="nav-text">把自己的一些笔记放到这里，正好跟人知识共享，又复习了自己的 vue ～（希望大佬能多多指点指点）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#初识-Vue"><span class="nav-number"></span> <span class="nav-text">初识 Vue</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Vue-常用指令"><span class="nav-number"></span> <span class="nav-text">Vue 常用指令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Vue-父子组件传值"><span class="nav-number"></span> <span class="nav-text">Vue 父子组件传值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Vue生命周期"><span class="nav-number"></span> <span class="nav-text">Vue生命周期</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Vue数组方法"><span class="nav-number"></span> <span class="nav-text">Vue数组方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Vue组件"><span class="nav-number"></span> <span class="nav-text">Vue组件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#我自己的小程序"><span class="nav-number">1.</span> <span class="nav-text">我自己的小程序</span></a></li></ol></div>
             
 
           </div>
@@ -615,7 +636,7 @@
 
 
 
-  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://theme-next.org">NexT.Gemini</a> v6.3.0</div>
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://theme-next.org">NexT.Mist</a> v6.3.0</div>
 
 
 
@@ -669,9 +690,18 @@
 
 
 
+  
+  
 
 
 
+  
+  
+
+
+
+  
+  
 
 
 
@@ -696,7 +726,27 @@
 
   
   
-    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+    <script type="text/javascript" src="true"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/three.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/three-waves.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/canvas_lines.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/canvas_sphere.min.js"></script>
   
 
 
@@ -711,13 +761,6 @@
 
   
   
-
-
-  <script type="text/javascript" src="/js/src/affix.js?v=6.3.0"></script>
-
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.3.0"></script>
-
-
 
   
   <script type="text/javascript" src="/js/src/scrollspy.js?v=6.3.0"></script>
