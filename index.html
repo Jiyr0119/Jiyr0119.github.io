@@ -571,7 +571,7 @@
                 
               
 
-              <time title="创建时间：2018-07-18 17:14:08 / 修改时间：17:32:57" itemprop="dateCreated datePublished" datetime="2018-07-18T17:14:08+08:00">2018-07-18</time>
+              <time title="创建时间：2018-07-18 17:14:08 / 修改时间：20:23:02" itemprop="dateCreated datePublished" datetime="2018-07-18T17:14:08+08:00">2018-07-18</time>
             
 
             
@@ -639,14 +639,15 @@
 
       
         
-          
-            <h2 id="Vue-在methods中使用filter的方法"><a href="#Vue-在methods中使用filter的方法" class="headerlink" title="Vue 在methods中使用filter的方法"></a>Vue 在methods中使用filter的方法</h2><p>需求是 要格式化银行卡 我们项目用了一个ui组件库<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 众所周知 filter 是可以在dom里面的 但是需求就是各种个样 唉</span></span><br><span class="line">&lt;span&gt;(&#123;&#123;item.bdactp | cardtpFilter&#125;&#125;)&lt;<span class="regexp">/span&gt;&lt;/</span>p&gt; </span><br><span class="line"></span><br><span class="line">&lt;popup-picker title=<span class="string">"卡号"</span> @on-change=<span class="string">"handleBankCard"</span> :data=<span class="string">"cardList"</span> v-model=<span class="string">"cardNumber"</span>&gt;&lt;/popup-picker&gt;</span><br></pre></td></tr></table></figure></p>
+          <h2 id="Vue-在methods中使用filter的方法"><a href="#Vue-在methods中使用filter的方法" class="headerlink" title="Vue 在methods中使用filter的方法"></a>Vue 在methods中使用filter的方法</h2><p>需求是 要格式化银行卡 我们项目用了一个ui组件库<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 众所周知 filter 是可以在dom里面的 但是需求就是各种个样 唉</span></span><br><span class="line">&lt;span&gt;(&#123;&#123;item.bdactp | cardtpFilter&#125;&#125;)&lt;<span class="regexp">/span&gt;&lt;/</span>p&gt; </span><br><span class="line"></span><br><span class="line">&lt;popup-picker title=<span class="string">"卡号"</span> @on-change=<span class="string">"handleBankCard"</span> :data=<span class="string">"cardList"</span> v-model=<span class="string">"cardNumber"</span>&gt;&lt;/popup-picker&gt;</span><br></pre></td></tr></table></figure></p>
 <p>于是找到了一个方法<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.$options.filters[filter](...args)   <span class="comment">//这种方法很简单,也很实用</span></span><br><span class="line"><span class="comment">//实践</span></span><br><span class="line">bankList.map(<span class="function"><span class="params">item</span> =&gt;</span> &#123;</span><br><span class="line">      arr.push(<span class="keyword">this</span>.$options.filters[<span class="string">'cardnoFilter'</span>](item.bdacct));<span class="comment">// 如果要在methods里面用filter的方法 这样写</span></span><br><span class="line">      <span class="keyword">this</span>.telNum = item.phonno;</span><br><span class="line">    &#125;);</span><br></pre></td></tr></table></figure></p>
-<h2 id="Vue-全局挂载一个自定义方法"><a href="#Vue-全局挂载一个自定义方法" class="headerlink" title="Vue 全局挂载一个自定义方法"></a>Vue 全局挂载一个自定义方法</h2><p>因为要用到 存储的方法，刚开始实现的是 每个页面里面引入封装的公共方法。觉得团队合作起来很不方便，写一个模块引入一次。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">'vue'</span>;</span><br><span class="line"><span class="keyword">const</span> store = <span class="built_in">window</span>.sessionStorage;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">StoreMethod</span> </span>&#123;</span><br><span class="line">  set(key, val) &#123;</span><br><span class="line">    <span class="keyword">if</span> (key &amp;&amp; <span class="keyword">typeof</span> key === <span class="string">'string'</span>) &#123;</span><br><span class="line">      store.setItem(key, <span class="built_in">JSON</span>.stringify(val));</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">this</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  get(key) &#123;</span><br><span class="line">    <span class="keyword">const</span> value = store.getItem(key);</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">typeof</span> value !== <span class="string">'string'</span>) &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="literal">undefined</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="built_in">JSON</span>.parse(value);</span><br><span class="line">    &#125; <span class="keyword">catch</span> (e) &#123;</span><br><span class="line">      <span class="keyword">return</span> value || <span class="literal">undefined</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  remove(key) &#123;</span><br><span class="line">    <span class="keyword">const</span> val = <span class="keyword">this</span>.get(key);</span><br><span class="line">    store.removeItem(key);</span><br><span class="line">    <span class="keyword">return</span> val;</span><br><span class="line">  &#125;</span><br><span class="line">  has(key) &#123;</span><br><span class="line">    <span class="keyword">let</span> result = <span class="literal">false</span>;</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">this</span>.get(key) &amp;&amp; <span class="keyword">this</span>.get(key) !== <span class="string">'undefined'</span>) &#123;</span><br><span class="line">      result = <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> result;</span><br><span class="line">  &#125;</span><br><span class="line">  clear() &#123;</span><br><span class="line">    store.clear();</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">this</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">Object</span>.defineProperty(Vue.prototype, <span class="string">'$storage'</span>, &#123;</span><br><span class="line">  value: <span class="keyword">new</span> StoreMethod()</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">// 使用</span></span><br><span class="line">    <span class="keyword">let</span> info = <span class="keyword">this</span>.$storage.get(<span class="string">'turnOut'</span>);</span><br></pre></td></tr></table></figure>
-<h2 id="小程序"><a href="#小程序" class="headerlink" title="小程序"></a>小程序</h2><p><img src="https://user-gold-cdn.xitu.io/2018/5/29/163aa02a511249dd?imageView2/0/w/1280/h/960/format/webp/ignore-error/1"></p>
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/07/18/Vue实战技巧/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -749,7 +750,7 @@
                 
               
 
-              <time title="创建时间：2018-07-18 12:11:40 / 修改时间：17:28:51" itemprop="dateCreated datePublished" datetime="2018-07-18T12:11:40+08:00">2018-07-18</time>
+              <time title="创建时间：2018-07-18 12:11:40 / 修改时间：20:22:48" itemprop="dateCreated datePublished" datetime="2018-07-18T12:11:40+08:00">2018-07-18</time>
             
 
             
@@ -824,16 +825,14 @@
 
       
         
-          
-            <p>我刚开始遇到的问题是修改了config.yml下的这个配置<br>URL<br>If your site is put in a subdirectory, set url as ‘<a href="http://yoursite.com/child&#39;" target="_blank" rel="noopener">http://yoursite.com/child&#39;</a> and root as ‘/child/‘<br>url: <a href="https://www.jonathon.com">https://www.jonathon.com</a><br>root: /</p>
-<p>部署之后404</p>
-<p>调试执行到 hexo s 后，访问localhost:4000 出现</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Cannot GET /</span><br></pre></td></tr></table></figure>
-<h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><p>需要执行 npm intall  或者 使用淘宝镜像  cnpm i</p>
-<h2 id="完整步骤示例"><a href="#完整步骤示例" class="headerlink" title="完整步骤示例"></a>完整步骤示例</h2><p>npm install hexo-cli -g<br>hexo init<br>npm install<br>hexo server</p>
-<h2 id="小程序"><a href="#小程序" class="headerlink" title="小程序"></a>小程序</h2><p><img src="https://user-gold-cdn.xitu.io/2018/5/29/163aa02a511249dd?imageView2/0/w/1280/h/960/format/webp/ignore-error/1"></p>
-
-          
+          <p>我刚开始遇到的问题是修改了config.yml下的这个配置<br>URL<br>If your site is put in a subdirectory, set url as ‘<a href="http://yoursite.com/child&#39;" target="_blank" rel="noopener">http://yoursite.com/child&#39;</a> and root as ‘/child/‘<br>url: <a href="https://www.jonathon.com">https://www.jonathon.com</a><br>root: /<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/07/18/Hexo-404的问题/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1231,7 +1230,7 @@
 -->
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共5.6k字</span>
+  <span class="post-count">博客全站共5.7k字</span>
 </div>
 
         
