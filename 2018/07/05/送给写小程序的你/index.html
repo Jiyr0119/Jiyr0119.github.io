@@ -158,7 +158,7 @@
 <meta property="og:image" content="https://user-gold-cdn.xitu.io/2018/5/29/163aa02a345baf55?imageView2/0/w/1280/h/960/format/webp/ignore-error/1">
 <meta property="og:image" content="https://user-gold-cdn.xitu.io/2018/5/29/163aa02a3b1fbc66?imageView2/0/w/1280/h/960/format/webp/ignore-error/1">
 <meta property="og:image" content="https://user-gold-cdn.xitu.io/2018/5/29/163aa02a511249dd?imageView2/0/w/1280/h/960/format/webp/ignore-error/1">
-<meta property="og:updated_time" content="2018-07-18T04:17:31.075Z">
+<meta property="og:updated_time" content="2018-07-18T09:28:43.404Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="送给写小程序的你。">
 <meta name="twitter:description" content="声明：本人也是菜鸟一只，写的不好的地方，大佬们指点指点。微信小程序商城，持续更新。先说说写小程序的渊源吧，我之前认识的大佬写了一个比较简单的小程序，我改了改样式于是成功的有了我的第一个小程序。然后我在找工作的时候，简历上写了这么一回事，结果进来之后，leader 语重心长的对我说，公司的小程序商城就教给你了，重点是公司没有一个人会微信小程序。WTF，不是招我进来写 VUE 的吗? 于是就开始了我">
@@ -419,7 +419,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2018-07-18 12:17:31" itemprop="dateModified" datetime="2018-07-18T12:17:31+08:00">2018-07-18</time>
+                <time title="修改时间：2018-07-18 17:28:43" itemprop="dateModified" datetime="2018-07-18T17:28:43+08:00">2018-07-18</time>
               
             
           </span>
@@ -436,21 +436,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/web前端/" itemprop="url" rel="index"><span itemprop="name">web前端</span></a></span>
-
-                
-                
-                  ，
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/web前端/移动端/" itemprop="url" rel="index"><span itemprop="name">移动端</span></a></span>
-
-                
-                
-                  ，
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/web前端/移动端/笔记/" itemprop="url" rel="index"><span itemprop="name">笔记</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/笔记/" itemprop="url" rel="index"><span itemprop="name">笔记</span></a></span>
 
                 
                 
@@ -528,7 +514,7 @@
 <p>按钮选中时取出对应item的角标放到新的arr里，这里因为我之前结算的逻辑已经搞好了，我就随便往数组里push数据，但其实可以作为对应商品的更重要的一些数据处理。按钮不选中是从新的arr里找到这个item对应下标的数据移除完成上面两步处理之后，每次按钮状态发生变化的时候判断arr的长度和cart的长度。<br>这就是我的处理，也可循环，实现的方式有很多，只是拿出来让没有接触过的小伙伴做个参考～<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">data: &#123;</span><br><span class="line">likeList: [],</span><br><span class="line">carts:[], <span class="comment">// 购物车列表</span></span><br><span class="line">hasList:<span class="literal">false</span>, <span class="comment">// 列表是否有数据</span></span><br><span class="line"><span class="comment">//totalPrice:0, // 总价，初始为0</span></span><br><span class="line">selectAllStatus:<span class="literal">false</span>, <span class="comment">// 全选状态，默认全选,</span></span><br><span class="line">goodsNums:<span class="number">0</span>,</span><br><span class="line">allclick:[]</span><br><span class="line">&#125;</span><br><span class="line">每件商品单个选中的的逻辑处理</span><br><span class="line">selectList(e) &#123;</span><br><span class="line">  <span class="keyword">const</span> index = e.currentTarget.dataset.index;<span class="comment">// 获取每一个点击的购物车ID</span></span><br><span class="line">  <span class="keyword">let</span> carts = <span class="keyword">this</span>.data.carts,</span><br><span class="line">  selected = carts[index].select,</span><br><span class="line">  all = <span class="keyword">this</span>.data.allclick;</span><br><span class="line">  carts[index].select = !selected;</span><br><span class="line">carts[index].select == <span class="literal">true</span> ? all.push(index):all.splice(index,<span class="number">1</span>);</span><br><span class="line">all.length == carts.length ?</span><br><span class="line"><span class="keyword">this</span>.setData(&#123;</span><br><span class="line">  selectAllStatus: <span class="literal">true</span></span><br><span class="line">&#125;):<span class="keyword">this</span>.setData(&#123;</span><br><span class="line">  selectAllStatus: <span class="literal">false</span></span><br><span class="line">&#125;);</span><br><span class="line">  <span class="keyword">this</span>.getTotalPrice();</span><br><span class="line">&#125;,</span><br><span class="line">这段代码也还是先处理全选的状态，然后就是关联状态的处理，</span><br></pre></td></tr></table></figure></p>
 <p>当全选没有勾选的时候全部改变商品信息里的按钮为false，直接清空allclick数组。<br>当全选勾选的时候全部改变商品信息里的按钮为true，先清空，接着重新push，再赋值。<br>经过这几步操作之后就解决了全选这方面的所有逻辑，</p>
 <p>一步步记录自己的踩坑历程~我要做到我技术不是最好的，但我给你总结的小程序的东西是最简单粗暴的哈哈哈</p>
-<h2 id="我自己的小程序"><a href="#我自己的小程序" class="headerlink" title="我自己的小程序"></a>我自己的小程序</h2><p><img src="https://user-gold-cdn.xitu.io/2018/5/29/163aa02a511249dd?imageView2/0/w/1280/h/960/format/webp/ignore-error/1"></p>
+<h2 id="小程序"><a href="#小程序" class="headerlink" title="小程序"></a>小程序</h2><p><img src="https://user-gold-cdn.xitu.io/2018/5/29/163aa02a511249dd?imageView2/0/w/1280/h/960/format/webp/ignore-error/1"></p>
 
       
     </div>
@@ -553,7 +539,7 @@
   <p><span>本文标题:</span><a href="/2018/07/05/送给写小程序的你/">送给写小程序的你。</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 Jonathon 的个人博客">Jonathon</a></p>
   <p><span>发布时间:</span>2018年07月05日 - 20:07</p>
-  <p><span>最后更新:</span>2018年07月18日 - 12:07</p>
+  <p><span>最后更新:</span>2018年07月18日 - 17:07</p>
   <p><span>原始链接:</span><a href="/2018/07/05/送给写小程序的你/" title="送给写小程序的你。">https://www.jonathon.com/2018/07/05/送给写小程序的你/</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://www.jonathon.com/2018/07/05/送给写小程序的你/"  aria-label="复制成功！"></i></span>
   </p>
@@ -717,7 +703,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">3</span>
+                    <span class="site-state-item-count">4</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -736,11 +722,7 @@
                     
                       
                     
-                      
-                    
-                      
-                    
-                    <span class="site-state-item-count">5</span>
+                    <span class="site-state-item-count">3</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -811,7 +793,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#声明：本人也是菜鸟一只，写的不好的地方，大佬们指点指点。"><span class="nav-number">1.</span> <span class="nav-text">声明：本人也是菜鸟一只，写的不好的地方，大佬们指点指点。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#微信小程序之-rpx"><span class="nav-number">2.</span> <span class="nav-text">微信小程序之 rpx</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#微信小程序之容器视图"><span class="nav-number">3.</span> <span class="nav-text">微信小程序之容器视图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#微信小程序之-UI-框架"><span class="nav-number">4.</span> <span class="nav-text">微信小程序之 UI 框架</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#微信小程序之-switchTab"><span class="nav-number">5.</span> <span class="nav-text">微信小程序之 switchTab</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#微信小程序之禁止页面下拉"><span class="nav-number">6.</span> <span class="nav-text">微信小程序之禁止页面下拉</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#微信小程序之页面深度"><span class="nav-number">7.</span> <span class="nav-text">微信小程序之页面深度</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#微信小程序之上拉加载"><span class="nav-number">8.</span> <span class="nav-text">微信小程序之上拉加载</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#微信小程序之数据交互"><span class="nav-number">9.</span> <span class="nav-text">微信小程序之数据交互</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#微信小程序之Android请求失败的坑"><span class="nav-number">10.</span> <span class="nav-text">微信小程序之Android请求失败的坑</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#微信小程序之地址页面三级联动"><span class="nav-number">11.</span> <span class="nav-text">微信小程序之地址页面三级联动</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#微信小程序之-Android-环境下的横向滚动"><span class="nav-number">12.</span> <span class="nav-text">微信小程序之 Android 环境下的横向滚动</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#微信小程序之-Ios-环境下-mp4-播放问题"><span class="nav-number">13.</span> <span class="nav-text">微信小程序之 Ios 环境下 mp4 播放问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#微信小程序之微信支付的坑"><span class="nav-number">14.</span> <span class="nav-text">微信小程序之微信支付的坑</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#微信小程序之图片上传"><span class="nav-number">15.</span> <span class="nav-text">微信小程序之图片上传</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#微信小程序之电商购物车逻辑"><span class="nav-number">16.</span> <span class="nav-text">微信小程序之电商购物车逻辑</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#我自己的小程序"><span class="nav-number">17.</span> <span class="nav-text">我自己的小程序</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#声明：本人也是菜鸟一只，写的不好的地方，大佬们指点指点。"><span class="nav-number">1.</span> <span class="nav-text">声明：本人也是菜鸟一只，写的不好的地方，大佬们指点指点。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#微信小程序之-rpx"><span class="nav-number">2.</span> <span class="nav-text">微信小程序之 rpx</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#微信小程序之容器视图"><span class="nav-number">3.</span> <span class="nav-text">微信小程序之容器视图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#微信小程序之-UI-框架"><span class="nav-number">4.</span> <span class="nav-text">微信小程序之 UI 框架</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#微信小程序之-switchTab"><span class="nav-number">5.</span> <span class="nav-text">微信小程序之 switchTab</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#微信小程序之禁止页面下拉"><span class="nav-number">6.</span> <span class="nav-text">微信小程序之禁止页面下拉</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#微信小程序之页面深度"><span class="nav-number">7.</span> <span class="nav-text">微信小程序之页面深度</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#微信小程序之上拉加载"><span class="nav-number">8.</span> <span class="nav-text">微信小程序之上拉加载</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#微信小程序之数据交互"><span class="nav-number">9.</span> <span class="nav-text">微信小程序之数据交互</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#微信小程序之Android请求失败的坑"><span class="nav-number">10.</span> <span class="nav-text">微信小程序之Android请求失败的坑</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#微信小程序之地址页面三级联动"><span class="nav-number">11.</span> <span class="nav-text">微信小程序之地址页面三级联动</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#微信小程序之-Android-环境下的横向滚动"><span class="nav-number">12.</span> <span class="nav-text">微信小程序之 Android 环境下的横向滚动</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#微信小程序之-Ios-环境下-mp4-播放问题"><span class="nav-number">13.</span> <span class="nav-text">微信小程序之 Ios 环境下 mp4 播放问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#微信小程序之微信支付的坑"><span class="nav-number">14.</span> <span class="nav-text">微信小程序之微信支付的坑</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#微信小程序之图片上传"><span class="nav-number">15.</span> <span class="nav-text">微信小程序之图片上传</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#微信小程序之电商购物车逻辑"><span class="nav-number">16.</span> <span class="nav-text">微信小程序之电商购物车逻辑</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#小程序"><span class="nav-number">17.</span> <span class="nav-text">小程序</span></a></li></ol></div>
             
 
           </div>
@@ -856,7 +838,7 @@
 -->
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共5.2k字</span>
+  <span class="post-count">博客全站共5.6k字</span>
 </div>
 
         

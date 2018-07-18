@@ -129,48 +129,27 @@
 
 
 
-  <meta name="description" content="把自己的一些笔记放到这里，正好跟人知识共享，又复习了自己的 vue ～（希望大佬能多多指点指点）初识 VueVue.js 不支持 IE8 及其以下版本，因为 Vue.js 使用了 IE8 不能模拟的 ECMAScript 5 特性。 Vue.js 支持所有兼容 ECMAScript 5 的浏览器。">
+  <meta name="description" content="Vue 在methods中使用filter的方法需求是 要格式化银行卡 我们项目用了一个ui组件库1234// 众所周知 filter 是可以在dom里面的 但是需求就是各种个样 唉&amp;lt;span&amp;gt;(&amp;#123;&amp;#123;item.bdactp | cardtpFilter&amp;#125;&amp;#125;)&amp;lt;/span&amp;gt;&amp;lt;/p&amp;gt; &amp;lt;popup-picker titl">
 <meta name="keywords" content="vue,javascript">
 <meta property="og:type" content="article">
-<meta property="og:title" content="我眼中的Vue">
-<meta property="og:url" content="https://www.jonathon.com/2018/07/17/我眼中的vue/index.html">
+<meta property="og:title" content="Vue实战技巧">
+<meta property="og:url" content="https://www.jonathon.com/2018/07/18/Vue实战技巧/index.html">
 <meta property="og:site_name" content="Jonathon&#39;s Blog">
-<meta property="og:description" content="把自己的一些笔记放到这里，正好跟人知识共享，又复习了自己的 vue ～（希望大佬能多多指点指点）初识 VueVue.js 不支持 IE8 及其以下版本，因为 Vue.js 使用了 IE8 不能模拟的 ECMAScript 5 特性。 Vue.js 支持所有兼容 ECMAScript 5 的浏览器。">
+<meta property="og:description" content="Vue 在methods中使用filter的方法需求是 要格式化银行卡 我们项目用了一个ui组件库1234// 众所周知 filter 是可以在dom里面的 但是需求就是各种个样 唉&amp;lt;span&amp;gt;(&amp;#123;&amp;#123;item.bdactp | cardtpFilter&amp;#125;&amp;#125;)&amp;lt;/span&amp;gt;&amp;lt;/p&amp;gt; &amp;lt;popup-picker titl">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://p3.pstatp.com/large/434e00024fdc1d230d6e">
-<meta property="og:image" content="http://p1.pstatp.com/large/434e00024fdb69aa2352">
-<meta property="og:image" content="http://p3.pstatp.com/large/43520000aed03b2cf265">
-<meta property="og:image" content="http://p3.pstatp.com/large/434f0002383755af295e">
-<meta property="og:image" content="http://p3.pstatp.com/large/434d00024d41eea0916e">
-<meta property="og:image" content="http://p9.pstatp.com/large/43510002290cf7405d3d">
-<meta property="og:image" content="http://p1.pstatp.com/large/434e00024fdef50a137c">
-<meta property="og:image" content="http://p1.pstatp.com/large/43520000aed15a5aeaf1">
-<meta property="og:image" content="http://p3.pstatp.com/large/434f00023839cc439c45">
-<meta property="og:image" content="http://p1.pstatp.com/large/434d00024d4492542dfa">
-<meta property="og:image" content="http://p3.pstatp.com/large/434e00024fdfdb0d464f">
-<meta property="og:image" content="http://p1.pstatp.com/large/43510002290e3ad147f9">
-<meta property="og:image" content="http://p1.pstatp.com/large/434f0002383a38ea8558">
-<meta property="og:image" content="http://p9.pstatp.com/large/435000022e723d050d08">
-<meta property="og:image" content="http://p3.pstatp.com/large/435000022e7589d27f20">
-<meta property="og:image" content="http://p3.pstatp.com/large/43520000aed573d2d8d5">
-<meta property="og:image" content="http://p3.pstatp.com/large/4351000229112ea7b5e1">
-<meta property="og:image" content="http://p9.pstatp.com/large/43530000286ed1219ad8">
-<meta property="og:image" content="http://p1.pstatp.com/large/435000022e740f419ab7">
-<meta property="og:image" content="http://p1.pstatp.com/large/434f0002383e2c3f2341">
-<meta property="og:image" content="http://p3.pstatp.com/large/435000022e76fefaa72e">
 <meta property="og:image" content="https://user-gold-cdn.xitu.io/2018/5/29/163aa02a511249dd?imageView2/0/w/1280/h/960/format/webp/ignore-error/1">
-<meta property="og:updated_time" content="2018-07-18T09:28:34.716Z">
+<meta property="og:updated_time" content="2018-07-18T09:32:57.887Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="我眼中的Vue">
-<meta name="twitter:description" content="把自己的一些笔记放到这里，正好跟人知识共享，又复习了自己的 vue ～（希望大佬能多多指点指点）初识 VueVue.js 不支持 IE8 及其以下版本，因为 Vue.js 使用了 IE8 不能模拟的 ECMAScript 5 特性。 Vue.js 支持所有兼容 ECMAScript 5 的浏览器。">
-<meta name="twitter:image" content="http://p3.pstatp.com/large/434e00024fdc1d230d6e">
+<meta name="twitter:title" content="Vue实战技巧">
+<meta name="twitter:description" content="Vue 在methods中使用filter的方法需求是 要格式化银行卡 我们项目用了一个ui组件库1234// 众所周知 filter 是可以在dom里面的 但是需求就是各种个样 唉&amp;lt;span&amp;gt;(&amp;#123;&amp;#123;item.bdactp | cardtpFilter&amp;#125;&amp;#125;)&amp;lt;/span&amp;gt;&amp;lt;/p&amp;gt; &amp;lt;popup-picker titl">
+<meta name="twitter:image" content="https://user-gold-cdn.xitu.io/2018/5/29/163aa02a511249dd?imageView2/0/w/1280/h/960/format/webp/ignore-error/1">
 
 
 
 
 
 
-  <link rel="canonical" href="https://www.jonathon.com/2018/07/17/我眼中的vue/"/>
+  <link rel="canonical" href="https://www.jonathon.com/2018/07/18/Vue实战技巧/"/>
 
 
 
@@ -180,7 +159,7 @@
   };
 </script>
 
-  <title>我眼中的Vue | Jonathon's Blog</title>
+  <title>Vue实战技巧 | Jonathon's Blog</title>
   
 
 
@@ -356,7 +335,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.jonathon.com/2018/07/17/我眼中的vue/">
+    <link itemprop="mainEntityOfPage" href="https://www.jonathon.com/2018/07/18/Vue实战技巧/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jonathon">
@@ -373,7 +352,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">我眼中的Vue
+          <h2 class="post-title" itemprop="name headline">Vue实战技巧
               
             
           </h2>
@@ -399,24 +378,12 @@
                 
               
 
-              <time title="创建时间：2018-07-17 12:24:49" itemprop="dateCreated datePublished" datetime="2018-07-17T12:24:49+08:00">2018-07-17</time>
+              <time title="创建时间：2018-07-18 17:14:08 / 修改时间：17:32:57" itemprop="dateCreated datePublished" datetime="2018-07-18T17:14:08+08:00">2018-07-18</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2018-07-18 17:28:34" itemprop="dateModified" datetime="2018-07-18T17:28:34+08:00">2018-07-18</time>
               
             
           </span>
@@ -449,8 +416,8 @@
                 <i class="fa fa-comment-o"></i>
               </span>
               
-                <a href="/2018/07/17/我眼中的vue/#SOHUCS" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span id="changyan_count_unit" class="post-comments-count hc-comment-count" data-xid="2018/07/17/我眼中的vue/" itemprop="commentsCount"></span>
+                <a href="/2018/07/18/Vue实战技巧/#SOHUCS" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span id="changyan_count_unit" class="post-comments-count hc-comment-count" data-xid="2018/07/18/Vue实战技巧/" itemprop="commentsCount"></span>
                 </a>
               
             
@@ -478,43 +445,10 @@
       
 
       
-        <h2 id="把自己的一些笔记放到这里，正好跟人知识共享，又复习了自己的-vue-～（希望大佬能多多指点指点）"><a href="#把自己的一些笔记放到这里，正好跟人知识共享，又复习了自己的-vue-～（希望大佬能多多指点指点）" class="headerlink" title="把自己的一些笔记放到这里，正好跟人知识共享，又复习了自己的 vue ～（希望大佬能多多指点指点）"></a>把自己的一些笔记放到这里，正好跟人知识共享，又复习了自己的 vue ～（希望大佬能多多指点指点）</h2><h2 id="初识-Vue"><a href="#初识-Vue" class="headerlink" title="初识 Vue"></a>初识 Vue</h2><p>Vue.js 不支持 IE8 及其以下版本，因为 Vue.js 使用了 IE8 不能模拟的 ECMAScript 5 特性。</p>
-<p>Vue.js 支持所有兼容 ECMAScript 5 的浏览器。<br><img src="http://p3.pstatp.com/large/434e00024fdc1d230d6e"></p>
-<a id="more"></a>
-<p>下载完 vue.js 控制台输入 Vue 测试成功否</p>
-<p><img src="http://p1.pstatp.com/large/434e00024fdb69aa2352"></p>
-<p>独立构建和运行时构建</p>
-<p>独立构建：打包的时候用 babel 编译代码</p>
-<p>运行时构建：一起打包上线然后适时监控，但是占用空间很大。</p>
-<p>vue 构建项目不用 webpack 了 因为有了 vue.cli。</p>
-<h2 id="Vue-常用指令"><a href="#Vue-常用指令" class="headerlink" title="Vue 常用指令"></a>Vue 常用指令</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">v-：指令</span><br><span class="line"></span><br><span class="line">&#123;&#123;&#125;&#125;：叫做插值表达式</span><br><span class="line"></span><br><span class="line">v-text=“” 和&#123;&#123;&#125;&#125;插值一样</span><br><span class="line"></span><br><span class="line">v-bind: （：）可以寻找下面的变量</span><br><span class="line"></span><br><span class="line">v-if=“true” 直接影响 dom 节点是否存在 false 则标签不再存在 直接删除了</span><br><span class="line"></span><br><span class="line">v-show=“seen” seen 是展示，false 是不展示 但是节点还在 相当于隐藏</span><br><span class="line"></span><br><span class="line">v-for=&quot;&quot; 循环</span><br><span class="line"></span><br><span class="line">v-on：click （@click） 监听的事件名字</span><br><span class="line"></span><br><span class="line">v-model=“” 双向绑定</span><br><span class="line"></span><br><span class="line">v-once： 限制，只有第一次绑定的时候显示值， 然后就不变了</span><br><span class="line"></span><br><span class="line">v-html： 显示内容中去除标签</span><br></pre></td></tr></table></figure>
-<p>methods：要添加的事件</p>
-<p><img src="http://p3.pstatp.com/large/43520000aed03b2cf265"><br><img src="http://p3.pstatp.com/large/434f0002383755af295e"><br><img src="http://p3.pstatp.com/large/434d00024d41eea0916e"><br>修饰符</p>
-<p>.prevent 阻止默认行为 (methods 里面就是 event.preventDefault())</p>
-<p>.stop 阻止冒泡<br><img src="http://p9.pstatp.com/large/43510002290cf7405d3d"></p>
-<p>过滤器（管道命令）</p>
-<p>前边是个变量</p>
-<p>后面那是过滤器的名称<br><img src="http://p1.pstatp.com/large/434e00024fdef50a137c"></p>
-<p>date.now 不是一个内部依赖<br><img src="http://p1.pstatp.com/large/43520000aed15a5aeaf1"></p>
-<p>todolist<br><img src="http://p3.pstatp.com/large/434f00023839cc439c45"></p>
-<p>表达式<br><img src="http://p1.pstatp.com/large/434d00024d4492542dfa"></p>
-<p>app 是实例</p>
-<p>el：”#root” = app.$mount(“root”)</p>
-<p>watch 监听 message 的变化 es6 里面如果用 this，this 指向的是 data</p>
-<p><img src="http://p3.pstatp.com/large/434e00024fdfdb0d464f"></p>
-<h2 id="Vue-父子组件传值"><a href="#Vue-父子组件传值" class="headerlink" title="Vue 父子组件传值"></a>Vue 父子组件传值</h2><p>子组件<br><img src="http://p1.pstatp.com/large/43510002290e3ad147f9"><br>父组件<br><img src="http://p1.pstatp.com/large/434f0002383a38ea8558"><br><img src="http://p9.pstatp.com/large/435000022e723d050d08"></p>
-<h2 id="Vue生命周期"><a href="#Vue生命周期" class="headerlink" title="Vue生命周期"></a>Vue生命周期</h2><p>在页面生命周期的某一个点上执行某一个函数，叫做钩子。</p>
-<p>beforeCreate 创建虚拟dom之前执行的</p>
-<p>create 创建虚拟dom之后执行的</p>
-<p>bofoereMount 挂载，渲染dom之前执行的</p>
-<p>mounted 挂载完，页面渲染之后执行的</p>
-<p>beforeUpdate 数据改变的时候执行</p>
-<p>updated 数据改变的时候执行</p>
-<p>beforeDestroy 当你要销毁这个实例的时候执行 app.$destroy()</p>
-<p>destroyed 当你要销毁这个实例的时候执行 app.$destroy()<br><img src="http://p3.pstatp.com/large/435000022e7589d27f20"></p>
-<h2 id="Vue数组方法"><a href="#Vue数组方法" class="headerlink" title="Vue数组方法"></a>Vue数组方法</h2><p>变异方法指的的是原数组进行改变<br><img src="http://p3.pstatp.com/large/43520000aed573d2d8d5"><br>非变异方法是指不改变原数组<br><img src="http://p3.pstatp.com/large/4351000229112ea7b5e1"></p>
-<h2 id="Vue组件"><a href="#Vue组件" class="headerlink" title="Vue组件"></a>Vue组件</h2><p>子组件：定义一个变量 然后用compinents接收定义（标签名：变量名）</p>
-<p>用变量定义的局部组件<br><img src="http://p9.pstatp.com/large/43530000286ed1219ad8"><br>用Vue.component定义的全局组件<br><img src="http://p1.pstatp.com/large/435000022e740f419ab7"><br>双向绑定<br><img src="http://p1.pstatp.com/large/434f0002383e2c3f2341"><br>异步更新队列<br><img src="http://p3.pstatp.com/large/435000022e76fefaa72e"></p>
+        <h2 id="Vue-在methods中使用filter的方法"><a href="#Vue-在methods中使用filter的方法" class="headerlink" title="Vue 在methods中使用filter的方法"></a>Vue 在methods中使用filter的方法</h2><p>需求是 要格式化银行卡 我们项目用了一个ui组件库<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 众所周知 filter 是可以在dom里面的 但是需求就是各种个样 唉</span></span><br><span class="line">&lt;span&gt;(&#123;&#123;item.bdactp | cardtpFilter&#125;&#125;)&lt;<span class="regexp">/span&gt;&lt;/</span>p&gt; </span><br><span class="line"></span><br><span class="line">&lt;popup-picker title=<span class="string">"卡号"</span> @on-change=<span class="string">"handleBankCard"</span> :data=<span class="string">"cardList"</span> v-model=<span class="string">"cardNumber"</span>&gt;&lt;/popup-picker&gt;</span><br></pre></td></tr></table></figure></p>
+<p>于是找到了一个方法<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.$options.filters[filter](...args)   <span class="comment">//这种方法很简单,也很实用</span></span><br><span class="line"><span class="comment">//实践</span></span><br><span class="line">bankList.map(<span class="function"><span class="params">item</span> =&gt;</span> &#123;</span><br><span class="line">      arr.push(<span class="keyword">this</span>.$options.filters[<span class="string">'cardnoFilter'</span>](item.bdacct));<span class="comment">// 如果要在methods里面用filter的方法 这样写</span></span><br><span class="line">      <span class="keyword">this</span>.telNum = item.phonno;</span><br><span class="line">    &#125;);</span><br></pre></td></tr></table></figure></p>
+<h2 id="Vue-全局挂载一个自定义方法"><a href="#Vue-全局挂载一个自定义方法" class="headerlink" title="Vue 全局挂载一个自定义方法"></a>Vue 全局挂载一个自定义方法</h2><p>因为要用到 存储的方法，刚开始实现的是 每个页面里面引入封装的公共方法。觉得团队合作起来很不方便，写一个模块引入一次。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">'vue'</span>;</span><br><span class="line"><span class="keyword">const</span> store = <span class="built_in">window</span>.sessionStorage;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">StoreMethod</span> </span>&#123;</span><br><span class="line">  set(key, val) &#123;</span><br><span class="line">    <span class="keyword">if</span> (key &amp;&amp; <span class="keyword">typeof</span> key === <span class="string">'string'</span>) &#123;</span><br><span class="line">      store.setItem(key, <span class="built_in">JSON</span>.stringify(val));</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">this</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  get(key) &#123;</span><br><span class="line">    <span class="keyword">const</span> value = store.getItem(key);</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">typeof</span> value !== <span class="string">'string'</span>) &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="literal">undefined</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="built_in">JSON</span>.parse(value);</span><br><span class="line">    &#125; <span class="keyword">catch</span> (e) &#123;</span><br><span class="line">      <span class="keyword">return</span> value || <span class="literal">undefined</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  remove(key) &#123;</span><br><span class="line">    <span class="keyword">const</span> val = <span class="keyword">this</span>.get(key);</span><br><span class="line">    store.removeItem(key);</span><br><span class="line">    <span class="keyword">return</span> val;</span><br><span class="line">  &#125;</span><br><span class="line">  has(key) &#123;</span><br><span class="line">    <span class="keyword">let</span> result = <span class="literal">false</span>;</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">this</span>.get(key) &amp;&amp; <span class="keyword">this</span>.get(key) !== <span class="string">'undefined'</span>) &#123;</span><br><span class="line">      result = <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> result;</span><br><span class="line">  &#125;</span><br><span class="line">  clear() &#123;</span><br><span class="line">    store.clear();</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">this</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">Object</span>.defineProperty(Vue.prototype, <span class="string">'$storage'</span>, &#123;</span><br><span class="line">  value: <span class="keyword">new</span> StoreMethod()</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">// 使用</span></span><br><span class="line">    <span class="keyword">let</span> info = <span class="keyword">this</span>.$storage.get(<span class="string">'turnOut'</span>);</span><br></pre></td></tr></table></figure>
 <h2 id="小程序"><a href="#小程序" class="headerlink" title="小程序"></a>小程序</h2><p><img src="https://user-gold-cdn.xitu.io/2018/5/29/163aa02a511249dd?imageView2/0/w/1280/h/960/format/webp/ignore-error/1"></p>
 
       
@@ -537,12 +471,12 @@
   <!-- JS库 sweetalert 可修改路径 -->
   <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-  <p><span>本文标题:</span><a href="/2018/07/17/我眼中的vue/">我眼中的Vue</a></p>
+  <p><span>本文标题:</span><a href="/2018/07/18/Vue实战技巧/">Vue实战技巧</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 Jonathon 的个人博客">Jonathon</a></p>
-  <p><span>发布时间:</span>2018年07月17日 - 12:07</p>
+  <p><span>发布时间:</span>2018年07月18日 - 17:07</p>
   <p><span>最后更新:</span>2018年07月18日 - 17:07</p>
-  <p><span>原始链接:</span><a href="/2018/07/17/我眼中的vue/" title="我眼中的Vue">https://www.jonathon.com/2018/07/17/我眼中的vue/</a>
-    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://www.jonathon.com/2018/07/17/我眼中的vue/"  aria-label="复制成功！"></i></span>
+  <p><span>原始链接:</span><a href="/2018/07/18/Vue实战技巧/" title="Vue实战技巧">https://www.jonathon.com/2018/07/18/Vue实战技巧/</a>
+    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://www.jonathon.com/2018/07/18/Vue实战技巧/"  aria-label="复制成功！"></i></span>
   </p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
 </div>
@@ -615,8 +549,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/07/05/送给写小程序的你/" rel="next" title="送给写小程序的你。">
-                <i class="fa fa-chevron-left"></i> 送给写小程序的你。
+              <a href="/2018/07/18/Hexo-404的问题/" rel="next" title="Hexo 404的问题">
+                <i class="fa fa-chevron-left"></i> Hexo 404的问题
               </a>
             
           </div>
@@ -624,10 +558,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/07/18/Hexo-404的问题/" rel="prev" title="Hexo 404的问题">
-                Hexo 404的问题 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -800,7 +730,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#把自己的一些笔记放到这里，正好跟人知识共享，又复习了自己的-vue-～（希望大佬能多多指点指点）"><span class="nav-number">1.</span> <span class="nav-text">把自己的一些笔记放到这里，正好跟人知识共享，又复习了自己的 vue ～（希望大佬能多多指点指点）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#初识-Vue"><span class="nav-number">2.</span> <span class="nav-text">初识 Vue</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Vue-常用指令"><span class="nav-number">3.</span> <span class="nav-text">Vue 常用指令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Vue-父子组件传值"><span class="nav-number">4.</span> <span class="nav-text">Vue 父子组件传值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Vue生命周期"><span class="nav-number">5.</span> <span class="nav-text">Vue生命周期</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Vue数组方法"><span class="nav-number">6.</span> <span class="nav-text">Vue数组方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Vue组件"><span class="nav-number">7.</span> <span class="nav-text">Vue组件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#小程序"><span class="nav-number">8.</span> <span class="nav-text">小程序</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Vue-在methods中使用filter的方法"><span class="nav-number">1.</span> <span class="nav-text">Vue 在methods中使用filter的方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Vue-全局挂载一个自定义方法"><span class="nav-number">2.</span> <span class="nav-text">Vue 全局挂载一个自定义方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#小程序"><span class="nav-number">3.</span> <span class="nav-text">小程序</span></a></li></ol></div>
             
 
           </div>
