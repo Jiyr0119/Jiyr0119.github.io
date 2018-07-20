@@ -1,3 +1,4 @@
+https://www.jonathon.cn/2018/07/20/Hexo博客搭建之路/
 https://www.jonathon.cn/2018/07/19/hexo-seo优化/
 https://www.jonathon.cn/2018/07/18/Vue实战技巧/
 https://www.jonathon.cn/2018/07/18/Hexo-404的问题/
