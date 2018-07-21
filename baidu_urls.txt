@@ -1,6 +1,6 @@
-https://www.jonathon.cn/2018/07/20/Hexo博客搭建之路/
-https://www.jonathon.cn/2018/07/19/hexo-seo优化/
-https://www.jonathon.cn/2018/07/18/Vue实战技巧/
-https://www.jonathon.cn/2018/07/18/Hexo-404的问题/
-https://www.jonathon.cn/2018/07/17/我眼中的vue/
-https://www.jonathon.cn/2018/07/05/送给写小程序的你/
+https://www.jonathon.cn/Hexo博客搭建之路.html
+https://www.jonathon.cn/hexo-seo优化.html
+https://www.jonathon.cn/Vue实战技巧.html
+https://www.jonathon.cn/Hexo-404的问题.html
+https://www.jonathon.cn/我眼中的vue.html
+https://www.jonathon.cn/送给写小程序的你.html
