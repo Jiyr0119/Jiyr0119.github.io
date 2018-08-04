@@ -4,6 +4,45 @@
 
     
   <url>
+    <loc>https://www.jonathon.cn/wechat-qrcode.html</loc>
+    <lastmod>2018-08-04T03:36:26.170Z</lastmod>
+    <data>
+        <display>
+        <title>微信小程序：带参数小程序相关知识</title>
+        <pubTime>2018-08-04T03:18:34.000Z</pubTime>
+        
+        <tag>微信小程序</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.jonathon.cn/%E6%88%91%E7%9C%BC%E4%B8%AD%E7%9A%84vue.html</loc>
+    <lastmod>2018-08-04T03:18:04.375Z</lastmod>
+    <data>
+        <display>
+        <title>我眼中的Vue</title>
+        <pubTime>2018-07-17T04:24:49.143Z</pubTime>
+        
+        <tag>vue</tag>
+         
+        <tag>javascript</tag>
+         
+         
+           
+             
+              <breadCrumb title="笔记" url="https://www.jonathon.cn/categories/%E7%AC%94%E8%AE%B0/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://www.jonathon.cn/%E9%80%81%E7%BB%99%E5%86%99%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%9A%84%E4%BD%A0.html</loc>
     <lastmod>2018-08-04T02:47:39.481Z</lastmod>
     <data>
@@ -143,28 +182,6 @@
         <display>
         <title>Vue实战技巧</title>
         <pubTime>2018-07-18T09:14:08.000Z</pubTime>
-        
-        <tag>vue</tag>
-         
-        <tag>javascript</tag>
-         
-         
-           
-             
-              <breadCrumb title="笔记" url="https://www.jonathon.cn/categories/%E7%AC%94%E8%AE%B0/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://www.jonathon.cn/%E6%88%91%E7%9C%BC%E4%B8%AD%E7%9A%84vue.html</loc>
-    <lastmod>2018-07-18T09:28:34.716Z</lastmod>
-    <data>
-        <display>
-        <title>我眼中的Vue</title>
-        <pubTime>2018-07-17T04:24:49.143Z</pubTime>
         
         <tag>vue</tag>
          
