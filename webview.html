@@ -131,24 +131,21 @@
 
 
 
-  <meta name="description" content="这个是带参数小程序码，我们项目里用到的就是，身份不同带不同参数，然后请求接口。代码如下： 123456789101112131415161718onLoad(options) &amp;#123;//用户授权操作options.db ? wx.setStorageSync(&apos;dbid&apos;, options.db) : &apos;&apos;; //分享功能逻辑wx.setStorageSync(&apos;scene&apos;, optio">
-<meta name="keywords" content="微信小程序">
+  <meta name="description" content="缘由因为公司项目是链接银行业务的这种需求，所以存在一些监管方面的问题，然后就有了小程序里面嵌套h5的这种解决方式。 开始那些什么官方配置的什么，就不在这里说了。 跟着文档走，细心的慢慢配置的就好。思考一下，其实跳webview 全是一个页面只不过是不同的参数拼接成不同的url。在这个前提下呢，就可以开始封装方法辣～ 实现先直接上代码了。123456789101112131415161718192">
+<meta name="keywords" content="webview">
 <meta property="og:type" content="article">
-<meta property="og:title" content="微信小程序：带参数小程序相关知识">
-<meta property="og:url" content="https://www.jonathon.cn/wechat-qrcode.html">
+<meta property="og:title" content="微信小程序Webview最佳实践。">
+<meta property="og:url" content="https://www.jonathon.cn/webview.html">
 <meta property="og:site_name" content="Jonathon&#39;s Blog">
-<meta property="og:description" content="这个是带参数小程序码，我们项目里用到的就是，身份不同带不同参数，然后请求接口。代码如下： 123456789101112131415161718onLoad(options) &amp;#123;//用户授权操作options.db ? wx.setStorageSync(&apos;dbid&apos;, options.db) : &apos;&apos;; //分享功能逻辑wx.setStorageSync(&apos;scene&apos;, optio">
+<meta property="og:description" content="缘由因为公司项目是链接银行业务的这种需求，所以存在一些监管方面的问题，然后就有了小程序里面嵌套h5的这种解决方式。 开始那些什么官方配置的什么，就不在这里说了。 跟着文档走，细心的慢慢配置的就好。思考一下，其实跳webview 全是一个页面只不过是不同的参数拼接成不同的url。在这个前提下呢，就可以开始封装方法辣～ 实现先直接上代码了。123456789101112131415161718192">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://user-gold-cdn.xitu.io/2018/8/4/16502e26580f2d94?imageView2/1/w/1080/h/320/q/85/format/webp/interlace/1">
-<meta property="og:image" content="https://user-gold-cdn.xitu.io/2018/8/4/16502e5b12cd4963?imageView2/0/w/1280/h/960/format/webp/ignore-error/1">
-<meta property="og:image" content="https://user-gold-cdn.xitu.io/2018/8/4/16502e8edde54a7a?imageView2/0/w/1280/h/960/format/webp/ignore-error/1">
-<meta property="og:image" content="https://user-gold-cdn.xitu.io/2018/8/4/16502e8eddf4d2c5?imageView2/0/w/1280/h/960/format/webp/ignore-error/1">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2018/8/20/1655729929eb308e?imageView2/1/w/1080/h/320/q/85/format/webp/interlace/1">
 <meta property="og:image" content="https://user-gold-cdn.xitu.io/2018/5/29/163aa02a511249dd?imageView2/0/w/1280/h/960/format/webp/ignore-error/1">
-<meta property="og:updated_time" content="2018-08-04T03:36:26.170Z">
+<meta property="og:updated_time" content="2018-08-20T12:28:19.304Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="微信小程序：带参数小程序相关知识">
-<meta name="twitter:description" content="这个是带参数小程序码，我们项目里用到的就是，身份不同带不同参数，然后请求接口。代码如下： 123456789101112131415161718onLoad(options) &amp;#123;//用户授权操作options.db ? wx.setStorageSync(&apos;dbid&apos;, options.db) : &apos;&apos;; //分享功能逻辑wx.setStorageSync(&apos;scene&apos;, optio">
-<meta name="twitter:image" content="https://user-gold-cdn.xitu.io/2018/8/4/16502e26580f2d94?imageView2/1/w/1080/h/320/q/85/format/webp/interlace/1">
+<meta name="twitter:title" content="微信小程序Webview最佳实践。">
+<meta name="twitter:description" content="缘由因为公司项目是链接银行业务的这种需求，所以存在一些监管方面的问题，然后就有了小程序里面嵌套h5的这种解决方式。 开始那些什么官方配置的什么，就不在这里说了。 跟着文档走，细心的慢慢配置的就好。思考一下，其实跳webview 全是一个页面只不过是不同的参数拼接成不同的url。在这个前提下呢，就可以开始封装方法辣～ 实现先直接上代码了。123456789101112131415161718192">
+<meta name="twitter:image" content="https://user-gold-cdn.xitu.io/2018/8/20/1655729929eb308e?imageView2/1/w/1080/h/320/q/85/format/webp/interlace/1">
 
 
 
@@ -157,7 +154,7 @@
 
 
 
-  <link rel="canonical" href="https://www.jonathon.cn/wechat-qrcode.html"/>
+  <link rel="canonical" href="https://www.jonathon.cn/webview.html"/>
 
 
 
@@ -167,7 +164,7 @@
   };
 </script>
 
-  <title>微信小程序：带参数小程序相关知识 | Jonathon's Blog</title>
+  <title>微信小程序Webview最佳实践。 | Jonathon's Blog</title>
   
 
 
@@ -343,7 +340,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.jonathon.cn/wechat-qrcode.html">
+    <link itemprop="mainEntityOfPage" href="https://www.jonathon.cn/webview.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jonathon">
@@ -360,7 +357,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">微信小程序：带参数小程序相关知识
+          <h2 class="post-title" itemprop="name headline">微信小程序Webview最佳实践。
               
             
           </h2>
@@ -386,7 +383,7 @@
                 
               
 
-              <time title="创建时间：2018-08-04 11:18:34 / 修改时间：11:36:26" itemprop="dateCreated datePublished" datetime="2018-08-04T11:18:34+08:00">2018-08-04</time>
+              <time title="创建时间：2018-08-20 20:16:48 / 修改时间：20:28:19" itemprop="dateCreated datePublished" datetime="2018-08-20T20:16:48+08:00">2018-08-20</time>
             
 
             
@@ -406,8 +403,8 @@
                 <i class="fa fa-comment-o"></i>
               </span>
               
-                <a href="/wechat-qrcode.html#SOHUCS" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span id="changyan_count_unit" class="post-comments-count hc-comment-count" data-xid="wechat-qrcode.html" itemprop="commentsCount"></span>
+                <a href="/webview.html#SOHUCS" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span id="changyan_count_unit" class="post-comments-count hc-comment-count" data-xid="webview.html" itemprop="commentsCount"></span>
                 </a>
               
             
@@ -443,26 +440,15 @@
       
 
       
-        <p><img src="https://user-gold-cdn.xitu.io/2018/8/4/16502e26580f2d94?imageView2/1/w/1080/h/320/q/85/format/webp/interlace/1"></p>
-<p>这个是带参数小程序码，我们项目里用到的就是，身份不同带不同参数，然后请求接口。代码如下：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">onLoad(options) &#123;<span class="comment">//用户授权操作</span></span><br><span class="line">options.db ? wx.setStorageSync(<span class="string">'dbid'</span>, options.db) : <span class="string">''</span>; <span class="comment">//分享功能逻辑</span></span><br><span class="line">wx.setStorageSync(<span class="string">'scene'</span>, options.scene)<span class="comment">// 这里就是从url获取的的参数，发送给后端大哥，然后让他去请求接口生成。</span></span><br><span class="line">utils.login(<span class="keyword">this</span>.handleLogin.bind(<span class="keyword">this</span>),<span class="keyword">this</span>.handleReset.bind(<span class="keyword">this</span>));</span><br><span class="line"><span class="keyword">let</span> card = wx.getStorageSync(<span class="string">'UserCard'</span>),</span><br><span class="line">show = wx.getStorageSync(<span class="string">'seller'</span>),</span><br><span class="line">db = wx.getStorageSync(<span class="string">'dbid'</span>),</span><br><span class="line">ifHave = <span class="literal">false</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span>(card.distribution_id!=<span class="string">''</span>)&#123;</span><br><span class="line">        ifHave = <span class="literal">true</span>;  </span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;    </span><br><span class="line">        ifHave = <span class="literal">false</span>;</span><br><span class="line">    &#125; </span><br><span class="line">    <span class="keyword">this</span>.setData(&#123;     </span><br><span class="line">        userId:card.user_id,     </span><br><span class="line">        dbShow:ifHave &#125;)</span><br><span class="line">    &#125;,</span><br></pre></td></tr></table></figure>
-<p>其实很简单，主要当时调试的时候，有一个坑提醒一下。小程序码唤醒的是你线上发布过的小程序，也怪自己当时没有好好读文档吃的亏。哈哈 。所以我就总结了一下。<br><a id="more"></a></p>
-<h2 id="获取小程序页面二维码"><a href="#获取小程序页面二维码" class="headerlink" title="获取小程序页面二维码"></a>获取小程序页面二维码</h2><p>通过后台接口可以获取小程序任意页面的二维码，扫描该二维码可以直接进入小程序对应的页面Bug &amp; Tiptip：通过该接口，仅能生成已发布的小程序的二维码。tip：可以在开发者工具预览时生成开发版的带参二维码。tip：生成二维码的总数不限，但接口调用每天上限 100000 次（官方文档写的1万，有误，是10万次）。<br><img src="https://user-gold-cdn.xitu.io/2018/8/4/16502e5b12cd4963?imageView2/0/w/1280/h/960/format/webp/ignore-error/1"></p>
-<p>第三方生成地址：（假如我理解有误，以下工具并非是这个用途，请在回帖内指出）</p>
-<p>好推二维码：HotApp微信小程序统计-小程序参数二维码生成和精准统计平台</p>
-<p>草料二维码：草料微信小程序参数二维码生成器</p>
-<p>阿拉丁二维码：阿拉丁-二维码生成王</p>
-<h2 id="相关讨论"><a href="#相关讨论" class="headerlink" title="相关讨论"></a>相关讨论</h2><h3 id="讨论一：带参二维码数量问题"><a href="#讨论一：带参二维码数量问题" class="headerlink" title="讨论一：带参二维码数量问题"></a>讨论一：带参二维码数量问题</h3><p>1、在公众平台首页的通知中说是限制1w个<br>2、通过接口获得带参数二维码。最多可生成带参数二维码10000个，请谨慎调用。<br>可参考调用文档。但是调用文档里面却又说是无数个<br>tip：生成二维码的总数不限，但接口调用每天上限 100000 次。<br>那么到底是什么情况？<br>是只能生成1w个，还是每天只能生成1w个，还是只能生成1w个并且每天只能扫码访问1w次？<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">生成的数量无限制，但是每天只能调用接口100000次；另外，扫码访问次数也没有限制。</span><br></pre></td></tr></table></figure></p>
-<h3 id="讨论二：获取页面二维码的接口，怎么老是提示错误啊"><a href="#讨论二：获取页面二维码的接口，怎么老是提示错误啊" class="headerlink" title="讨论二：获取页面二维码的接口，怎么老是提示错误啊"></a>讨论二：获取页面二维码的接口，怎么老是提示错误啊</h3><p>代码：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">wx.request(&#123; <span class="attr">url</span>: <span class="string">'https://api.weixin.qq.com/cgi-bin/wxaapp/createwxaqrcode?access_token='</span>+app.globalData.token,</span><br><span class="line"> data: &#123;<span class="string">'path'</span>: <span class="string">"/pages/my/my?uid=1"</span>,<span class="string">'width'</span>: <span class="number">430</span>&#125;,</span><br><span class="line"> header: &#123; <span class="string">'content-type'</span>: <span class="string">'application/json'</span> &#125;, </span><br><span class="line"> success: <span class="function"><span class="keyword">function</span>(<span class="params">res</span>) </span>&#123; <span class="built_in">console</span>.log(res.data) &#125;, </span><br><span class="line"> fail:<span class="function"><span class="keyword">function</span>(<span class="params">res</span>) </span>&#123; <span class="built_in">console</span>.log(<span class="string">'isFail'</span>) &#125; </span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
-<p>输出的结果是：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;errcode: 44002, errmsg: &quot;empty post data hint: [tB1Kha0354vr18]&quot;&#125;</span><br></pre></td></tr></table></figure></p>
-<p>说是post data 是空的，哪位高人能帮忙解决下，多谢了！！！<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">问题解决了，method: &quot;POST&quot;,只能通post方式传参数怎么文档也不说清楚？？？</span><br></pre></td></tr></table></figure></p>
-<h3 id="相关讨论三：有大神-做过-小程序-二维码-获取吗"><a href="#相关讨论三：有大神-做过-小程序-二维码-获取吗" class="headerlink" title="相关讨论三：有大神 做过 小程序 二维码 获取吗"></a>相关讨论三：有大神 做过 小程序 二维码 获取吗</h3><p>小程序 获取二维码 接口 48001 无权限<br><img src="https://user-gold-cdn.xitu.io/2018/8/4/16502e8edde54a7a?imageView2/0/w/1280/h/960/format/webp/ignore-error/1"><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">必须是已经上线的小程序才可以获取二维码</span><br></pre></td></tr></table></figure></p>
-<h3 id="相关讨论四：生成二维码接口问题"><a href="#相关讨论四：生成二维码接口问题" class="headerlink" title="相关讨论四：生成二维码接口问题"></a>相关讨论四：生成二维码接口问题</h3><p>生成二维码接口问题：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&quot;errcode&quot;:40159,&quot;errmsg&quot;:&quot;param path length invalid hint: [thH2ka0199vr23]&quot;&#125;</span><br></pre></td></tr></table></figure></p>
-<p>但长度不超（且比较短）和内容都是app.json定义好的，小程序也正式发布了。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">找到原因了，是以json格式发过去。</span><br></pre></td></tr></table></figure></p>
-<h3 id="相关讨论五：请教下各位，怎么样能把生成的二维码在界面上显示出来-二维码是在前端生成的"><a href="#相关讨论五：请教下各位，怎么样能把生成的二维码在界面上显示出来-二维码是在前端生成的" class="headerlink" title="相关讨论五：请教下各位，怎么样能把生成的二维码在界面上显示出来　二维码是在前端生成的"></a>相关讨论五：请教下各位，怎么样能把生成的二维码在界面上显示出来　二维码是在前端生成的</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">前端哪有二维码， 二维码要么你自己后台做，要么官方接口做，都是后台的，</span><br><span class="line">发送参数出去， 请求回来得到 图片url， 用下载api，</span><br><span class="line">把文件下载下来就可以了；</span><br></pre></td></tr></table></figure>
-<p>前端调用createwxaqrcode　可以返回数据啊，就是怎么转成图片，这个是后台请求官方接口，返回的图片；<br><img src="https://user-gold-cdn.xitu.io/2018/8/4/16502e8eddf4d2c5?imageView2/0/w/1280/h/960/format/webp/ignore-error/1"><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">不过，他返回的不是图片下载路径，而是就是一张图片文件， </span><br><span class="line">你得用后台，下载这张图片，返回你服务器这行图片的路径，</span><br><span class="line">再下载到手机了；</span><br></pre></td></tr></table></figure></p>
-<h2 id="微信小程序参数二维码的应用场景"><a href="#微信小程序参数二维码的应用场景" class="headerlink" title="微信小程序参数二维码的应用场景"></a>微信小程序参数二维码的应用场景</h2><p>微信已经成为人与人沟通的重要工具，微信小程序的出现，更便捷地实现了人与物、人与服务的连接。而这些连接的重要入口，就是二维码。可以预见很多熟悉的场景：当你在收费停车区域停车，只需要用微信扫一扫停车位边上对应的二维码，对应的小程序就会自动计算你在哪个位置停了多久，你只需要直接在小程序上支付停车费即可。当你在餐厅点餐，只需要用微信扫一扫对应桌子上的二维码，即可完成点餐，服务员就会把对应的餐食送到。而你就餐完毕，还可以直接一键支付餐费，甚至对服务打分。微信小程序推出后，以上各种服务场景，搭建在微信小程序上，实现越来越多便利的功能。这些场景的实现，不再需要依靠复杂的app，小程序和微信公众号进行打通，快速实现各类服务功能。而以上场景的应用，入口就是“带参数的小程序二维码”。对应的停车位、对应的餐桌，即对应小程序的特定页面，智能化地方便用户使用和操作，而服务提供者，还可以实时监控使用行为、渠道数据等。</p>
-<h2 id="一步步记录自己的踩坑历程-我要做到我技术不是最好的，但我给你总结的小程序的东西是最简单粗暴的哈哈哈"><a href="#一步步记录自己的踩坑历程-我要做到我技术不是最好的，但我给你总结的小程序的东西是最简单粗暴的哈哈哈" class="headerlink" title="一步步记录自己的踩坑历程~我要做到我技术不是最好的，但我给你总结的小程序的东西是最简单粗暴的哈哈哈"></a>一步步记录自己的踩坑历程~我要做到我技术不是最好的，但我给你总结的小程序的东西是最简单粗暴的哈哈哈</h2><p><img src="https://user-gold-cdn.xitu.io/2018/5/29/163aa02a511249dd?imageView2/0/w/1280/h/960/format/webp/ignore-error/1"></p>
+        <p><img src="https://user-gold-cdn.xitu.io/2018/8/20/1655729929eb308e?imageView2/1/w/1080/h/320/q/85/format/webp/interlace/1"></p>
+<h2 id="缘由"><a href="#缘由" class="headerlink" title="缘由"></a>缘由</h2><p>因为公司项目是链接银行业务的这种需求，所以存在一些监管方面的问题，然后就有了小程序里面嵌套h5的这种解决方式。</p>
+<h2 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h2><p>那些什么官方配置的什么，就不在这里说了。 跟着文档走，细心的慢慢配置的就好。思考一下，其实跳webview 全是一个页面只不过是不同的参数拼接成不同的url。在这个前提下呢，就可以开始封装方法辣～</p>
+<h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2><p>先直接上代码了。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> *  方法名：</span></span><br><span class="line"><span class="comment"> *    webView: 跳转到H5界面</span></span><br><span class="line"><span class="comment"> *  参数：</span></span><br><span class="line"><span class="comment"> *    path:  访问界面的路径</span></span><br><span class="line"><span class="comment"> *    param: 页面附带参数</span></span><br><span class="line"><span class="comment"> *    type: 0 默认 2 外部地址 1 redirectTo跳转</span></span><br><span class="line"><span class="comment"> *    finger  是否验证指纹</span></span><br><span class="line"><span class="comment"> *  返回：</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">webView</span>(<span class="params">path, param, type = <span class="number">0</span>, finger = true</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> defu = app.config.h5url;</span><br><span class="line">    <span class="keyword">let</span> url = defu + <span class="string">"/"</span> + path;</span><br><span class="line">    <span class="keyword">if</span> (type === <span class="number">2</span>)</span><br><span class="line">        url = path;</span><br><span class="line">    <span class="keyword">let</span> to = <span class="string">'/pages/common/webview/webview?url='</span> + <span class="built_in">encodeURIComponent</span>(url);</span><br><span class="line">    <span class="keyword">if</span> (!isNull(param)) &#123;</span><br><span class="line">        param = param;</span><br><span class="line">        to = to + <span class="string">"&amp;param="</span> + <span class="built_in">encodeURIComponent</span>(<span class="built_in">JSON</span>.stringify(param));</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (type === <span class="number">0</span> || type === <span class="number">2</span>) &#123;</span><br><span class="line">        wx.navigateTo(&#123;</span><br><span class="line">            url: to,</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (type === <span class="number">1</span>) &#123;</span><br><span class="line">        wx.redirectTo(&#123;</span><br><span class="line">            url: to,</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 方法名：跳转到H5</span></span><br><span class="line"><span class="comment"> * 参数：</span></span><br><span class="line"><span class="comment"> *    servid : 服务Id 跳转到H5对应的url</span></span><br><span class="line"><span class="comment"> *    flag: 是否选择银行卡 (默认是)</span></span><br><span class="line"><span class="comment"> *    param：跳转到H5携带的参数 </span></span><br><span class="line"><span class="comment"> *    finger: 是否验证手势密码</span></span><br><span class="line"><span class="comment"> *    redirectTp 跳转类型: (默认0 nato 1 redirectto)</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">toH5</span>(<span class="params">servid, flag = true, param = &#123;&#125;, finger = true, redirectTp = <span class="number">0</span></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(param)</span><br><span class="line">    <span class="keyword">if</span> (isNull(param))</span><br><span class="line">        param = &#123;&#125;;</span><br><span class="line">    <span class="keyword">let</span> h5url = getRouteH5(servid);</span><br><span class="line">    <span class="keyword">let</span> userInfo = getDataBase(<span class="string">"userInfo"</span>);</span><br><span class="line">    param.custInfo = getDataBase(<span class="string">"custInfo"</span>);</span><br><span class="line">    param.userInfo = &#123;</span><br><span class="line">        nickName: userInfo.nickName,</span><br><span class="line">        avatarUrl: userInfo.avatarUrl,</span><br><span class="line">        model: getDataBase(<span class="string">"deviceInfo"</span>).model</span><br><span class="line">    &#125;;</span><br><span class="line">    param.header = app.globalData.header;</span><br><span class="line">    <span class="keyword">if</span> (!app.globalData.first2H5) &#123;</span><br><span class="line">        param.first2H5 = <span class="string">"1"</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    webView(h5url.url, param, redirectTp, finger);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>在这里定义了两个方法，一些url上面不明文传输之类的处理。 </p>
+<p>小程序里面的代码结束了，然后我们在H5里面开始接受从小程序传过的来参数。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">因为h5是用vue来实现的，所以我们要在router beforeEach 里面进行判断。</span><br><span class="line"> </span><br><span class="line">  <span class="keyword">if</span> (navigator.userAgent.toLowerCase().indexOf(<span class="string">'micromessenger'</span>) !== <span class="number">-1</span>) &#123;</span><br><span class="line">    <span class="comment">// 说明是从小程序webview过来的</span></span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">from</span>.name === <span class="literal">null</span> &amp;&amp; !Util.isNull(to.query.param)) &#123;</span><br><span class="line">      <span class="built_in">console</span>.log(to.query.param)</span><br><span class="line">      <span class="keyword">let</span> param = <span class="built_in">JSON</span>.parse(to.query.param);</span><br><span class="line">      to.query.param = param;</span><br><span class="line">      <span class="keyword">if</span> (<span class="built_in">parseInt</span>(param.first2H5) === <span class="number">1</span> || Util.isNull(<span class="built_in">window</span>.localStorage.getItem(<span class="string">"loginCustInfo"</span>))) &#123;</span><br><span class="line">        <span class="built_in">window</span>.localStorage.setItem(<span class="string">"header"</span>, <span class="built_in">JSON</span>.stringify(param.header)); <span class="comment">// 设备指纹</span></span><br><span class="line">        <span class="built_in">window</span>.localStorage.setItem(<span class="string">"loginCustInfo"</span>, <span class="built_in">JSON</span>.stringify(param.custInfo));</span><br><span class="line">        <span class="built_in">window</span>.localStorage.setItem(<span class="string">"loginNickInfo"</span>, <span class="built_in">JSON</span>.stringify(param.userInfo));</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>加班加了好久，最近也没怎么写，表达的不好，请大家多多原谅。 </p>
+<p><img src="https://user-gold-cdn.xitu.io/2018/5/29/163aa02a511249dd?imageView2/0/w/1280/h/960/format/webp/ignore-error/1"></p>
 
       
     </div>
@@ -484,12 +470,12 @@
   <!-- JS库 sweetalert 可修改路径 -->
   <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-  <p><span>本文标题:</span><a href="/wechat-qrcode.html">微信小程序：带参数小程序相关知识</a></p>
+  <p><span>本文标题:</span><a href="/webview.html">微信小程序Webview最佳实践。</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 Jonathon 的个人博客">Jonathon</a></p>
-  <p><span>发布时间:</span>2018年08月04日 - 11:08</p>
-  <p><span>最后更新:</span>2018年08月04日 - 11:08</p>
-  <p><span>原始链接:</span><a href="/wechat-qrcode.html" title="微信小程序：带参数小程序相关知识">https://www.jonathon.cn/wechat-qrcode.html</a>
-    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://www.jonathon.cn/wechat-qrcode.html"  aria-label="复制成功！"></i></span>
+  <p><span>发布时间:</span>2018年08月20日 - 20:08</p>
+  <p><span>最后更新:</span>2018年08月20日 - 20:08</p>
+  <p><span>原始链接:</span><a href="/webview.html" title="微信小程序Webview最佳实践。">https://www.jonathon.cn/webview.html</a>
+    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://www.jonathon.cn/webview.html"  aria-label="复制成功！"></i></span>
   </p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
 </div>
@@ -547,7 +533,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/微信小程序/" <i class="fa fa-tag"></i>微信小程序</a>
+            <a href="/tags/webview/" <i class="fa fa-tag"></i>webview</a>
           
         </div>
       
@@ -560,8 +546,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/koa2.html" rel="next" title="Koa2+co-wechat快速搭建微信公众号服务器配置">
-                <i class="fa fa-chevron-left"></i> Koa2+co-wechat快速搭建微信公众号服务器配置
+              <a href="/wechat-qrcode.html" rel="next" title="微信小程序：带参数小程序相关知识">
+                <i class="fa fa-chevron-left"></i> 微信小程序：带参数小程序相关知识
               </a>
             
           </div>
@@ -569,10 +555,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/webview.html" rel="prev" title="微信小程序Webview最佳实践。">
-                微信小程序Webview最佳实践。 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -786,7 +768,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#获取小程序页面二维码"><span class="nav-number">1.</span> <span class="nav-text">获取小程序页面二维码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#相关讨论"><span class="nav-number">2.</span> <span class="nav-text">相关讨论</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#讨论一：带参二维码数量问题"><span class="nav-number">2.1.</span> <span class="nav-text">讨论一：带参二维码数量问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#讨论二：获取页面二维码的接口，怎么老是提示错误啊"><span class="nav-number">2.2.</span> <span class="nav-text">讨论二：获取页面二维码的接口，怎么老是提示错误啊</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#相关讨论三：有大神-做过-小程序-二维码-获取吗"><span class="nav-number">2.3.</span> <span class="nav-text">相关讨论三：有大神 做过 小程序 二维码 获取吗</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#相关讨论四：生成二维码接口问题"><span class="nav-number">2.4.</span> <span class="nav-text">相关讨论四：生成二维码接口问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#相关讨论五：请教下各位，怎么样能把生成的二维码在界面上显示出来-二维码是在前端生成的"><span class="nav-number">2.5.</span> <span class="nav-text">相关讨论五：请教下各位，怎么样能把生成的二维码在界面上显示出来　二维码是在前端生成的</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#微信小程序参数二维码的应用场景"><span class="nav-number">3.</span> <span class="nav-text">微信小程序参数二维码的应用场景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#一步步记录自己的踩坑历程-我要做到我技术不是最好的，但我给你总结的小程序的东西是最简单粗暴的哈哈哈"><span class="nav-number">4.</span> <span class="nav-text">一步步记录自己的踩坑历程~我要做到我技术不是最好的，但我给你总结的小程序的东西是最简单粗暴的哈哈哈</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#缘由"><span class="nav-number">1.</span> <span class="nav-text">缘由</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#开始"><span class="nav-number">2.</span> <span class="nav-text">开始</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实现"><span class="nav-number">3.</span> <span class="nav-text">实现</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#结语"><span class="nav-number">4.</span> <span class="nav-text">结语</span></a></li></ol></div>
             
 
           </div>
