@@ -131,20 +131,20 @@
 
 
 
-  <meta name="description" content="缘由因为公司项目是链接银行业务的这种需求，所以存在一些监管方面的问题，然后就有了小程序里面嵌套h5的这种解决方式。 开始那些什么官方配置的什么，就不在这里说了。 跟着文档走，细心的慢慢配置的就好。思考一下，其实跳webview 全是一个页面只不过是不同的参数拼接成不同的url。在这个前提下呢，就可以开始封装方法辣～ 实现先直接上代码了。123456789101112131415161718192">
+  <meta name="description" content="缘由因为公司项目是链接银行业务的这种需求，所以存在一些监管方面的问题，然后就有了小程序里面嵌套h5的这种解决方式。 开始那些什么官方配置的什么，就不在这里说了。 跟着文档走，细心的慢慢配置的就好。思考一下，其实跳webview 全是一个页面只不过是不同的参数拼接成不同的url。在这个前提下呢，就可以开始封装方法辣～">
 <meta name="keywords" content="webview">
 <meta property="og:type" content="article">
 <meta property="og:title" content="微信小程序Webview最佳实践。">
 <meta property="og:url" content="https://www.jonathon.cn/webview.html">
 <meta property="og:site_name" content="Jonathon&#39;s Blog">
-<meta property="og:description" content="缘由因为公司项目是链接银行业务的这种需求，所以存在一些监管方面的问题，然后就有了小程序里面嵌套h5的这种解决方式。 开始那些什么官方配置的什么，就不在这里说了。 跟着文档走，细心的慢慢配置的就好。思考一下，其实跳webview 全是一个页面只不过是不同的参数拼接成不同的url。在这个前提下呢，就可以开始封装方法辣～ 实现先直接上代码了。123456789101112131415161718192">
+<meta property="og:description" content="缘由因为公司项目是链接银行业务的这种需求，所以存在一些监管方面的问题，然后就有了小程序里面嵌套h5的这种解决方式。 开始那些什么官方配置的什么，就不在这里说了。 跟着文档走，细心的慢慢配置的就好。思考一下，其实跳webview 全是一个页面只不过是不同的参数拼接成不同的url。在这个前提下呢，就可以开始封装方法辣～">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://user-gold-cdn.xitu.io/2018/8/20/1655729929eb308e?imageView2/1/w/1080/h/320/q/85/format/webp/interlace/1">
 <meta property="og:image" content="https://user-gold-cdn.xitu.io/2018/5/29/163aa02a511249dd?imageView2/0/w/1280/h/960/format/webp/ignore-error/1">
-<meta property="og:updated_time" content="2018-08-20T12:28:19.304Z">
+<meta property="og:updated_time" content="2018-08-20T12:30:17.254Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="微信小程序Webview最佳实践。">
-<meta name="twitter:description" content="缘由因为公司项目是链接银行业务的这种需求，所以存在一些监管方面的问题，然后就有了小程序里面嵌套h5的这种解决方式。 开始那些什么官方配置的什么，就不在这里说了。 跟着文档走，细心的慢慢配置的就好。思考一下，其实跳webview 全是一个页面只不过是不同的参数拼接成不同的url。在这个前提下呢，就可以开始封装方法辣～ 实现先直接上代码了。123456789101112131415161718192">
+<meta name="twitter:description" content="缘由因为公司项目是链接银行业务的这种需求，所以存在一些监管方面的问题，然后就有了小程序里面嵌套h5的这种解决方式。 开始那些什么官方配置的什么，就不在这里说了。 跟着文档走，细心的慢慢配置的就好。思考一下，其实跳webview 全是一个页面只不过是不同的参数拼接成不同的url。在这个前提下呢，就可以开始封装方法辣～">
 <meta name="twitter:image" content="https://user-gold-cdn.xitu.io/2018/8/20/1655729929eb308e?imageView2/1/w/1080/h/320/q/85/format/webp/interlace/1">
 
 
@@ -383,7 +383,7 @@
                 
               
 
-              <time title="创建时间：2018-08-20 20:16:48 / 修改时间：20:28:19" itemprop="dateCreated datePublished" datetime="2018-08-20T20:16:48+08:00">2018-08-20</time>
+              <time title="创建时间：2018-08-20 20:16:48 / 修改时间：20:30:17" itemprop="dateCreated datePublished" datetime="2018-08-20T20:16:48+08:00">2018-08-20</time>
             
 
             
@@ -393,6 +393,24 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/心得分享/" itemprop="url" rel="index"><span itemprop="name">心得分享</span></a></span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -442,7 +460,7 @@
       
         <p><img src="https://user-gold-cdn.xitu.io/2018/8/20/1655729929eb308e?imageView2/1/w/1080/h/320/q/85/format/webp/interlace/1"></p>
 <h2 id="缘由"><a href="#缘由" class="headerlink" title="缘由"></a>缘由</h2><p>因为公司项目是链接银行业务的这种需求，所以存在一些监管方面的问题，然后就有了小程序里面嵌套h5的这种解决方式。</p>
-<h2 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h2><p>那些什么官方配置的什么，就不在这里说了。 跟着文档走，细心的慢慢配置的就好。思考一下，其实跳webview 全是一个页面只不过是不同的参数拼接成不同的url。在这个前提下呢，就可以开始封装方法辣～</p>
+<h2 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h2><p>那些什么官方配置的什么，就不在这里说了。 跟着文档走，细心的慢慢配置的就好。思考一下，其实跳webview 全是一个页面只不过是不同的参数拼接成不同的url。在这个前提下呢，就可以开始封装方法辣～<br><a id="more"></a></p>
 <h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2><p>先直接上代码了。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> *  方法名：</span></span><br><span class="line"><span class="comment"> *    webView: 跳转到H5界面</span></span><br><span class="line"><span class="comment"> *  参数：</span></span><br><span class="line"><span class="comment"> *    path:  访问界面的路径</span></span><br><span class="line"><span class="comment"> *    param: 页面附带参数</span></span><br><span class="line"><span class="comment"> *    type: 0 默认 2 外部地址 1 redirectTo跳转</span></span><br><span class="line"><span class="comment"> *    finger  是否验证指纹</span></span><br><span class="line"><span class="comment"> *  返回：</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">webView</span>(<span class="params">path, param, type = <span class="number">0</span>, finger = true</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> defu = app.config.h5url;</span><br><span class="line">    <span class="keyword">let</span> url = defu + <span class="string">"/"</span> + path;</span><br><span class="line">    <span class="keyword">if</span> (type === <span class="number">2</span>)</span><br><span class="line">        url = path;</span><br><span class="line">    <span class="keyword">let</span> to = <span class="string">'/pages/common/webview/webview?url='</span> + <span class="built_in">encodeURIComponent</span>(url);</span><br><span class="line">    <span class="keyword">if</span> (!isNull(param)) &#123;</span><br><span class="line">        param = param;</span><br><span class="line">        to = to + <span class="string">"&amp;param="</span> + <span class="built_in">encodeURIComponent</span>(<span class="built_in">JSON</span>.stringify(param));</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (type === <span class="number">0</span> || type === <span class="number">2</span>) &#123;</span><br><span class="line">        wx.navigateTo(&#123;</span><br><span class="line">            url: to,</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (type === <span class="number">1</span>) &#123;</span><br><span class="line">        wx.redirectTo(&#123;</span><br><span class="line">            url: to,</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 方法名：跳转到H5</span></span><br><span class="line"><span class="comment"> * 参数：</span></span><br><span class="line"><span class="comment"> *    servid : 服务Id 跳转到H5对应的url</span></span><br><span class="line"><span class="comment"> *    flag: 是否选择银行卡 (默认是)</span></span><br><span class="line"><span class="comment"> *    param：跳转到H5携带的参数 </span></span><br><span class="line"><span class="comment"> *    finger: 是否验证手势密码</span></span><br><span class="line"><span class="comment"> *    redirectTp 跳转类型: (默认0 nato 1 redirectto)</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">toH5</span>(<span class="params">servid, flag = true, param = &#123;&#125;, finger = true, redirectTp = <span class="number">0</span></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(param)</span><br><span class="line">    <span class="keyword">if</span> (isNull(param))</span><br><span class="line">        param = &#123;&#125;;</span><br><span class="line">    <span class="keyword">let</span> h5url = getRouteH5(servid);</span><br><span class="line">    <span class="keyword">let</span> userInfo = getDataBase(<span class="string">"userInfo"</span>);</span><br><span class="line">    param.custInfo = getDataBase(<span class="string">"custInfo"</span>);</span><br><span class="line">    param.userInfo = &#123;</span><br><span class="line">        nickName: userInfo.nickName,</span><br><span class="line">        avatarUrl: userInfo.avatarUrl,</span><br><span class="line">        model: getDataBase(<span class="string">"deviceInfo"</span>).model</span><br><span class="line">    &#125;;</span><br><span class="line">    param.header = app.globalData.header;</span><br><span class="line">    <span class="keyword">if</span> (!app.globalData.first2H5) &#123;</span><br><span class="line">        param.first2H5 = <span class="string">"1"</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    webView(h5url.url, param, redirectTp, finger);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>在这里定义了两个方法，一些url上面不明文传输之类的处理。 </p>
 <p>小程序里面的代码结束了，然后我们在H5里面开始接受从小程序传过的来参数。</p>
