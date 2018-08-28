@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.jonathon.cn/"/>
-  <updated>2018-08-23T02:12:38.643Z</updated>
+  <updated>2018-08-28T13:00:34.963Z</updated>
   <id>https://www.jonathon.cn/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>认识Vuex</title>
+    <link href="https://www.jonathon.cn/vuex.html"/>
+    <id>https://www.jonathon.cn/vuex.html</id>
+    <published>2018-08-28T12:59:09.192Z</published>
+    <updated>2018-08-28T13:00:34.963Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="VueX"><a href="#VueX" class="headerlink" title="VueX"></a>VueX</h2><p>Vuex 是一个专为 Vue.js 应用程序开发的状态管理模式。它采用集中式存储管理应用的所有组件的状态，并以相应的规则保证状态以一种可预测的方式发生变化。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;VueX&quot;&gt;&lt;a href=&quot;#VueX&quot; class=&quot;headerlink&quot; title=&quot;VueX&quot;&gt;&lt;/a&gt;VueX&lt;/h2&gt;&lt;p&gt;Vuex 是一个专为 Vue.js 应用程序开发的状态管理模式。它采用集中式存储管理应用的所有组件的状态，并以相应的规则保证
+      
+    
+    </summary>
+    
+      <category term="笔记" scheme="https://www.jonathon.cn/categories/%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="vue" scheme="https://www.jonathon.cn/tags/vue/"/>
+    
+      <category term="javascript" scheme="https://www.jonathon.cn/tags/javascript/"/>
+    
+  </entry>
   
   <entry>
     <title>你还在发愁小程序自定义导航栏吗？</title>
