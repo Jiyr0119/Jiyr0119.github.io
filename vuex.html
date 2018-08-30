@@ -139,10 +139,12 @@
 <meta property="og:site_name" content="Jonathon&#39;s Blog">
 <meta property="og:description" content="VueXVuex 是一个专为 Vue.js 应用程序开发的状态管理模式。它采用集中式存储管理应用的所有组件的状态，并以相应的规则保证状态以一种可预测的方式发生变化。 引入Vuex（用Vue cli或者其他架工具构建好项目）利用npm包管理工具，进行安装 vuex。在控制命令行中输入下边的命令就可以了1npm install vuex --save 新建一个store文件夹（这个不是必须的），并在文">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-08-30T12:24:03.152Z">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2018/5/29/163aa02a511249dd?imageView2/0/w/1280/h/960/format/webp/ignore-error/1">
+<meta property="og:updated_time" content="2018-08-30T12:28:31.972Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="认识Vuex">
 <meta name="twitter:description" content="VueXVuex 是一个专为 Vue.js 应用程序开发的状态管理模式。它采用集中式存储管理应用的所有组件的状态，并以相应的规则保证状态以一种可预测的方式发生变化。 引入Vuex（用Vue cli或者其他架工具构建好项目）利用npm包管理工具，进行安装 vuex。在控制命令行中输入下边的命令就可以了1npm install vuex --save 新建一个store文件夹（这个不是必须的），并在文">
+<meta name="twitter:image" content="https://user-gold-cdn.xitu.io/2018/5/29/163aa02a511249dd?imageView2/0/w/1280/h/960/format/webp/ignore-error/1">
 
 
 
@@ -397,7 +399,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2018-08-30 20:24:03" itemprop="dateModified" datetime="2018-08-30T20:24:03+08:00">2018-08-30</time>
+                <time title="修改时间：2018-08-30 20:28:31" itemprop="dateModified" datetime="2018-08-30T20:28:31+08:00">2018-08-30</time>
               
             
           </span>
@@ -496,7 +498,7 @@
 <h2 id="模板获取Mutations方法"><a href="#模板获取Mutations方法" class="headerlink" title="模板获取Mutations方法"></a>模板获取Mutations方法</h2><p>实际开发中我们也不喜欢看到$store.commit( )这样的方法出现，我们希望跟调用模板里的方法一样调用。</p>
 <p>例如：@click=”reduce” 就和没引用vuex插件一样。要达到这种写法，只需要简单的两部就可以了：</p>
 <p>1、在模板count.vue里用import 引入我们的mapMutations：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; mapState,mapMutations &#125; <span class="keyword">from</span> <span class="string">'vuex'</span>;</span><br></pre></td></tr></table></figure></p>
-<p>2、在模板的<script>标签里添加methods属性，并加入mapMutations<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">methods:mapMutations([ <span class="string">'add'</span>,<span class="string">'reduce'</span></span><br><span class="line">]),</span><br></pre></td></tr></table></figure></p>
+<p>2、在模板的js标签里添加methods属性，并加入mapMutations<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">methods:mapMutations([ <span class="string">'add'</span>,<span class="string">'reduce'</span></span><br><span class="line">]),</span><br></pre></td></tr></table></figure></p>
 <p>通过上边两部，我们已经可以在模板中直接使用我们的reduce或者add方法了，就像下面这样。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;button @click=<span class="string">"reduce"</span>&gt;-&lt;/button&gt;</span><br></pre></td></tr></table></figure></p>
 <h2 id="getters计算过滤操作"><a href="#getters计算过滤操作" class="headerlink" title="getters计算过滤操作"></a>getters计算过滤操作</h2><p>getters从表面是获得的意思，可以把他看作在获取数据之前进行的一种再编辑,相当于对数据的一个过滤和加工。你可以把它看作store.js的计算属性。</p>
 <p>getters基本用法：</p>
@@ -509,8 +511,8 @@
 <p>在actions里写了两个方法addAction和reduceAction，在方法体里，我们都用commit调用了Mutations里边的方法。细心的小伙伴会发现这两个方法传递的参数也不一样。</p>
 <p>ontext：上下文对象，这里你可以理解称store本身。</p>
 <p>{commit}：直接把commit对象传递过来，可以让方法体逻辑和代码更清晰明了。</p>
-<h2 id="小程序"><a href="#小程序" class="headerlink" title="小程序"></a>小程序</h2><p><img src='https://user-gold-cdn.xitu.io/2018/5/29/163aa02a511249dd?imageView2/0/w/1280/h/960/format/webp/ignore-error/1'/></p>
-</script></p>
+<h2 id="小程序"><a href="#小程序" class="headerlink" title="小程序"></a>小程序</h2><p><img src="https://user-gold-cdn.xitu.io/2018/5/29/163aa02a511249dd?imageView2/0/w/1280/h/960/format/webp/ignore-error/1"></p>
+
       
     </div>
 
@@ -835,7 +837,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#VueX"><span class="nav-number">1.</span> <span class="nav-text">VueX</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#引入Vuex（用Vue-cli或者其他架工具构建好项目）"><span class="nav-number">2.</span> <span class="nav-text">引入Vuex（用Vue cli或者其他架工具构建好项目）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#利用npm包管理工具，进行安装-vuex。在控制命令行中输入下边的命令就可以了"><span class="nav-number">2.1.</span> <span class="nav-text">利用npm包管理工具，进行安装 vuex。在控制命令行中输入下边的命令就可以了</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#新建一个store文件夹（这个不是必须的），并在文件夹下新建store-js文件，文件中引入我们的vue和vuex。"><span class="nav-number">2.2.</span> <span class="nav-text">新建一个store文件夹（这个不是必须的），并在文件夹下新建store.js文件，文件中引入我们的vue和vuex。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用我们vuex，引入之后用Vue-use进行引用。"><span class="nav-number">2.3.</span> <span class="nav-text">使用我们vuex，引入之后用Vue.use进行引用。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#在main-js-中引入新建的vuex文件"><span class="nav-number">2.4.</span> <span class="nav-text">在main.js 中引入新建的vuex文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#再然后-在实例化-Vue对象时加入-store-对象"><span class="nav-number">2.5.</span> <span class="nav-text">再然后 , 在实例化 Vue对象时加入 store 对象 :</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#牛刀小试的Demo"><span class="nav-number">3.</span> <span class="nav-text">牛刀小试的Demo</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#现在我们store-js文件里增加一个常量对象。store-js文件就是我们在引入vuex时的那个文件。"><span class="nav-number">3.1.</span> <span class="nav-text">现在我们store.js文件里增加一个常量对象。store.js文件就是我们在引入vuex时的那个文件。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#用export-default-封装代码，让外部可以引用"><span class="nav-number">3.2.</span> <span class="nav-text">用export default 封装代码，让外部可以引用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#新建一个vue的模板，位置在components文件夹下，名字叫count-vue。在模板中我们引入我们刚建的store-js文件，并在模板中用输出count-的值。"><span class="nav-number">3.3.</span> <span class="nav-text">新建一个vue的模板，位置在components文件夹下，名字叫count.vue。在模板中我们引入我们刚建的store.js文件，并在模板中用输出count 的值。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#在store-js文件中加入两个改变state的方法。"><span class="nav-number">3.4.</span> <span class="nav-text">在store.js文件中加入两个改变state的方法。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#在count-vue模板中加入两个按钮，并调用mutations中的方法。"><span class="nav-number">3.5.</span> <span class="nav-text">在count.vue模板中加入两个按钮，并调用mutations中的方法。</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#通过computed的计算属性直接赋值"><span class="nav-number">4.</span> <span class="nav-text">通过computed的计算属性直接赋值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#通过mapState的对象来赋值"><span class="nav-number">5.</span> <span class="nav-text">通过mapState的对象来赋值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#通过mapState的数组来赋值"><span class="nav-number">6.</span> <span class="nav-text">通过mapState的数组来赋值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#模板获取Mutations方法"><span class="nav-number">7.</span> <span class="nav-text">模板获取Mutations方法</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#VueX"><span class="nav-number">1.</span> <span class="nav-text">VueX</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#引入Vuex（用Vue-cli或者其他架工具构建好项目）"><span class="nav-number">2.</span> <span class="nav-text">引入Vuex（用Vue cli或者其他架工具构建好项目）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#利用npm包管理工具，进行安装-vuex。在控制命令行中输入下边的命令就可以了"><span class="nav-number">2.1.</span> <span class="nav-text">利用npm包管理工具，进行安装 vuex。在控制命令行中输入下边的命令就可以了</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#新建一个store文件夹（这个不是必须的），并在文件夹下新建store-js文件，文件中引入我们的vue和vuex。"><span class="nav-number">2.2.</span> <span class="nav-text">新建一个store文件夹（这个不是必须的），并在文件夹下新建store.js文件，文件中引入我们的vue和vuex。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用我们vuex，引入之后用Vue-use进行引用。"><span class="nav-number">2.3.</span> <span class="nav-text">使用我们vuex，引入之后用Vue.use进行引用。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#在main-js-中引入新建的vuex文件"><span class="nav-number">2.4.</span> <span class="nav-text">在main.js 中引入新建的vuex文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#再然后-在实例化-Vue对象时加入-store-对象"><span class="nav-number">2.5.</span> <span class="nav-text">再然后 , 在实例化 Vue对象时加入 store 对象 :</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#牛刀小试的Demo"><span class="nav-number">3.</span> <span class="nav-text">牛刀小试的Demo</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#现在我们store-js文件里增加一个常量对象。store-js文件就是我们在引入vuex时的那个文件。"><span class="nav-number">3.1.</span> <span class="nav-text">现在我们store.js文件里增加一个常量对象。store.js文件就是我们在引入vuex时的那个文件。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#用export-default-封装代码，让外部可以引用"><span class="nav-number">3.2.</span> <span class="nav-text">用export default 封装代码，让外部可以引用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#新建一个vue的模板，位置在components文件夹下，名字叫count-vue。在模板中我们引入我们刚建的store-js文件，并在模板中用输出count-的值。"><span class="nav-number">3.3.</span> <span class="nav-text">新建一个vue的模板，位置在components文件夹下，名字叫count.vue。在模板中我们引入我们刚建的store.js文件，并在模板中用输出count 的值。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#在store-js文件中加入两个改变state的方法。"><span class="nav-number">3.4.</span> <span class="nav-text">在store.js文件中加入两个改变state的方法。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#在count-vue模板中加入两个按钮，并调用mutations中的方法。"><span class="nav-number">3.5.</span> <span class="nav-text">在count.vue模板中加入两个按钮，并调用mutations中的方法。</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#通过computed的计算属性直接赋值"><span class="nav-number">4.</span> <span class="nav-text">通过computed的计算属性直接赋值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#通过mapState的对象来赋值"><span class="nav-number">5.</span> <span class="nav-text">通过mapState的对象来赋值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#通过mapState的数组来赋值"><span class="nav-number">6.</span> <span class="nav-text">通过mapState的数组来赋值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#模板获取Mutations方法"><span class="nav-number">7.</span> <span class="nav-text">模板获取Mutations方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#getters计算过滤操作"><span class="nav-number">8.</span> <span class="nav-text">getters计算过滤操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#actions异步修改状态"><span class="nav-number">9.</span> <span class="nav-text">actions异步修改状态</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#在store-js中声明actions"><span class="nav-number">9.1.</span> <span class="nav-text">在store.js中声明actions</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#小程序"><span class="nav-number">10.</span> <span class="nav-text">小程序</span></a></li></ol></div>
             
 
           </div>
@@ -882,7 +884,7 @@
 -->
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共17.6k字</span>
+  <span class="post-count">博客全站共18.2k字</span>
 </div>
 
         
