@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.jonathon.cn/javascript.html</loc>
+    
+    <lastmod>2018-09-04T12:50:18.882Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.jonathon.cn/vuex.html</loc>
     
     <lastmod>2018-09-03T09:29:34.111Z</lastmod>

@@ -337,6 +337,185 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.jonathon.cn/Vue实战技巧.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jonathon">
+      <meta itemprop="description" content="用代码一路奋战。">
+      <meta itemprop="image" content="/images/t9.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jonathon's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/Vue实战技巧.html" itemprop="url">
+                  Vue实战技巧
+                </a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+        
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-07-18 17:14:08 / 修改时间：20:23:02" itemprop="dateCreated datePublished" datetime="2018-07-18T17:14:08+08:00">2018-07-18</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/笔记/" itemprop="url" rel="index"><span itemprop="name">笔记</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-comment-o"></i>
+              </span>
+              
+                <a href="/Vue实战技巧.html#SOHUCS" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span id="url::https://www.jonathon.cn/Vue实战技巧.html" class="cy_cmt_count" data-xid="Vue实战技巧.html" itemprop="commentsCount" ></span>
+                </a>
+              
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="Vue-在methods中使用filter的方法"><a href="#Vue-在methods中使用filter的方法" class="headerlink" title="Vue 在methods中使用filter的方法"></a>Vue 在methods中使用filter的方法</h2><p>需求是 要格式化银行卡 我们项目用了一个ui组件库<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 众所周知 filter 是可以在dom里面的 但是需求就是各种个样 唉</span></span><br><span class="line">&lt;span&gt;(&#123;&#123;item.bdactp | cardtpFilter&#125;&#125;)&lt;<span class="regexp">/span&gt;&lt;/</span>p&gt; </span><br><span class="line"></span><br><span class="line">&lt;popup-picker title=<span class="string">"卡号"</span> @on-change=<span class="string">"handleBankCard"</span> :data=<span class="string">"cardList"</span> v-model=<span class="string">"cardNumber"</span>&gt;&lt;/popup-picker&gt;</span><br></pre></td></tr></table></figure></p>
+<p>于是找到了一个方法<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.$options.filters[filter](...args)   <span class="comment">//这种方法很简单,也很实用</span></span><br><span class="line"><span class="comment">//实践</span></span><br><span class="line">bankList.map(<span class="function"><span class="params">item</span> =&gt;</span> &#123;</span><br><span class="line">      arr.push(<span class="keyword">this</span>.$options.filters[<span class="string">'cardnoFilter'</span>](item.bdacct));<span class="comment">// 如果要在methods里面用filter的方法 这样写</span></span><br><span class="line">      <span class="keyword">this</span>.telNum = item.phonno;</span><br><span class="line">    &#125;);</span><br></pre></td></tr></table></figure></p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/Vue实战技巧.html#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+    
+    <div>
+      
+    </div>
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://www.jonathon.cn/Hexo-404的问题.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -761,7 +940,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">12</span>
+                    <span class="site-state-item-count">13</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -817,7 +996,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">10</span>
+                      
+                    
+                    <span class="site-state-item-count">11</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -927,7 +1108,7 @@
 -->
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共18.3k字</span>
+  <span class="post-count">博客全站共19.4k字</span>
 </div>
 
         
