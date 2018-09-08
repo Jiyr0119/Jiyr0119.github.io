@@ -5,7 +5,7 @@
     
   <url>
     <loc>https://www.jonathon.cn/javascript.html</loc>
-    <lastmod>2018-09-08T03:08:14.364Z</lastmod>
+    <lastmod>2018-09-08T03:09:48.940Z</lastmod>
     <data>
         <display>
         <title>走进JavaScript</title>
@@ -13,7 +13,7 @@
         
         <tag>JavaScript</tag>
          
-        <tag>node.js</tag>
+        <tag>前端</tag>
          
          
            
@@ -156,9 +156,9 @@
         <title>Koa2+co-wechat快速搭建微信公众号服务器配置</title>
         <pubTime>2018-07-24T12:53:12.000Z</pubTime>
         
-        <tag>node.js</tag>
-         
         <tag>koa2</tag>
+         
+        <tag>node.js</tag>
          
         <tag>服务端</tag>
          
