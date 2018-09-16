@@ -2,6 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.jonathon.cn/wechat-qrcode.html</loc>
+    
+    <lastmod>2018-09-16T02:45:29.205Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.jonathon.cn/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E4%B9%8B%E8%B7%AF.html</loc>
+    
+    <lastmod>2018-09-16T02:44:54.889Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.jonathon.cn/Hexo-404%E7%9A%84%E9%97%AE%E9%A2%98.html</loc>
+    
+    <lastmod>2018-09-16T02:44:54.889Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.jonathon.cn/hexo-seo%E4%BC%98%E5%8C%96.html</loc>
+    
+    <lastmod>2018-09-16T02:44:54.889Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.jonathon.cn/javascript.html</loc>
     
     <lastmod>2018-09-08T03:09:48.940Z</lastmod>
@@ -37,13 +65,6 @@
   </url>
   
   <url>
-    <loc>https://www.jonathon.cn/wechat-qrcode.html</loc>
-    
-    <lastmod>2018-08-04T03:36:26.170Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://www.jonathon.cn/%E6%88%91%E7%9C%BC%E4%B8%AD%E7%9A%84vue.html</loc>
     
     <lastmod>2018-08-04T03:18:04.375Z</lastmod>
@@ -58,30 +79,9 @@
   </url>
   
   <url>
-    <loc>https://www.jonathon.cn/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E4%B9%8B%E8%B7%AF.html</loc>
-    
-    <lastmod>2018-07-23T08:56:41.441Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://www.jonathon.cn/Markdown-%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97.html</loc>
     
     <lastmod>2018-07-21T06:03:07.201Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.jonathon.cn/hexo-seo%E4%BC%98%E5%8C%96.html</loc>
-    
-    <lastmod>2018-07-20T03:27:20.237Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.jonathon.cn/Hexo-404%E7%9A%84%E9%97%AE%E9%A2%98.html</loc>
-    
-    <lastmod>2018-07-20T03:27:18.336Z</lastmod>
     
   </url>
   
