@@ -532,6 +532,345 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.jonathon.cn/js0.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jonathon">
+      <meta itemprop="description" content="用代码一路奋战。">
+      <meta itemprop="image" content="/images/t9.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jonathon's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/js0.html" itemprop="url">
+                  Javascript基本语句
+                </a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+        
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-09-16 10:52:03 / 修改时间：11:51:32" itemprop="dateCreated datePublished" datetime="2018-09-16T10:52:03+08:00">2018-09-16</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/笔记/" itemprop="url" rel="index"><span itemprop="name">笔记</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-comment-o"></i>
+              </span>
+              
+                <a href="/js0.html#SOHUCS" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span id="url::https://www.jonathon.cn/js0.html" class="cy_cmt_count" data-xid="js0.html" itemprop="commentsCount" ></span>
+                </a>
+              
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="1、选择结构-（判断）"><a href="#1、选择结构-（判断）" class="headerlink" title="1、选择结构 （判断）"></a>1、选择结构 （判断）</h2><p>单分支选择结构：</p>
+<p>控制语句：</p>
+<pre><code>if(表达式){
+
+语句组;
+
+}
+</code></pre><p>说明： 表达式 一般为 条件表达式 或 逻辑表达式</p>
+<p>执行逻辑：</p>
+<p>如果if后面的表达式为真true，就执行语句组。</p>
+<p>如果if后面的表达式为假false，就跳出if语句</p>
+<p>控制语句:</p>
+<pre><code>if(表达式){
+
+    语句组;
+
+}else{
+
+    语句组;
+
+}
+</code></pre><p>执行逻辑：</p>
+<p>如果if后面的表达式为真，就执行if语句组，否则就执行else</p>
+<p>图示：<br><img src="http://p9.pstatp.com/large/46d60004f42287d8ec3c"></p>
+<ul>
+<li><p>js 中布尔环境下 if 语句，下面的代表真假两种情况：</p>
+</li>
+<li><p>所有数字为真，0 为假</p>
+</li>
+<li><p>所有字符串为真，空字符串为假</p>
+</li>
+<li><p>null 和 undefined 为 假</p>
+</li>
+<li><p>所有对象为真</p>
+</li>
+</ul>
+<h2 id="2、代码规范（扩展）"><a href="#2、代码规范（扩展）" class="headerlink" title="2、代码规范（扩展）"></a>2、代码规范（扩展）</h2><ul>
+<li><p>嵌套的代码必须缩进（tab ）</p>
+</li>
+<li><p>每条语句结束后 可以用 分号或换行符 直接换行结束该语句 （建议用分号结束）</p>
+</li>
+<li><p>所有的标点符号 都是 英文半角状态</p>
+</li>
+<li><p>所有的代码严格区分大小写</p>
+</li>
+</ul>
+<h2 id="3、多分支选择结构"><a href="#3、多分支选择结构" class="headerlink" title="3、多分支选择结构"></a>3、多分支选择结构</h2><p>控制语句：</p>
+<pre><code>if(表达式1){
+    语句组1;
+}else if(表达式2){
+    语句组2;
+}else if(表达式3){
+    语句组3;
+}else{
+    语句组n;
+}
+</code></pre><p>执行逻辑：</p>
+<p>首先判断表达式1，如果结果为真，执行语句组1</p>
+<p>如果结果为假，继续判断表达式2，执行逻辑同上…..</p>
+<p>图示：<br><img src="http://p99.pstatp.com/large/46d80004bb9e7c77377f"></p>
+<h2 id="4、if-语句的嵌套"><a href="#4、if-语句的嵌套" class="headerlink" title="4、if 语句的嵌套"></a>4、if 语句的嵌套</h2><p>语法结构：</p>
+<p>if(表达式1){</p>
+<pre><code>if(表达式2){
+
+}
+
+}else{
+
+    if(表达式3){
+
+    }
+</code></pre><p>}</p>
+<h2 id="5、关于-if-使用时需要注意的问题总结"><a href="#5、关于-if-使用时需要注意的问题总结" class="headerlink" title="5、关于 if 使用时需要注意的问题总结"></a>5、关于 if 使用时需要注意的问题总结</h2><ul>
+<li><p>else 后面不能有条件</p>
+</li>
+<li><p>else 可以省略的</p>
+</li>
+<li><p>else 永远与它同级的 并 离他最近的 if 语句配对</p>
+</li>
+<li><p>if 或 else 后面如果有多条语句，必须要用{}括起来</p>
+</li>
+<li><p>if 或 else 后面如果只有一条语句，{} 是可以省略的 （初学者不建议省略）</p>
+</li>
+</ul>
+<h2 id="6、多分支结构-switch-开关语句"><a href="#6、多分支结构-switch-开关语句" class="headerlink" title="6、多分支结构 switch ( 开关语句 )"></a>6、多分支结构 switch ( 开关语句 )</h2><p>语法结构：</p>
+<pre><code>switch( 表达式 ){
+
+case 常量表达式1 : 语句1;
+
+case 常量表达式2 : 语句2;
+
+.....
+
+default : 语句 n;
+</code></pre><p>}</p>
+<p>关于 switch 语句的几点说明：</p>
+<ul>
+<li><p>switch 表达式 一般为 常量表达式 或 变量</p>
+</li>
+<li><p>default 后面 没有条件</p>
+</li>
+<li><p>default 可以省略</p>
+</li>
+<li><p>如果 case 后面的语句没有 break ，会实现 case 穿透 （会继续向下执行）</p>
+</li>
+</ul>
+<p>执行逻辑：</p>
+<ul>
+<li><p>用 switch 的表达式的值和 case 常量表达式的值做比较，如果相等，就执行该 case 对应的语句</p>
+</li>
+<li><p>如果 case 语句后面 有 break ， 则可中断 switch</p>
+</li>
+<li><p>如果 case 语句后面 没有 break，则实现 case 穿透， 继续向后执行</p>
+</li>
+</ul>
+<h2 id="7、多分支-switch-和-if-的使用场景"><a href="#7、多分支-switch-和-if-的使用场景" class="headerlink" title="7、多分支 switch 和 if 的使用场景"></a>7、多分支 switch 和 if 的使用场景</h2><p>一般条件是一个范围的时候，可以使用 if</p>
+<p>一般条件是一个具体值时，使用 switch 可以提高效率</p>
+<h2 id="8、while-循环"><a href="#8、while-循环" class="headerlink" title="8、while 循环"></a>8、while 循环</h2><p>while 循环也叫 当型循环</p>
+<p>控制语句结构：</p>
+<p>while(表达式){</p>
+<pre><code>循环体;
+</code></pre><p>}</p>
+<p>说明：</p>
+<p>表达式一般为条件表达式 ，也就是循环终止条件</p>
+<p>循环体就是反复执行的任务</p>
+<p>循环要素：</p>
+<ul>
+<li><p>循环变量，用来控制循环</p>
+</li>
+<li><p>循环变量的初始值</p>
+</li>
+<li><p>循环变量的终值（循环条件）</p>
+</li>
+<li><p>循环变量增值（步长） 控制循环次数</p>
+</li>
+<li><p>循环体<br>执行逻辑：</p>
+</li>
+</ul>
+<p>首先判断表达式是否成立，如果表达式不成立，循环体一次也不执行，直接跳出循环体</p>
+<p>如果表达式成立， 执行循环体，然后在判断表达式，直到表达式不成立退出整个循环</p>
+<p><img src="http://p1.pstatp.com/large/46d70004f02ed7f269b4"></p>
+<h2 id="9、do…while-循环"><a href="#9、do…while-循环" class="headerlink" title="9、do…while 循环"></a>9、do…while 循环</h2><p>do…while 循环 也叫做 直到型 循环<br>控制语句：</p>
+<p>do{</p>
+<pre><code>循环体
+</code></pre><p>}while(表达式);<br>执行逻辑：</p>
+<p>首先执行一次循环体，然后再判断表达式，如果表达式为假，退出循环</p>
+<p>如果表达式为真，继续执行循环体，直到表达式为假，退出循环</p>
+<p><img src="http://p3.pstatp.com/large/46d60004fa4e7bb4c9e2"></p>
+<h2 id="10、while循环-和-do-while循环的区别"><a href="#10、while循环-和-do-while循环的区别" class="headerlink" title="10、while循环 和 do..while循环的区别"></a>10、while循环 和 do..while循环的区别</h2><p>while循环 先判断，后执行，循环体可能一次也不执行</p>
+<p>do…while循环 先执行，后判断 ，循环体至少要执行一次</p>
+<h2 id="11、for循环"><a href="#11、for循环" class="headerlink" title="11、for循环"></a>11、for循环</h2><p>控制语句：</p>
+<p>for(表达式 1;表达式 2;表达式 3){</p>
+<p>循环体</p>
+<p>}</p>
+<p>说明：</p>
+<p>表达式1 通常表示为循环变量赋初始值</p>
+<p>表达式1 可以省略，提到for的上面</p>
+<p>表达式2 通常表示循环条件（终值）</p>
+<p>表达式2不能省略，如果省略了表达式2，就会出现死循环</p>
+<p>表达式3 通常表示循环变量增值（步长）</p>
+<p>表达式3可以省略，提到循环体中</p>
+<p>执行逻辑：</p>
+<p>先执行表达式1，再判断表达式2，如果表达式2不成立，直接退出循环体</p>
+<p>如果表达式2成立，执行循环体，再执行表达式3，再判断表达式2，直到表达式2为false退出循环</p>
+<p><img src="http://p1.pstatp.com/large/46d60004fad4417c6096"></p>
+<h2 id="在山竹的洗礼中，写完了这篇。纪念一下"><a href="#在山竹的洗礼中，写完了这篇。纪念一下" class="headerlink" title="在山竹的洗礼中，写完了这篇。纪念一下"></a>在山竹的洗礼中，写完了这篇。纪念一下</h2><p><img src="https://user-gold-cdn.xitu.io/2018/5/29/163aa02a511249dd?imageView2/0/w/1280/h/960/format/webp/ignore-error/1"></p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+    
+    <div>
+      
+    </div>
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://www.jonathon.cn/javascript.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -2027,197 +2366,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.jonathon.cn/hexo-seo优化.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Jonathon">
-      <meta itemprop="description" content="用代码一路奋战。">
-      <meta itemprop="image" content="/images/t9.jpeg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Jonathon's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/hexo-seo优化.html" itemprop="url">
-                  hexo seo优化
-                </a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-        
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2018-07-19 11:25:46" itemprop="dateCreated datePublished" datetime="2018-07-19T11:25:46+08:00">2018-07-19</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2018-09-16 10:44:54" itemprop="dateModified" datetime="2018-09-16T10:44:54+08:00">2018-09-16</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/博客搭建/" itemprop="url" rel="index"><span itemprop="name">博客搭建</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-              <span class="post-meta-divider">|</span>
-              <span class="post-meta-item-icon">
-                <i class="fa fa-comment-o"></i>
-              </span>
-              
-                <a href="/hexo-seo优化.html#SOHUCS" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span id="url::https://www.jonathon.cn/hexo-seo优化.html" class="cy_cmt_count" data-xid="hexo-seo优化.html" itemprop="commentsCount" ></span>
-                </a>
-              
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>SEO (Search Engine Optimization)，即搜索引擎优化。简单来说，SEO就是您可以使用提升网站排名的所有方法的总称，SEO用于确保您的网站及其内容在搜索引擎结果页面（SERP）上的可见性。</p>
-<h2 id="验证你的网站-让你博客被搜索引擎找到"><a href="#验证你的网站-让你博客被搜索引擎找到" class="headerlink" title="验证你的网站(让你博客被搜索引擎找到)"></a>验证你的网站(让你博客被搜索引擎找到)</h2><p>在谷歌或者百度的搜索链接中，使用以下格式可以直接搜索自己的域名， 如果能搜索到就说明已经被收录，反之则没有。可以直接搜索自己的域名，或者加一些关键词来更好地判断，例如：<br>site: <a href="https://www.jonathon.cn/">https://www.jonathon.cn/</a><br>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/hexo-seo优化.html#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-    
-    <div>
-      
-    </div>
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2269,7 +2417,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">13</span>
+                    <span class="site-state-item-count">14</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -2437,7 +2585,7 @@
 -->
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共20.5k字</span>
+  <span class="post-count">博客全站共21.7k字</span>
 </div>
 
         
