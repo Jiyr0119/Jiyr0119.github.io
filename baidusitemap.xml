@@ -5,7 +5,7 @@
     
   <url>
     <loc>https://www.jonathon.cn/async.html</loc>
-    <lastmod>2018-09-29T05:48:37.504Z</lastmod>
+    <lastmod>2018-09-29T06:49:57.488Z</lastmod>
     <data>
         <display>
         <title>【转载】JavaScript中的同步和异步的个人理解</title>
@@ -67,26 +67,6 @@
 
     
   <url>
-    <loc>https://www.jonathon.cn/hexo-seo%E4%BC%98%E5%8C%96.html</loc>
-    <lastmod>2018-09-16T02:44:54.889Z</lastmod>
-    <data>
-        <display>
-        <title>hexo seo优化</title>
-        <pubTime>2018-07-19T03:25:46.000Z</pubTime>
-        
-        <tag>hexo</tag>
-         
-         
-           
-             
-              <breadCrumb title="博客搭建" url="https://www.jonathon.cn/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://www.jonathon.cn/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E4%B9%8B%E8%B7%AF.html</loc>
     <lastmod>2018-09-16T02:44:54.889Z</lastmod>
     <data>
@@ -113,6 +93,26 @@
         <display>
         <title>Hexo 404的问题</title>
         <pubTime>2018-07-18T04:11:40.000Z</pubTime>
+        
+        <tag>hexo</tag>
+         
+         
+           
+             
+              <breadCrumb title="博客搭建" url="https://www.jonathon.cn/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.jonathon.cn/hexo-seo%E4%BC%98%E5%8C%96.html</loc>
+    <lastmod>2018-09-16T02:44:54.889Z</lastmod>
+    <data>
+        <display>
+        <title>hexo seo优化</title>
+        <pubTime>2018-07-19T03:25:46.000Z</pubTime>
         
         <tag>hexo</tag>
          
