@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.jonathon.cn/"/>
-  <updated>2018-09-29T06:49:57.488Z</updated>
+  <updated>2018-11-10T07:56:11.453Z</updated>
   <id>https://www.jonathon.cn/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Javascript函数</title>
+    <link href="https://www.jonathon.cn/js1.html"/>
+    <id>https://www.jonathon.cn/js1.html</id>
+    <published>2018-11-10T07:05:25.000Z</published>
+    <updated>2018-11-10T07:56:11.453Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="1、函数的概念"><a href="#1、函数的概念" class="headerlink" title="1、函数的概念"></a>1、函数的概念</h2><p>函数的概念：函数就是一个工具，也就是具有某个特定功能的一小段代码块</p><h2 id="2、函数定义"><a href="#2、函数定义" class="headerlink" title="2、函数定义"></a>2、函数定义</h2><h3 id="方式一：-函数调用可以在任意位置"><a href="#方式一：-函数调用可以在任意位置" class="headerlink" title="方式一： 函数调用可以在任意位置"></a>方式一： 函数调用可以在任意位置</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> 函数名(<span class="params"></span>) </span>&#123;</span><br><span class="line">  函数体;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="方式二：表达式定义—先定义，后调用，函数的调用一定是在定义后"><a href="#方式二：表达式定义—先定义，后调用，函数的调用一定是在定义后" class="headerlink" title="方式二：表达式定义—先定义，后调用，函数的调用一定是在定义后"></a>方式二：表达式定义—先定义，后调用，函数的调用一定是在定义后</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> fn = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  函数体;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;1、函数的概念&quot;&gt;&lt;a href=&quot;#1、函数的概念&quot; class=&quot;headerlink&quot; title=&quot;1、函数的概念&quot;&gt;&lt;/a&gt;1、函数的概念&lt;/h2&gt;&lt;p&gt;函数的概念：函数就是一个工具，也就是具有某个特定功能的一小段代码块&lt;/p&gt;
+&lt;h2 id=&quot;2、函数
+      
+    
+    </summary>
+    
+      <category term="笔记" scheme="https://www.jonathon.cn/categories/%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="JavaScript" scheme="https://www.jonathon.cn/tags/JavaScript/"/>
+    
+      <category term="前端" scheme="https://www.jonathon.cn/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
   
   <entry>
     <title>【转载】JavaScript中的同步和异步的个人理解</title>
