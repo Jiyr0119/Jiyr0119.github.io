@@ -139,7 +139,7 @@
 <meta property="og:site_name" content="Jonathon&#39;s Blog">
 <meta property="og:description" content="1、函数的概念函数的概念：函数就是一个工具，也就是具有某个特定功能的一小段代码块 2、函数定义方式一： 函数调用可以在任意位置123function 函数名() &amp;#123;  函数体;&amp;#125; 方式二：表达式定义—先定义，后调用，函数的调用一定是在定义后123var fn = function() &amp;#123;  函数体;&amp;#125;; 3、函数的调用函数名([参数]); 函数的调用还可以通">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-11-10T08:00:15.803Z">
+<meta property="og:updated_time" content="2018-11-10T08:01:59.809Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Javascript函数">
 <meta name="twitter:description" content="1、函数的概念函数的概念：函数就是一个工具，也就是具有某个特定功能的一小段代码块 2、函数定义方式一： 函数调用可以在任意位置123function 函数名() &amp;#123;  函数体;&amp;#125; 方式二：表达式定义—先定义，后调用，函数的调用一定是在定义后123var fn = function() &amp;#123;  函数体;&amp;#125;; 3、函数的调用函数名([参数]); 函数的调用还可以通">
@@ -380,7 +380,7 @@
                 
               
 
-              <time title="创建时间：2018-11-10 15:05:25 / 修改时间：16:00:15" itemprop="dateCreated datePublished" datetime="2018-11-10T15:05:25+08:00">2018-11-10</time>
+              <time title="创建时间：2018-11-10 15:05:25 / 修改时间：16:01:59" itemprop="dateCreated datePublished" datetime="2018-11-10T15:05:25+08:00">2018-11-10</time>
             
 
             
@@ -476,6 +476,17 @@
 <p>onblur 失去焦点</p>
 <p>onchange 改变事件</p>
 <p>onsubmit 表单提交事件</p>
+<h2 id="7、事件用法"><a href="#7、事件用法" class="headerlink" title="7、事件用法"></a>7、事件用法</h2><p>1、 将事件写到标签内部 – 执行某个事件时直接调用函数</p>
+<p>2、 找到某个元素.事件 = function(){ … } 事件源.事件 = 事件处理程序</p>
+<p>通过 id 方式找到要操作的元素：</p>
+<p>document.getElementById(“id 名”)</p>
+<h2 id="8、通过-js-操作元素的样式、属性、内容"><a href="#8、通过-js-操作元素的样式、属性、内容" class="headerlink" title="8、通过 js 操作元素的样式、属性、内容"></a>8、通过 js 操作元素的样式、属性、内容</h2><h3 id="操作样式：obj-表示要操作的标签元素"><a href="#操作样式：obj-表示要操作的标签元素" class="headerlink" title="操作样式：obj 表示要操作的标签元素"></a>操作样式：obj 表示要操作的标签元素</h3><p>obj.style.样式名称 = “值” 样式名写法：小驼峰 fontSize backgroundColor</p>
+<h3 id="属性操作："><a href="#属性操作：" class="headerlink" title="属性操作："></a>属性操作：</h3><p>obj.属性名 = “值” 操作图片的路径： oImg.src = “”</p>
+<h3 id="内容操作："><a href="#内容操作：" class="headerlink" title="内容操作："></a>内容操作：</h3><p>操作表单的内容： obj.value = “值”</p>
+<p>操作普通标签内容： obj.innerHTML = “值”</p>
+<h3 id="this-指向的是事件的触发者"><a href="#this-指向的是事件的触发者" class="headerlink" title="this 指向的是事件的触发者"></a>this 指向的是事件的触发者</h3><p>小明.say = function(){</p>
+<p>this is 小明……</p>
+<p>}</p>
 
       
     </div>
@@ -815,7 +826,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1、函数的概念"><span class="nav-number">1.</span> <span class="nav-text">1、函数的概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2、函数定义"><span class="nav-number">2.</span> <span class="nav-text">2、函数定义</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#方式一：-函数调用可以在任意位置"><span class="nav-number">2.1.</span> <span class="nav-text">方式一： 函数调用可以在任意位置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#方式二：表达式定义—先定义，后调用，函数的调用一定是在定义后"><span class="nav-number">2.2.</span> <span class="nav-text">方式二：表达式定义—先定义，后调用，函数的调用一定是在定义后</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3、函数的调用"><span class="nav-number">3.</span> <span class="nav-text">3、函数的调用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4、函数和事件的关系"><span class="nav-number">4.</span> <span class="nav-text">4、函数和事件的关系</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5、js-中的事件三要素"><span class="nav-number">5.</span> <span class="nav-text">5、js 中的事件三要素</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6、js-中的常用事件"><span class="nav-number">6.</span> <span class="nav-text">6、js 中的常用事件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#鼠标事件"><span class="nav-number">6.1.</span> <span class="nav-text">鼠标事件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#键盘事件"><span class="nav-number">6.2.</span> <span class="nav-text">键盘事件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#页面事件"><span class="nav-number">6.3.</span> <span class="nav-text">页面事件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#其它事件（表单）"><span class="nav-number">6.4.</span> <span class="nav-text">其它事件（表单）</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1、函数的概念"><span class="nav-number">1.</span> <span class="nav-text">1、函数的概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2、函数定义"><span class="nav-number">2.</span> <span class="nav-text">2、函数定义</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#方式一：-函数调用可以在任意位置"><span class="nav-number">2.1.</span> <span class="nav-text">方式一： 函数调用可以在任意位置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#方式二：表达式定义—先定义，后调用，函数的调用一定是在定义后"><span class="nav-number">2.2.</span> <span class="nav-text">方式二：表达式定义—先定义，后调用，函数的调用一定是在定义后</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3、函数的调用"><span class="nav-number">3.</span> <span class="nav-text">3、函数的调用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4、函数和事件的关系"><span class="nav-number">4.</span> <span class="nav-text">4、函数和事件的关系</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5、js-中的事件三要素"><span class="nav-number">5.</span> <span class="nav-text">5、js 中的事件三要素</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6、js-中的常用事件"><span class="nav-number">6.</span> <span class="nav-text">6、js 中的常用事件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#鼠标事件"><span class="nav-number">6.1.</span> <span class="nav-text">鼠标事件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#键盘事件"><span class="nav-number">6.2.</span> <span class="nav-text">键盘事件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#页面事件"><span class="nav-number">6.3.</span> <span class="nav-text">页面事件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#其它事件（表单）"><span class="nav-number">6.4.</span> <span class="nav-text">其它事件（表单）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7、事件用法"><span class="nav-number">7.</span> <span class="nav-text">7、事件用法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8、通过-js-操作元素的样式、属性、内容"><span class="nav-number">8.</span> <span class="nav-text">8、通过 js 操作元素的样式、属性、内容</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#操作样式：obj-表示要操作的标签元素"><span class="nav-number">8.1.</span> <span class="nav-text">操作样式：obj 表示要操作的标签元素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#属性操作："><span class="nav-number">8.2.</span> <span class="nav-text">属性操作：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#内容操作："><span class="nav-number">8.3.</span> <span class="nav-text">内容操作：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#this-指向的是事件的触发者"><span class="nav-number">8.4.</span> <span class="nav-text">this 指向的是事件的触发者</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -862,7 +873,7 @@
 -->
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共24.5k字</span>
+  <span class="post-count">博客全站共24.7k字</span>
 </div>
 
         
