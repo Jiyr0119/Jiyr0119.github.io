@@ -1,3 +1,4 @@
+https://www.jonathon.cn/js2.html
 https://www.jonathon.cn/js1.html
 https://www.jonathon.cn/async.html
 https://www.jonathon.cn/js0.html
