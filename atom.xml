@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.jonathon.cn/"/>
-  <updated>2018-11-21T02:34:59.700Z</updated>
+  <updated>2018-12-06T07:27:22.077Z</updated>
   <id>https://www.jonathon.cn/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JavascriptDom</title>
+    <link href="https://www.jonathon.cn/js3.html"/>
+    <id>https://www.jonathon.cn/js3.html</id>
+    <published>2018-12-06T07:22:19.000Z</published>
+    <updated>2018-12-06T07:27:22.077Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="节点克隆"><a href="#节点克隆" class="headerlink" title="节点克隆"></a>节点克隆</h2><p>cloneNode()<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">用法：</span><br><span class="line"></span><br><span class="line">对象.cloneNode([<span class="literal">true</span>]); <span class="literal">true</span>表示可有可无</span><br><span class="line"></span><br><span class="line">如果含有参数<span class="literal">true</span>，表示深度克隆，即克隆该对象本身，又克隆该对象的内容</span><br><span class="line"></span><br><span class="line">如果没有参数<span class="literal">true</span>，只克隆该对象本身</span><br></pre></td></tr></table></figure></p><h2 id="dom中的属性操作方法"><a href="#dom中的属性操作方法" class="headerlink" title="dom中的属性操作方法"></a>dom中的属性操作方法</h2><p>1、获取属性值</p><p>对象.getAttribute(“属性名”) 获取属性值 ，可以获取标签的固有属性值，也可以获取自定义属性值 （该方法不能操作 单选框或复选框的checked值）</p><p>2、设置属性值</p><p>对象.setAttribute(“属性名”,”值”);</p><p>3、移出某个对象的属性</p><p>对象.removeAttribute(“属性名”);</p><h2 id="事件对象（event）"><a href="#事件对象（event）" class="headerlink" title="事件对象（event）"></a>事件对象（event）</h2><p>什么是事件对象：当触发某个事件时（onclick、onmouseover…）,会产生一个对象，这个对象就是事件对象。</p><h2 id="获取事件对象的兼容写法"><a href="#获取事件对象的兼容写法" class="headerlink" title="获取事件对象的兼容写法"></a>获取事件对象的兼容写法</h2><p>var e = evt || window.event;  此时 e 变量 代表了事件对象</p><h2 id="事件对象作用"><a href="#事件对象作用" class="headerlink" title="事件对象作用"></a>事件对象作用</h2><p>获取键盘状态，鼠标位置和鼠标按钮状态。</p><p>不同的事件产生的事件对象 可能会有不同的属性</p><h2 id="获取坐标问题"><a href="#获取坐标问题" class="headerlink" title="获取坐标问题"></a>获取坐标问题</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">clientX / clientY 获取距离浏览器窗口 左侧 和 定部的距离 （即使滚动条将内容区向上移动，永远获取的是距离浏览器窗口距离）</span><br><span class="line"></span><br><span class="line">pageX / pageY 获取距离页面内容区域的左侧和顶部的距离 （如果滚动条没有触发，值和clientY相等）</span><br><span class="line"></span><br><span class="line">offsetX / offsetY 获取的是距离某个元素内部的 左偏移 和 上偏移（火狐不兼容）</span><br><span class="line"></span><br><span class="line">screenX / screenY 获取距离屏幕的左偏移和上偏移</span><br><span class="line"></span><br><span class="line">layerX / layerY （火狐浏览器识别 ： 结果同 offsetX 和 offsetY）</span><br></pre></td></tr></table></figure><h2 id="阻止浏览器右键单击的默认行为"><a href="#阻止浏览器右键单击的默认行为" class="headerlink" title="阻止浏览器右键单击的默认行为"></a>阻止浏览器右键单击的默认行为</h2><p>右键单击事件：oncontextmenu</p><p>e.preventDefault ? e.preventDefault() : e.returnValue = false;</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;节点克隆&quot;&gt;&lt;a href=&quot;#节点克隆&quot; class=&quot;headerlink&quot; title=&quot;节点克隆&quot;&gt;&lt;/a&gt;节点克隆&lt;/h2&gt;&lt;p&gt;cloneNode()&lt;br&gt;&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>JavascriptDom</title>
