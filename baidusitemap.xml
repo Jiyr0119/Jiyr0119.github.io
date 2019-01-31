@@ -4,6 +4,21 @@
 
     
   <url>
+    <loc>https://www.jonathon.cn/js4.html</loc>
+    <lastmod>2019-01-31T05:46:18.053Z</lastmod>
+    <data>
+        <display>
+        <title>Javascript事件流</title>
+        <pubTime>2019-01-31T05:43:12.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://www.jonathon.cn/js3.html</loc>
     <lastmod>2018-12-06T07:28:08.133Z</lastmod>
     <data>
@@ -181,12 +196,12 @@
 
     
   <url>
-    <loc>https://www.jonathon.cn/hexo-seo%E4%BC%98%E5%8C%96.html</loc>
+    <loc>https://www.jonathon.cn/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E4%B9%8B%E8%B7%AF.html</loc>
     <lastmod>2018-09-16T02:44:54.889Z</lastmod>
     <data>
         <display>
-        <title>hexo seo优化</title>
-        <pubTime>2018-07-19T03:25:46.000Z</pubTime>
+        <title>Hexo博客 域名解析+个性化教程。</title>
+        <pubTime>2018-07-20T05:26:38.000Z</pubTime>
         
         <tag>hexo</tag>
          
@@ -201,12 +216,12 @@
 
     
   <url>
-    <loc>https://www.jonathon.cn/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E4%B9%8B%E8%B7%AF.html</loc>
+    <loc>https://www.jonathon.cn/hexo-seo%E4%BC%98%E5%8C%96.html</loc>
     <lastmod>2018-09-16T02:44:54.889Z</lastmod>
     <data>
         <display>
-        <title>Hexo博客 域名解析+个性化教程。</title>
-        <pubTime>2018-07-20T05:26:38.000Z</pubTime>
+        <title>hexo seo优化</title>
+        <pubTime>2018-07-19T03:25:46.000Z</pubTime>
         
         <tag>hexo</tag>
          

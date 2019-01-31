@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.jonathon.cn/"/>
-  <updated>2018-12-06T07:28:08.133Z</updated>
+  <updated>2019-01-31T05:46:18.053Z</updated>
   <id>https://www.jonathon.cn/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Javascript事件流</title>
+    <link href="https://www.jonathon.cn/js4.html"/>
+    <id>https://www.jonathon.cn/js4.html</id>
+    <published>2019-01-31T05:43:12.000Z</published>
+    <updated>2019-01-31T05:46:18.053Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="事件流"><a href="#事件流" class="headerlink" title="事件流"></a>事件流</h2><p><img src="http://p99.pstatp.com/large/4711000441cc4ea237bb"></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">当触发某个事件时（某个事件发生了），从子元素向父级元素触发 或 从父级元素向子元素触发的过程 ，这个过程 称为事件流</span><br><span class="line"></span><br><span class="line">事件流有两种模式：</span><br><span class="line"></span><br><span class="line">事件冒泡：从子元素向父级元素触发 small --- big ---body --- document -- window</span><br><span class="line"></span><br><span class="line">事件捕获：从父级元素向子元素触发 window --- document --- body --- big --- small</span><br></pre></td></tr></table></figure><p><img src="http://p1.pstatp.com/large/4ad70002b362ba3ccd37"></p><h2 id="事件冒泡"><a href="#事件冒泡" class="headerlink" title="事件冒泡"></a>事件冒泡</h2><p>当子元素触发某个事件时，同样的事件回向父级元素触发，这个过程称之为事件冒泡</p><h2 id="阻止事件冒泡"><a href="#阻止事件冒泡" class="headerlink" title="阻止事件冒泡"></a>阻止事件冒泡</h2><p>兼容写法：<br>e.stopPropagation?e.stopPropagation():e.cancelBubble=true;</p><h2 id="事件绑定"><a href="#事件绑定" class="headerlink" title="事件绑定"></a>事件绑定</h2><p>事件绑定： 如何为元素添加一个事件</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1、在标签上写事件名称 &lt;input onclick = &quot;fun()&quot;&gt;</span><br><span class="line"></span><br><span class="line">2、通过 对象.事件 = function()&#123; .... &#125; ,写在 script 标签内部的</span><br><span class="line"></span><br><span class="line">3、同过 addEventListener() 方法</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;事件流&quot;&gt;&lt;a href=&quot;#事件流&quot; class=&quot;headerlink&quot; title=&quot;事件流&quot;&gt;&lt;/a&gt;事件流&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;http://p99.pstatp.com/large/4711000441cc4ea237bb&quot;&gt;&lt;/p&gt;
+&lt;
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>JavascriptDom</title>

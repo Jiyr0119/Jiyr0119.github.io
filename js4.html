@@ -131,21 +131,21 @@
 
 
 
-  <meta name="description" content="缘由因为公司项目是链接银行业务的这种需求，所以存在一些监管方面的问题，然后就有了小程序里面嵌套h5的这种解决方式。 开始那些什么官方配置的什么，就不在这里说了。 跟着文档走，细心的慢慢配置的就好。思考一下，其实跳webview 全是一个页面只不过是不同的参数拼接成不同的url。在这个前提下呢，就可以开始封装方法辣～">
-<meta name="keywords" content="webview">
+  <meta name="description" content="事件流 1234567当触发某个事件时（某个事件发生了），从子元素向父级元素触发 或 从父级元素向子元素触发的过程 ，这个过程 称为事件流事件流有两种模式：事件冒泡：从子元素向父级元素触发 small --- big ---body --- document -- window事件捕获：从父级元素向子元素触发 window --- document --- body --- big --- sma">
+<meta name="keywords" content="小程序，前端，python，java">
 <meta property="og:type" content="article">
-<meta property="og:title" content="微信小程序Webview最佳实践。">
-<meta property="og:url" content="https://www.jonathon.cn/webview.html">
+<meta property="og:title" content="Javascript事件流">
+<meta property="og:url" content="https://www.jonathon.cn/js4.html">
 <meta property="og:site_name" content="Jonathon&#39;s Blog">
-<meta property="og:description" content="缘由因为公司项目是链接银行业务的这种需求，所以存在一些监管方面的问题，然后就有了小程序里面嵌套h5的这种解决方式。 开始那些什么官方配置的什么，就不在这里说了。 跟着文档走，细心的慢慢配置的就好。思考一下，其实跳webview 全是一个页面只不过是不同的参数拼接成不同的url。在这个前提下呢，就可以开始封装方法辣～">
+<meta property="og:description" content="事件流 1234567当触发某个事件时（某个事件发生了），从子元素向父级元素触发 或 从父级元素向子元素触发的过程 ，这个过程 称为事件流事件流有两种模式：事件冒泡：从子元素向父级元素触发 small --- big ---body --- document -- window事件捕获：从父级元素向子元素触发 window --- document --- body --- big --- sma">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://user-gold-cdn.xitu.io/2018/8/20/1655729929eb308e?imageView2/1/w/1080/h/320/q/85/format/webp/interlace/1">
-<meta property="og:image" content="https://user-gold-cdn.xitu.io/2018/5/29/163aa02a511249dd?imageView2/0/w/1280/h/960/format/webp/ignore-error/1">
-<meta property="og:updated_time" content="2018-08-20T12:30:17.254Z">
+<meta property="og:image" content="http://p99.pstatp.com/large/4711000441cc4ea237bb">
+<meta property="og:image" content="http://p1.pstatp.com/large/4ad70002b362ba3ccd37">
+<meta property="og:updated_time" content="2019-01-31T05:46:18.053Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="微信小程序Webview最佳实践。">
-<meta name="twitter:description" content="缘由因为公司项目是链接银行业务的这种需求，所以存在一些监管方面的问题，然后就有了小程序里面嵌套h5的这种解决方式。 开始那些什么官方配置的什么，就不在这里说了。 跟着文档走，细心的慢慢配置的就好。思考一下，其实跳webview 全是一个页面只不过是不同的参数拼接成不同的url。在这个前提下呢，就可以开始封装方法辣～">
-<meta name="twitter:image" content="https://user-gold-cdn.xitu.io/2018/8/20/1655729929eb308e?imageView2/1/w/1080/h/320/q/85/format/webp/interlace/1">
+<meta name="twitter:title" content="Javascript事件流">
+<meta name="twitter:description" content="事件流 1234567当触发某个事件时（某个事件发生了），从子元素向父级元素触发 或 从父级元素向子元素触发的过程 ，这个过程 称为事件流事件流有两种模式：事件冒泡：从子元素向父级元素触发 small --- big ---body --- document -- window事件捕获：从父级元素向子元素触发 window --- document --- body --- big --- sma">
+<meta name="twitter:image" content="http://p99.pstatp.com/large/4711000441cc4ea237bb">
 
 
 
@@ -154,7 +154,7 @@
 
 
 
-  <link rel="canonical" href="https://www.jonathon.cn/webview.html"/>
+  <link rel="canonical" href="https://www.jonathon.cn/js4.html"/>
 
 
 
@@ -164,7 +164,7 @@
   };
 </script>
 
-  <title>微信小程序Webview最佳实践。 | Jonathon's Blog</title>
+  <title>Javascript事件流 | Jonathon's Blog</title>
   
 
 
@@ -340,7 +340,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.jonathon.cn/webview.html">
+    <link itemprop="mainEntityOfPage" href="https://www.jonathon.cn/js4.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jonathon">
@@ -357,7 +357,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">微信小程序Webview最佳实践。
+          <h2 class="post-title" itemprop="name headline">Javascript事件流
               
             
           </h2>
@@ -383,7 +383,7 @@
                 
               
 
-              <time title="创建时间：2018-08-20 20:16:48 / 修改时间：20:30:17" itemprop="dateCreated datePublished" datetime="2018-08-20T20:16:48+08:00">2018-08-20</time>
+              <time title="创建时间：2019-01-31 13:43:12 / 修改时间：13:46:18" itemprop="dateCreated datePublished" datetime="2019-01-31T13:43:12+08:00">2019-01-31</time>
             
 
             
@@ -394,24 +394,6 @@
           </span>
 
           
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/心得分享/" itemprop="url" rel="index"><span itemprop="name">心得分享</span></a></span>
-
-                
-                
-              
-            </span>
-          
 
           
             
@@ -421,8 +403,8 @@
                 <i class="fa fa-comment-o"></i>
               </span>
               
-                <a href="/webview.html#SOHUCS" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span id="changyan_count_unit" class="post-comments-count hc-comment-count" data-xid="webview.html" itemprop="commentsCount"></span>
+                <a href="/js4.html#SOHUCS" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span id="changyan_count_unit" class="post-comments-count hc-comment-count" data-xid="js4.html" itemprop="commentsCount"></span>
                 </a>
               
             
@@ -450,15 +432,13 @@
       
 
       
-        <p><img src="https://user-gold-cdn.xitu.io/2018/8/20/1655729929eb308e?imageView2/1/w/1080/h/320/q/85/format/webp/interlace/1"></p>
-<h2 id="缘由"><a href="#缘由" class="headerlink" title="缘由"></a>缘由</h2><p>因为公司项目是链接银行业务的这种需求，所以存在一些监管方面的问题，然后就有了小程序里面嵌套h5的这种解决方式。</p>
-<h2 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h2><p>那些什么官方配置的什么，就不在这里说了。 跟着文档走，细心的慢慢配置的就好。思考一下，其实跳webview 全是一个页面只不过是不同的参数拼接成不同的url。在这个前提下呢，就可以开始封装方法辣～<br><a id="more"></a></p>
-<h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2><p>先直接上代码了。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> *  方法名：</span></span><br><span class="line"><span class="comment"> *    webView: 跳转到H5界面</span></span><br><span class="line"><span class="comment"> *  参数：</span></span><br><span class="line"><span class="comment"> *    path:  访问界面的路径</span></span><br><span class="line"><span class="comment"> *    param: 页面附带参数</span></span><br><span class="line"><span class="comment"> *    type: 0 默认 2 外部地址 1 redirectTo跳转</span></span><br><span class="line"><span class="comment"> *    finger  是否验证指纹</span></span><br><span class="line"><span class="comment"> *  返回：</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">webView</span>(<span class="params">path, param, type = <span class="number">0</span>, finger = true</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> defu = app.config.h5url;</span><br><span class="line">    <span class="keyword">let</span> url = defu + <span class="string">"/"</span> + path;</span><br><span class="line">    <span class="keyword">if</span> (type === <span class="number">2</span>)</span><br><span class="line">        url = path;</span><br><span class="line">    <span class="keyword">let</span> to = <span class="string">'/pages/common/webview/webview?url='</span> + <span class="built_in">encodeURIComponent</span>(url);</span><br><span class="line">    <span class="keyword">if</span> (!isNull(param)) &#123;</span><br><span class="line">        param = param;</span><br><span class="line">        to = to + <span class="string">"&amp;param="</span> + <span class="built_in">encodeURIComponent</span>(<span class="built_in">JSON</span>.stringify(param));</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (type === <span class="number">0</span> || type === <span class="number">2</span>) &#123;</span><br><span class="line">        wx.navigateTo(&#123;</span><br><span class="line">            url: to,</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (type === <span class="number">1</span>) &#123;</span><br><span class="line">        wx.redirectTo(&#123;</span><br><span class="line">            url: to,</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 方法名：跳转到H5</span></span><br><span class="line"><span class="comment"> * 参数：</span></span><br><span class="line"><span class="comment"> *    servid : 服务Id 跳转到H5对应的url</span></span><br><span class="line"><span class="comment"> *    flag: 是否选择银行卡 (默认是)</span></span><br><span class="line"><span class="comment"> *    param：跳转到H5携带的参数 </span></span><br><span class="line"><span class="comment"> *    finger: 是否验证手势密码</span></span><br><span class="line"><span class="comment"> *    redirectTp 跳转类型: (默认0 nato 1 redirectto)</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">toH5</span>(<span class="params">servid, flag = true, param = &#123;&#125;, finger = true, redirectTp = <span class="number">0</span></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(param)</span><br><span class="line">    <span class="keyword">if</span> (isNull(param))</span><br><span class="line">        param = &#123;&#125;;</span><br><span class="line">    <span class="keyword">let</span> h5url = getRouteH5(servid);</span><br><span class="line">    <span class="keyword">let</span> userInfo = getDataBase(<span class="string">"userInfo"</span>);</span><br><span class="line">    param.custInfo = getDataBase(<span class="string">"custInfo"</span>);</span><br><span class="line">    param.userInfo = &#123;</span><br><span class="line">        nickName: userInfo.nickName,</span><br><span class="line">        avatarUrl: userInfo.avatarUrl,</span><br><span class="line">        model: getDataBase(<span class="string">"deviceInfo"</span>).model</span><br><span class="line">    &#125;;</span><br><span class="line">    param.header = app.globalData.header;</span><br><span class="line">    <span class="keyword">if</span> (!app.globalData.first2H5) &#123;</span><br><span class="line">        param.first2H5 = <span class="string">"1"</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    webView(h5url.url, param, redirectTp, finger);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>在这里定义了两个方法，一些url上面不明文传输之类的处理。 </p>
-<p>小程序里面的代码结束了，然后我们在H5里面开始接受从小程序传过的来参数。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">因为h5是用vue来实现的，所以我们要在router beforeEach 里面进行判断。</span><br><span class="line"> </span><br><span class="line">  <span class="keyword">if</span> (navigator.userAgent.toLowerCase().indexOf(<span class="string">'micromessenger'</span>) !== <span class="number">-1</span>) &#123;</span><br><span class="line">    <span class="comment">// 说明是从小程序webview过来的</span></span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">from</span>.name === <span class="literal">null</span> &amp;&amp; !Util.isNull(to.query.param)) &#123;</span><br><span class="line">      <span class="built_in">console</span>.log(to.query.param)</span><br><span class="line">      <span class="keyword">let</span> param = <span class="built_in">JSON</span>.parse(to.query.param);</span><br><span class="line">      to.query.param = param;</span><br><span class="line">      <span class="keyword">if</span> (<span class="built_in">parseInt</span>(param.first2H5) === <span class="number">1</span> || Util.isNull(<span class="built_in">window</span>.localStorage.getItem(<span class="string">"loginCustInfo"</span>))) &#123;</span><br><span class="line">        <span class="built_in">window</span>.localStorage.setItem(<span class="string">"header"</span>, <span class="built_in">JSON</span>.stringify(param.header)); <span class="comment">// 设备指纹</span></span><br><span class="line">        <span class="built_in">window</span>.localStorage.setItem(<span class="string">"loginCustInfo"</span>, <span class="built_in">JSON</span>.stringify(param.custInfo));</span><br><span class="line">        <span class="built_in">window</span>.localStorage.setItem(<span class="string">"loginNickInfo"</span>, <span class="built_in">JSON</span>.stringify(param.userInfo));</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
-<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>加班加了好久，最近也没怎么写，表达的不好，请大家多多原谅。 </p>
-<p><img src="https://user-gold-cdn.xitu.io/2018/5/29/163aa02a511249dd?imageView2/0/w/1280/h/960/format/webp/ignore-error/1"></p>
+        <h2 id="事件流"><a href="#事件流" class="headerlink" title="事件流"></a>事件流</h2><p><img src="http://p99.pstatp.com/large/4711000441cc4ea237bb"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">当触发某个事件时（某个事件发生了），从子元素向父级元素触发 或 从父级元素向子元素触发的过程 ，这个过程 称为事件流</span><br><span class="line"></span><br><span class="line">事件流有两种模式：</span><br><span class="line"></span><br><span class="line">事件冒泡：从子元素向父级元素触发 small --- big ---body --- document -- window</span><br><span class="line"></span><br><span class="line">事件捕获：从父级元素向子元素触发 window --- document --- body --- big --- small</span><br></pre></td></tr></table></figure>
+<p><img src="http://p1.pstatp.com/large/4ad70002b362ba3ccd37"></p>
+<h2 id="事件冒泡"><a href="#事件冒泡" class="headerlink" title="事件冒泡"></a>事件冒泡</h2><p>当子元素触发某个事件时，同样的事件回向父级元素触发，这个过程称之为事件冒泡</p>
+<h2 id="阻止事件冒泡"><a href="#阻止事件冒泡" class="headerlink" title="阻止事件冒泡"></a>阻止事件冒泡</h2><p>兼容写法：<br>e.stopPropagation?e.stopPropagation():e.cancelBubble=true;</p>
+<h2 id="事件绑定"><a href="#事件绑定" class="headerlink" title="事件绑定"></a>事件绑定</h2><p>事件绑定： 如何为元素添加一个事件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1、在标签上写事件名称 &lt;input onclick = &quot;fun()&quot;&gt;</span><br><span class="line"></span><br><span class="line">2、通过 对象.事件 = function()&#123; .... &#125; ,写在 script 标签内部的</span><br><span class="line"></span><br><span class="line">3、同过 addEventListener() 方法</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -480,12 +460,12 @@
   <!-- JS库 sweetalert 可修改路径 -->
   <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-  <p><span>本文标题:</span><a href="/webview.html">微信小程序Webview最佳实践。</a></p>
+  <p><span>本文标题:</span><a href="/js4.html">Javascript事件流</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 Jonathon 的个人博客">Jonathon</a></p>
-  <p><span>发布时间:</span>2018年08月20日 - 20:08</p>
-  <p><span>最后更新:</span>2018年08月20日 - 20:08</p>
-  <p><span>原始链接:</span><a href="/webview.html" title="微信小程序Webview最佳实践。">https://www.jonathon.cn/webview.html</a>
-    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://www.jonathon.cn/webview.html"  aria-label="复制成功！"></i></span>
+  <p><span>发布时间:</span>2019年01月31日 - 13:01</p>
+  <p><span>最后更新:</span>2019年01月31日 - 13:01</p>
+  <p><span>原始链接:</span><a href="/js4.html" title="Javascript事件流">https://www.jonathon.cn/js4.html</a>
+    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://www.jonathon.cn/js4.html"  aria-label="复制成功！"></i></span>
   </p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
 </div>
@@ -541,12 +521,6 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/webview/" <i class="fa fa-tag"></i>webview</a>
-          
-        </div>
-      
 
       
       
@@ -556,8 +530,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/wechat-qrcode.html" rel="next" title="微信小程序：带参数小程序相关知识">
-                <i class="fa fa-chevron-left"></i> 微信小程序：带参数小程序相关知识
+              <a href="/js3.html" rel="next" title="JavascriptDom">
+                <i class="fa fa-chevron-left"></i> JavascriptDom
               </a>
             
           </div>
@@ -565,10 +539,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/topbar.html" rel="prev" title="你还在发愁小程序自定义导航栏吗？">
-                你还在发愁小程序自定义导航栏吗？ <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -800,7 +770,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#缘由"><span class="nav-number">1.</span> <span class="nav-text">缘由</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#开始"><span class="nav-number">2.</span> <span class="nav-text">开始</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实现"><span class="nav-number">3.</span> <span class="nav-text">实现</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#结语"><span class="nav-number">4.</span> <span class="nav-text">结语</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#事件流"><span class="nav-number">1.</span> <span class="nav-text">事件流</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#事件冒泡"><span class="nav-number">2.</span> <span class="nav-text">事件冒泡</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#阻止事件冒泡"><span class="nav-number">3.</span> <span class="nav-text">阻止事件冒泡</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#事件绑定"><span class="nav-number">4.</span> <span class="nav-text">事件绑定</span></a></li></ol></div>
             
 
           </div>
