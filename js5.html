@@ -131,18 +131,21 @@
 
 
 
-  <meta name="description" content="用代码一路奋战。">
+  <meta name="description" content="客户端和服务器客户端：一台电脑，为用户提供服务 服务器：安装了特定服务软件的一台电脑 java php .net 服务器语言 Tomcat apache iis 服务器软件 客户端和服务端的工作流程：  会话跟踪技术1客户端请求数据，服务器端根据客户端请求的数据并将数据解析返回的这样一个过程;称为一个会话。 会话跟踪技术 就是 cookie 从客户端向服务器端发送一些数据 ， 部分数据可以通过 c">
 <meta name="keywords" content="小程序，前端，python，java">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Javascript Cookie">
 <meta property="og:url" content="https://www.jonathon.cn/js5.html">
 <meta property="og:site_name" content="Jonathon&#39;s Blog">
-<meta property="og:description" content="用代码一路奋战。">
+<meta property="og:description" content="客户端和服务器客户端：一台电脑，为用户提供服务 服务器：安装了特定服务软件的一台电脑 java php .net 服务器语言 Tomcat apache iis 服务器软件 客户端和服务端的工作流程：  会话跟踪技术1客户端请求数据，服务器端根据客户端请求的数据并将数据解析返回的这样一个过程;称为一个会话。 会话跟踪技术 就是 cookie 从客户端向服务器端发送一些数据 ， 部分数据可以通过 c">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-01-31T06:37:44.669Z">
+<meta property="og:image" content="http://p1.pstatp.com/large/4add0004b35de8e90725">
+<meta property="og:image" content="http://p3.pstatp.com/large/4add0004b4270ca8e9a8">
+<meta property="og:updated_time" content="2019-01-31T06:45:51.198Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Javascript Cookie">
-<meta name="twitter:description" content="用代码一路奋战。">
+<meta name="twitter:description" content="客户端和服务器客户端：一台电脑，为用户提供服务 服务器：安装了特定服务软件的一台电脑 java php .net 服务器语言 Tomcat apache iis 服务器软件 客户端和服务端的工作流程：  会话跟踪技术1客户端请求数据，服务器端根据客户端请求的数据并将数据解析返回的这样一个过程;称为一个会话。 会话跟踪技术 就是 cookie 从客户端向服务器端发送一些数据 ， 部分数据可以通过 c">
+<meta name="twitter:image" content="http://p1.pstatp.com/large/4add0004b35de8e90725">
 
 
 
@@ -380,7 +383,7 @@
                 
               
 
-              <time title="创建时间：2019-01-31 14:34:52 / 修改时间：14:37:44" itemprop="dateCreated datePublished" datetime="2019-01-31T14:34:52+08:00">2019-01-31</time>
+              <time title="创建时间：2019-01-31 14:34:52 / 修改时间：14:45:51" itemprop="dateCreated datePublished" datetime="2019-01-31T14:34:52+08:00">2019-01-31</time>
             
 
             
@@ -429,7 +432,34 @@
       
 
       
-        
+        <h2 id="客户端和服务器"><a href="#客户端和服务器" class="headerlink" title="客户端和服务器"></a>客户端和服务器</h2><p>客户端：一台电脑，为用户提供服务</p>
+<p>服务器：安装了特定服务软件的一台电脑</p>
+<p>java php .net 服务器语言</p>
+<p>Tomcat apache iis 服务器软件</p>
+<p>客户端和服务端的工作流程：</p>
+<p><img src="http://p1.pstatp.com/large/4add0004b35de8e90725"></p>
+<h2 id="会话跟踪技术"><a href="#会话跟踪技术" class="headerlink" title="会话跟踪技术"></a>会话跟踪技术</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">客户端请求数据，服务器端根据客户端请求的数据并将数据解析返回的这样一个过程;称为一个会话。</span><br></pre></td></tr></table></figure>
+<p>会话跟踪技术 就是 cookie</p>
+<p>从客户端向服务器端发送一些数据 ， 部分数据可以通过 cookie 存储 ， cookie 就是用来存储数据的</p>
+<p>通过 cookie 可以存储会话过程中的状态和信息<br><img src="http://p3.pstatp.com/large/4add0004b4270ca8e9a8"></p>
+<a id="more"></a>
+<h2 id="cookie-的存和取"><a href="#cookie-的存和取" class="headerlink" title="cookie 的存和取"></a>cookie 的存和取</h2><p>存： document.cookie = “键=值”</p>
+<p>取： document.cookie</p>
+<h2 id="cookie-的生存期"><a href="#cookie-的生存期" class="headerlink" title="cookie 的生存期"></a>cookie 的生存期</h2><p>生存期：cookie 信息在浏览器中生存时间</p>
+<p>设置生存期：</p>
+<p>document.cookie = “键=值;expires=标准时间格式”;</p>
+<p>生存期说明：</p>
+<p>1、如果不设置生存期，浏览器关闭，cookie 信息自动消失</p>
+<p>2、如果设置生存期，cookie 信息会在生存期规定时间后自动消失。</p>
+<p>3、如果通过更改系统时间的方式删除 cookie，这种删除方式为假删除 ， 系统时间恢复后，cookie 信息自动恢复</p>
+<p>4、如果要删除 cookie， 可以将 cookie 的值设置为””, 或将 cookie 的生存期改为 -1</p>
+<h2 id="对象类型和字符串类型之间转换"><a href="#对象类型和字符串类型之间转换" class="headerlink" title="对象类型和字符串类型之间转换"></a>对象类型和字符串类型之间转换</h2><p>JSON.stringify( 对象 ) 将对象类型转成字符串</p>
+<p>JSON.parse( 字符串 ) 将字符串转成对象 这里的字符串要求： 去掉引号后就是一个对象</p>
+<p>例如： “[1,2,3,4,5]” 可以正常转换 ‘{“name”:”admin”}’ 可以</p>
+<p>“hello” 不可以正常转换</p>
+<p>cookie 存的数据类型是字符串</p>
+<p>document.cookie 取出来的数据一定是字符串</p>
+
       
     </div>
 
@@ -582,8 +612,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -742,6 +781,22 @@
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#客户端和服务器"><span class="nav-number">1.</span> <span class="nav-text">客户端和服务器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#会话跟踪技术"><span class="nav-number">2.</span> <span class="nav-text">会话跟踪技术</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#cookie-的存和取"><span class="nav-number">3.</span> <span class="nav-text">cookie 的存和取</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#cookie-的生存期"><span class="nav-number">4.</span> <span class="nav-text">cookie 的生存期</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#对象类型和字符串类型之间转换"><span class="nav-number">5.</span> <span class="nav-text">对象类型和字符串类型之间转换</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
 
@@ -782,7 +837,7 @@
 -->
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共27.9k字</span>
+  <span class="post-count">博客全站共28.4k字</span>
 </div>
 
         
