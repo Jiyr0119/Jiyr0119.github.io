@@ -532,6 +532,187 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.jonathon.cn/js6.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jonathon">
+      <meta itemprop="description" content="用代码一路奋战。">
+      <meta itemprop="image" content="/images/t9.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jonathon's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/js6.html" itemprop="url">
+                  Javascript 正则
+                </a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+        
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-01-31 14:48:08 / 修改时间：14:50:47" itemprop="dateCreated datePublished" datetime="2019-01-31T14:48:08+08:00">2019-01-31</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/笔记/" itemprop="url" rel="index"><span itemprop="name">笔记</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-comment-o"></i>
+              </span>
+              
+                <a href="/js6.html#SOHUCS" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span id="url::https://www.jonathon.cn/js6.html" class="cy_cmt_count" data-xid="js6.html" itemprop="commentsCount" ></span>
+                </a>
+              
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h2><p>作用： 前端往往会有大量的数据校验工作，可以通过正则表达式对象提高工作效率</p>
+<h2 id="正则表达式定义"><a href="#正则表达式定义" class="headerlink" title="正则表达式定义"></a>正则表达式定义</h2><p>var reg = /表达式/修饰符;</p>
+<p>正则表达是有 普通字符 和 特殊字符 组成的 ， 组成的这个正则表达式 就可以做一些校验工作</p>
+<h2 id="正则表达式中的特殊字符"><a href="#正则表达式中的特殊字符" class="headerlink" title="正则表达式中的特殊字符"></a>正则表达式中的特殊字符</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">^ : 表示正则表达式的开始</span><br><span class="line"></span><br><span class="line">$ : 表示正则表达式的结束</span><br><span class="line"></span><br><span class="line">- : 表示前面紧挨着的字符至少出现 1 次 没有上限 等价 &#123;1,&#125;</span><br><span class="line"></span><br><span class="line">? : 表示前面紧挨着的字符至少出现 0 次，至多出现 1 次 等价 &#123;0,1&#125;</span><br><span class="line"></span><br><span class="line">- : 表示前面紧挨着的字符至少出现 0 次 没有上限 等价&#123;0,&#125;</span><br><span class="line"></span><br><span class="line">. : 表示任意一个字符</span><br><span class="line"></span><br><span class="line">: 表示转义字符 . 表示 . \ 表示</span><br><span class="line"></span><br><span class="line">d : 表示 0-9 之间的任意一个数字 等价 [0-9]</span><br><span class="line"></span><br><span class="line">D : 表示非数字 （表示除了 0-9 之间的任意一个字符） 等价 [^0-9]</span><br><span class="line"></span><br><span class="line">w : 表示一个单词字符（字母、数字、下划线中的任意一个） 等价 [a-zA-Z0-9_]</span><br><span class="line"></span><br><span class="line">W : 表示一个非单词字符</span><br><span class="line"></span><br><span class="line">s : 表示空白字符（空格、tab）</span><br><span class="line"></span><br><span class="line">S : 非空白字符</span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/js6.html#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+    
+    <div>
+      
+    </div>
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://www.jonathon.cn/js5.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -2033,204 +2214,11 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.jonathon.cn/vuex.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Jonathon">
-      <meta itemprop="description" content="用代码一路奋战。">
-      <meta itemprop="image" content="/images/t9.jpeg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Jonathon's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/vuex.html" itemprop="url">
-                  认识Vuex
-                </a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-        
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2018-08-28 20:59:09" itemprop="dateCreated datePublished" datetime="2018-08-28T20:59:09+08:00">2018-08-28</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2018-09-03 17:29:34" itemprop="dateModified" datetime="2018-09-03T17:29:34+08:00">2018-09-03</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/笔记/" itemprop="url" rel="index"><span itemprop="name">笔记</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-              <span class="post-meta-divider">|</span>
-              <span class="post-meta-item-icon">
-                <i class="fa fa-comment-o"></i>
-              </span>
-              
-                <a href="/vuex.html#SOHUCS" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span id="url::https://www.jonathon.cn/vuex.html" class="cy_cmt_count" data-xid="vuex.html" itemprop="commentsCount" ></span>
-                </a>
-              
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="VueX"><a href="#VueX" class="headerlink" title="VueX"></a>VueX</h2><p>Vuex 是一个专为 Vue.js 应用程序开发的状态管理模式。它采用集中式存储管理应用的所有组件的状态，并以相应的规则保证状态以一种可预测的方式发生变化。</p>
-<h2 id="引入-Vuex（用-Vue-cli-或者其他架工具构建好项目）"><a href="#引入-Vuex（用-Vue-cli-或者其他架工具构建好项目）" class="headerlink" title="引入 Vuex（用 Vue cli 或者其他架工具构建好项目）"></a>引入 Vuex（用 Vue cli 或者其他架工具构建好项目）</h2><h3 id="利用-npm-包管理工具，进行安装-vuex。在控制命令行中输入下边的命令就可以了"><a href="#利用-npm-包管理工具，进行安装-vuex。在控制命令行中输入下边的命令就可以了" class="headerlink" title="利用 npm 包管理工具，进行安装 vuex。在控制命令行中输入下边的命令就可以了"></a>利用 npm 包管理工具，进行安装 vuex。在控制命令行中输入下边的命令就可以了</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install vuex --save</span><br></pre></td></tr></table></figure>
-<h3 id="新建一个-store-文件夹（这个不是必须的），并在文件夹下新建-store-js-文件，文件中引入我们的-vue-和-vuex。"><a href="#新建一个-store-文件夹（这个不是必须的），并在文件夹下新建-store-js-文件，文件中引入我们的-vue-和-vuex。" class="headerlink" title="新建一个 store 文件夹（这个不是必须的），并在文件夹下新建 store.js 文件，文件中引入我们的 vue 和 vuex。"></a>新建一个 store 文件夹（这个不是必须的），并在文件夹下新建 store.js 文件，文件中引入我们的 vue 和 vuex。</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">"vue"</span>;</span><br><span class="line"><span class="keyword">import</span> Vuex <span class="keyword">from</span> <span class="string">"vuex"</span>;</span><br></pre></td></tr></table></figure>
-<h3 id="使用我们-vuex，引入之后用-Vue-use-进行引用。"><a href="#使用我们-vuex，引入之后用-Vue-use-进行引用。" class="headerlink" title="使用我们 vuex，引入之后用 Vue.use 进行引用。"></a>使用我们 vuex，引入之后用 Vue.use 进行引用。</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Vue.use(Vuex);</span><br></pre></td></tr></table></figure>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/vuex.html#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-    
-    <div>
-      
-    </div>
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -2277,7 +2265,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">20</span>
+                    <span class="site-state-item-count">21</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -2457,7 +2445,7 @@
 -->
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共28.4k字</span>
+  <span class="post-count">博客全站共28.9k字</span>
 </div>
 
         
