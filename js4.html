@@ -141,7 +141,8 @@
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://p99.pstatp.com/large/4711000441cc4ea237bb">
 <meta property="og:image" content="http://p1.pstatp.com/large/4ad70002b362ba3ccd37">
-<meta property="og:updated_time" content="2019-01-31T05:46:18.053Z">
+<meta property="og:image" content="http://p9.pstatp.com/large/4ada0000956929660f25">
+<meta property="og:updated_time" content="2019-01-31T06:13:57.705Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Javascript事件流">
 <meta name="twitter:description" content="事件流 1234567当触发某个事件时（某个事件发生了），从子元素向父级元素触发 或 从父级元素向子元素触发的过程 ，这个过程 称为事件流事件流有两种模式：事件冒泡：从子元素向父级元素触发 small --- big ---body --- document -- window事件捕获：从父级元素向子元素触发 window --- document --- body --- big --- sma">
@@ -383,7 +384,7 @@
                 
               
 
-              <time title="创建时间：2019-01-31 13:43:12 / 修改时间：13:46:18" itemprop="dateCreated datePublished" datetime="2019-01-31T13:43:12+08:00">2019-01-31</time>
+              <time title="创建时间：2019-01-31 13:43:12 / 修改时间：14:13:57" itemprop="dateCreated datePublished" datetime="2019-01-31T13:43:12+08:00">2019-01-31</time>
             
 
             
@@ -434,11 +435,21 @@
       
         <h2 id="事件流"><a href="#事件流" class="headerlink" title="事件流"></a>事件流</h2><p><img src="http://p99.pstatp.com/large/4711000441cc4ea237bb"></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">当触发某个事件时（某个事件发生了），从子元素向父级元素触发 或 从父级元素向子元素触发的过程 ，这个过程 称为事件流</span><br><span class="line"></span><br><span class="line">事件流有两种模式：</span><br><span class="line"></span><br><span class="line">事件冒泡：从子元素向父级元素触发 small --- big ---body --- document -- window</span><br><span class="line"></span><br><span class="line">事件捕获：从父级元素向子元素触发 window --- document --- body --- big --- small</span><br></pre></td></tr></table></figure>
-<p><img src="http://p1.pstatp.com/large/4ad70002b362ba3ccd37"></p>
+<p><img src="http://p1.pstatp.com/large/4ad70002b362ba3ccd37"><br><a id="more"></a></p>
 <h2 id="事件冒泡"><a href="#事件冒泡" class="headerlink" title="事件冒泡"></a>事件冒泡</h2><p>当子元素触发某个事件时，同样的事件回向父级元素触发，这个过程称之为事件冒泡</p>
 <h2 id="阻止事件冒泡"><a href="#阻止事件冒泡" class="headerlink" title="阻止事件冒泡"></a>阻止事件冒泡</h2><p>兼容写法：<br>e.stopPropagation?e.stopPropagation():e.cancelBubble=true;</p>
 <h2 id="事件绑定"><a href="#事件绑定" class="headerlink" title="事件绑定"></a>事件绑定</h2><p>事件绑定： 如何为元素添加一个事件</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1、在标签上写事件名称 &lt;input onclick = &quot;fun()&quot;&gt;</span><br><span class="line"></span><br><span class="line">2、通过 对象.事件 = function()&#123; .... &#125; ,写在 script 标签内部的</span><br><span class="line"></span><br><span class="line">3、同过 addEventListener() 方法</span><br></pre></td></tr></table></figure>
+<h2 id="事件监听"><a href="#事件监听" class="headerlink" title="事件监听"></a>事件监听</h2><p>通过 addEventListener 方法为元素添加事件 称为事件的监听</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">事件监听好处：</span><br><span class="line"></span><br><span class="line">可以为同一个元素添加多个同样事件</span><br><span class="line"></span><br><span class="line">为同一个元素添加多个同样事件时，执行顺序从上到下顺序执行。</span><br><span class="line"></span><br><span class="line">事件监听用法：</span><br><span class="line"></span><br><span class="line">对象.addEventListener(&quot;事件&quot;,function()&#123;&#125;,true/false) --- 高版本浏览器</span><br><span class="line"></span><br><span class="line">说明：</span><br><span class="line"></span><br><span class="line">第一个参数： 监听的事件 这里的事件没有on</span><br><span class="line"></span><br><span class="line">第二个参数： 事件处理程序</span><br><span class="line"></span><br><span class="line">第三个参数： 是一个布尔值 true表示 事件的捕获 false 表示事件的冒泡 （默认是false）</span><br><span class="line"></span><br><span class="line">对象.attachEvent(&quot;事件&quot;,事件处理程序) ---- 低版本浏览器</span><br><span class="line"></span><br><span class="line">说明：</span><br><span class="line"></span><br><span class="line">第一个参数： 监听的事件 这里的事件有on</span><br><span class="line"></span><br><span class="line">第二个参数： 事件处理程序</span><br></pre></td></tr></table></figure>
+<h2 id="冒泡和捕获的执行顺序"><a href="#冒泡和捕获的执行顺序" class="headerlink" title="冒泡和捕获的执行顺序"></a>冒泡和捕获的执行顺序</h2><p>当同一个元素既有事件冒泡和事件捕获时，先执行捕获 ; 后执行冒泡<br><img src="http://p9.pstatp.com/large/4ada0000956929660f25"></p>
+<h2 id="事件委托"><a href="#事件委托" class="headerlink" title="事件委托"></a>事件委托</h2><p>委托：让别人去做</p>
+<p>事件委托：把某个事件委托给别人去做</p>
+<p>委托的好处：</p>
+<p>当某些元素具有同样的事件时，为了提高程序的执行效率，可以把这些元素的事件加到他们的父级元素上。</p>
+<p>委托实现方式：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">1、 父级元素.事件 = function()&#123; ... &#125;</span><br><span class="line"></span><br><span class="line">2、 通过事件监听方法 addEventListener 实现</span><br><span class="line"></span><br><span class="line">父级元素.addEventListener(&quot;事件&quot;,function()&#123; .... &#125;)</span><br><span class="line"></span><br><span class="line">委托实现时，获取事件源的属性： e.target || e.srcElement</span><br><span class="line"></span><br><span class="line">委托实现原理： 利用事件冒泡的机制，将某些元素的事件添加到父级元素上</span><br><span class="line"></span><br><span class="line">委托对事件的限制： 不是所有的事件都可以实现委托，例如下面的事件一般不需要委托 （onclick一般用委托实现的比较多）</span><br><span class="line"></span><br><span class="line">onload onfocus onblur ....</span><br></pre></td></tr></table></figure>
+<h2 id="注意的问题"><a href="#注意的问题" class="headerlink" title="注意的问题"></a>注意的问题</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">button 标签 在 form 中相当于 submit 按钮，会刷新页面</span><br><span class="line"></span><br><span class="line">&lt;a href =<span class="string">"#"</span>&gt;超链接&lt;<span class="regexp">/a&gt;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">阻止超链接的跳转功能</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">&lt;a href ="javascript:;"&gt;超链接&lt;/</span>a&gt;</span><br><span class="line"></span><br><span class="line">&lt;a href =<span class="string">"javascript:void(0);"</span>&gt;超链接&lt;<span class="regexp">/a&gt;</span></span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -463,7 +474,7 @@
   <p><span>本文标题:</span><a href="/js4.html">Javascript事件流</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 Jonathon 的个人博客">Jonathon</a></p>
   <p><span>发布时间:</span>2019年01月31日 - 13:01</p>
-  <p><span>最后更新:</span>2019年01月31日 - 13:01</p>
+  <p><span>最后更新:</span>2019年01月31日 - 14:01</p>
   <p><span>原始链接:</span><a href="/js4.html" title="Javascript事件流">https://www.jonathon.cn/js4.html</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://www.jonathon.cn/js4.html"  aria-label="复制成功！"></i></span>
   </p>
@@ -770,7 +781,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#事件流"><span class="nav-number">1.</span> <span class="nav-text">事件流</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#事件冒泡"><span class="nav-number">2.</span> <span class="nav-text">事件冒泡</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#阻止事件冒泡"><span class="nav-number">3.</span> <span class="nav-text">阻止事件冒泡</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#事件绑定"><span class="nav-number">4.</span> <span class="nav-text">事件绑定</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#事件流"><span class="nav-number">1.</span> <span class="nav-text">事件流</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#事件冒泡"><span class="nav-number">2.</span> <span class="nav-text">事件冒泡</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#阻止事件冒泡"><span class="nav-number">3.</span> <span class="nav-text">阻止事件冒泡</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#事件绑定"><span class="nav-number">4.</span> <span class="nav-text">事件绑定</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#事件监听"><span class="nav-number">5.</span> <span class="nav-text">事件监听</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#冒泡和捕获的执行顺序"><span class="nav-number">6.</span> <span class="nav-text">冒泡和捕获的执行顺序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#事件委托"><span class="nav-number">7.</span> <span class="nav-text">事件委托</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#注意的问题"><span class="nav-number">8.</span> <span class="nav-text">注意的问题</span></a></li></ol></div>
             
 
           </div>
@@ -817,7 +828,7 @@
 -->
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共26.7k字</span>
+  <span class="post-count">博客全站共27.2k字</span>
 </div>
 
         
