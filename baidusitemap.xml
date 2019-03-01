@@ -5,7 +5,7 @@
     
   <url>
     <loc>https://www.jonathon.cn/js7.html</loc>
-    <lastmod>2019-03-01T09:13:52.877Z</lastmod>
+    <lastmod>2019-03-01T09:14:50.245Z</lastmod>
     <data>
         <display>
         <title>Javascript AJAX</title>
@@ -112,12 +112,12 @@
 
     
   <url>
-    <loc>https://www.jonathon.cn/js4.html</loc>
+    <loc>https://www.jonathon.cn/js2.html</loc>
     <lastmod>2019-01-31T06:46:32.376Z</lastmod>
     <data>
         <display>
-        <title>Javascript事件流</title>
-        <pubTime>2019-01-31T05:43:12.000Z</pubTime>
+        <title>JavascriptDom</title>
+        <pubTime>2018-11-21T02:26:55.000Z</pubTime>
         
         <tag>JavaScript</tag>
          
@@ -134,12 +134,12 @@
 
     
   <url>
-    <loc>https://www.jonathon.cn/js2.html</loc>
+    <loc>https://www.jonathon.cn/js4.html</loc>
     <lastmod>2019-01-31T06:46:32.376Z</lastmod>
     <data>
         <display>
-        <title>JavascriptDom</title>
-        <pubTime>2018-11-21T02:26:55.000Z</pubTime>
+        <title>Javascript事件流</title>
+        <pubTime>2019-01-31T05:43:12.000Z</pubTime>
         
         <tag>JavaScript</tag>
          
