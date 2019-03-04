@@ -132,7 +132,7 @@
 
 
   <meta name="description" content="JSON Web Token（缩写 JWT）是目前最流行的跨域认证解决方案，本文介绍它的原理和用法。 一、跨域认证的问题互联网服务离不开用户认证。一般流程是下面这样。  用户向服务器发送用户名和密码。 服务器验证通过后，在当前对话（session）里面保存相关数据，比如用户角色、登录时间等等。 服务器向用户返回一个 session_id，写入用户的 Cookie。 用户随后的每一次请求，都会通过">
-<meta name="keywords" content="JavaScript,前端,转载">
+<meta name="keywords" content="JavaScript,前端">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JSON Web Token 入门教程">
 <meta property="og:url" content="https://www.jonathon.cn/jwt.html">
@@ -142,7 +142,7 @@
 <meta property="og:image" content="https://www.wangbase.com/blogimg/asset/201807/bg2018072301.jpg">
 <meta property="og:image" content="https://www.wangbase.com/blogimg/asset/201807/bg2018072304.jpg">
 <meta property="og:image" content="https://www.wangbase.com/blogimg/asset/201807/bg2018072303.jpg">
-<meta property="og:updated_time" content="2019-03-04T11:36:33.588Z">
+<meta property="og:updated_time" content="2019-03-04T11:39:46.901Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JSON Web Token 入门教程">
 <meta name="twitter:description" content="JSON Web Token（缩写 JWT）是目前最流行的跨域认证解决方案，本文介绍它的原理和用法。 一、跨域认证的问题互联网服务离不开用户认证。一般流程是下面这样。  用户向服务器发送用户名和密码。 服务器验证通过后，在当前对话（session）里面保存相关数据，比如用户角色、登录时间等等。 服务器向用户返回一个 session_id，写入用户的 Cookie。 用户随后的每一次请求，都会通过">
@@ -384,7 +384,7 @@
                 
               
 
-              <time title="创建时间：2019-03-04 19:04:12 / 修改时间：19:36:33" itemprop="dateCreated datePublished" datetime="2019-03-04T19:04:12+08:00">2019-03-04</time>
+              <time title="创建时间：2019-03-04 19:04:12 / 修改时间：19:39:46" itemprop="dateCreated datePublished" datetime="2019-03-04T19:04:12+08:00">2019-03-04</time>
             
 
             
@@ -406,7 +406,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/笔记/" itemprop="url" rel="index"><span itemprop="name">笔记</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/转载/" itemprop="url" rel="index"><span itemprop="name">转载</span></a></span>
 
                 
                 
@@ -464,6 +464,7 @@
 <p>举例来说，A 网站和 B 网站是同一家公司的关联服务。现在要求，用户只要在其中一个网站登录，再访问另一个网站就会自动登录，请问怎么实现？</p>
 <p>一种解决方案是 session 数据持久化，写入数据库或别的持久层。各种服务收到请求后，都向持久层请求数据。这种方案的优点是架构清晰，缺点是工程量比较大。另外，持久层万一挂了，就会单点失败。</p>
 <p>另一种方案是服务器索性不保存 session 数据了，所有数据都保存在客户端，每次请求都发回服务器。JWT 就是这种方案的一个代表</p>
+<a id="more"></a>
 <h2 id="二、JWT-的原理"><a href="#二、JWT-的原理" class="headerlink" title="二、JWT 的原理"></a>二、JWT 的原理</h2><p>JWT 的原理是，服务器认证以后，生成一个 JSON 对象，发回给用户，就像下面这样。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">"姓名"</span>: <span class="string">"张三"</span>,</span><br><span class="line">  <span class="string">"角色"</span>: <span class="string">"管理员"</span>,</span><br><span class="line">  <span class="string">"到期时间"</span>: <span class="string">"2018年7月1日0点0分"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>以后，用户与服务端通信的时候，都要发回这个 JSON 对象。服务器完全只靠这个对象认定用户身份。为了防止用户篡改数据，服务器在生成这个对象的时候，会加上签名（详见后文）。</p>
@@ -566,8 +567,6 @@
             <a href="/tags/JavaScript/" <i class="fa fa-tag"></i>JavaScript</a>
           
             <a href="/tags/前端/" <i class="fa fa-tag"></i>前端</a>
-          
-            <a href="/tags/转载/" <i class="fa fa-tag"></i>转载</a>
           
         </div>
       
@@ -692,7 +691,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">4</span>
+                      
+                    
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -733,9 +734,7 @@
                     
                       
                     
-                      
-                    
-                    <span class="site-state-item-count">15</span>
+                    <span class="site-state-item-count">14</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
