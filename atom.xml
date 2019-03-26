@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.jonathon.cn/"/>
-  <updated>2019-03-04T11:39:46.901Z</updated>
+  <updated>2019-03-26T11:36:07.499Z</updated>
   <id>https://www.jonathon.cn/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Vue优化构建过程</title>
+    <link href="https://www.jonathon.cn/vue-dll.html"/>
+    <id>https://www.jonathon.cn/vue-dll.html</id>
+    <published>2019-03-26T11:33:25.000Z</published>
+    <updated>2019-03-26T11:36:07.499Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="笔记" scheme="https://www.jonathon.cn/categories/%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="javascript" scheme="https://www.jonathon.cn/tags/javascript/"/>
+    
+      <category term="vue" scheme="https://www.jonathon.cn/tags/vue/"/>
+    
+  </entry>
   
   <entry>
     <title>JSON Web Token 入门教程</title>
@@ -375,9 +395,9 @@
       <category term="笔记" scheme="https://www.jonathon.cn/categories/%E7%AC%94%E8%AE%B0/"/>
     
     
-      <category term="vue" scheme="https://www.jonathon.cn/tags/vue/"/>
-    
       <category term="javascript" scheme="https://www.jonathon.cn/tags/javascript/"/>
+    
+      <category term="vue" scheme="https://www.jonathon.cn/tags/vue/"/>
     
   </entry>
   
@@ -556,31 +576,6 @@
     
     
       <category term="hexo" scheme="https://www.jonathon.cn/tags/hexo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Vue实战技巧</title>
-    <link href="https://www.jonathon.cn/Vue%E5%AE%9E%E6%88%98%E6%8A%80%E5%B7%A7.html"/>
-    <id>https://www.jonathon.cn/Vue实战技巧.html</id>
-    <published>2018-07-18T09:14:08.000Z</published>
-    <updated>2018-07-18T12:23:02.528Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="Vue-在methods中使用filter的方法"><a href="#Vue-在methods中使用filter的方法" class="headerlink" title="Vue 在methods中使用filter的方法"></a>Vue 在methods中使用filter的方法</h2><p>需求是 要格式化银行卡 我们项目用了一个ui组件库<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 众所周知 filter 是可以在dom里面的 但是需求就是各种个样 唉</span></span><br><span class="line">&lt;span&gt;(&#123;&#123;item.bdactp | cardtpFilter&#125;&#125;)&lt;<span class="regexp">/span&gt;&lt;/</span>p&gt; </span><br><span class="line"></span><br><span class="line">&lt;popup-picker title=<span class="string">"卡号"</span> @on-change=<span class="string">"handleBankCard"</span> :data=<span class="string">"cardList"</span> v-model=<span class="string">"cardNumber"</span>&gt;&lt;/popup-picker&gt;</span><br></pre></td></tr></table></figure></p><p>于是找到了一个方法<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.$options.filters[filter](...args)   <span class="comment">//这种方法很简单,也很实用</span></span><br><span class="line"><span class="comment">//实践</span></span><br><span class="line">bankList.map(<span class="function"><span class="params">item</span> =&gt;</span> &#123;</span><br><span class="line">      arr.push(<span class="keyword">this</span>.$options.filters[<span class="string">'cardnoFilter'</span>](item.bdacct));<span class="comment">// 如果要在methods里面用filter的方法 这样写</span></span><br><span class="line">      <span class="keyword">this</span>.telNum = item.phonno;</span><br><span class="line">    &#125;);</span><br></pre></td></tr></table></figure></p><a id="more"></a><h2 id="Vue-Object-defineProperty最佳实践"><a href="#Vue-Object-defineProperty最佳实践" class="headerlink" title="Vue Object.defineProperty最佳实践"></a>Vue Object.defineProperty最佳实践</h2><p>Object.defineProperty ，顾名思义，为对象定义属性。在js中我们可以通过下面这几种方法定义属性：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">  <span class="comment">// (1) define someOne property name</span></span><br><span class="line">someOne.name = <span class="string">'cover'</span>;</span><br><span class="line"><span class="comment">//or use (2) </span></span><br><span class="line">someOne[<span class="string">'name'</span>] = <span class="string">'cover'</span>;</span><br><span class="line"><span class="comment">// or use (3) defineProperty</span></span><br><span class="line"><span class="built_in">Object</span>.defineProperty(someOne, <span class="string">'name'</span>, &#123;</span><br><span class="line">    value : <span class="string">'cover'</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p><p>语法：<br>Object.defineProperty(object, propertyname, descriptor)<br>参数：<br>object 必需。 要在其上添加或修改属性的对象。 这可能是一个本机 JavaScript对象（即用户定义的对象或内置对象）或 DOM 对象。<br>propertyname 必需。 一个包含属性名称的字符串。<br>descriptor 必需。 属性描述符。 它可以针对数据属性或访问器属性。</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line">最佳实践</span><br><span class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">'vue'</span>;</span><br><span class="line"><span class="keyword">const</span> store = <span class="built_in">window</span>.sessionStorage;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">StoreMethod</span> </span>&#123;</span><br><span class="line">  set(key, val) &#123;</span><br><span class="line">    <span class="keyword">if</span> (key &amp;&amp; <span class="keyword">typeof</span> key === <span class="string">'string'</span>) &#123;</span><br><span class="line">      store.setItem(key, <span class="built_in">JSON</span>.stringify(val));</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">this</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  get(key) &#123;</span><br><span class="line">    <span class="keyword">const</span> value = store.getItem(key);</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">typeof</span> value !== <span class="string">'string'</span>) &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="literal">undefined</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="built_in">JSON</span>.parse(value);</span><br><span class="line">    &#125; <span class="keyword">catch</span> (e) &#123;</span><br><span class="line">      <span class="keyword">return</span> value || <span class="literal">undefined</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  remove(key) &#123;</span><br><span class="line">    <span class="keyword">const</span> val = <span class="keyword">this</span>.get(key);</span><br><span class="line">    store.removeItem(key);</span><br><span class="line">    <span class="keyword">return</span> val;</span><br><span class="line">  &#125;</span><br><span class="line">  has(key) &#123;</span><br><span class="line">    <span class="keyword">let</span> result = <span class="literal">false</span>;</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">this</span>.get(key) &amp;&amp; <span class="keyword">this</span>.get(key) !== <span class="string">'undefined'</span>) &#123;</span><br><span class="line">      result = <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> result;</span><br><span class="line">  &#125;</span><br><span class="line">  clear() &#123;</span><br><span class="line">    store.clear();</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">this</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">Object</span>.defineProperty(Vue.prototype, <span class="string">'$storage'</span>, &#123;</span><br><span class="line">  value: <span class="keyword">new</span> StoreMethod()</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">// 使用</span></span><br><span class="line">    <span class="keyword">let</span> info = <span class="keyword">this</span>.$storage.get(<span class="string">'turnOut'</span>);</span><br></pre></td></tr></table></figure><h2 id="小程序"><a href="#小程序" class="headerlink" title="小程序"></a>小程序</h2><p><img src="https://user-gold-cdn.xitu.io/2018/5/29/163aa02a511249dd?imageView2/0/w/1280/h/960/format/webp/ignore-error/1"></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;Vue-在methods中使用filter的方法&quot;&gt;&lt;a href=&quot;#Vue-在methods中使用filter的方法&quot; class=&quot;headerlink&quot; title=&quot;Vue 在methods中使用filter的方法&quot;&gt;&lt;/a&gt;Vue 在methods中使用filter的方法&lt;/h2&gt;&lt;p&gt;需求是 要格式化银行卡 我们项目用了一个ui组件库&lt;br&gt;&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// 众所周知 filter 是可以在dom里面的 但是需求就是各种个样 唉&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;span&amp;gt;(&amp;#123;&amp;#123;item.bdactp | cardtpFilter&amp;#125;&amp;#125;)&amp;lt;&lt;span class=&quot;regexp&quot;&gt;/span&amp;gt;&amp;lt;/&lt;/span&gt;p&amp;gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;popup-picker title=&lt;span class=&quot;string&quot;&gt;&quot;卡号&quot;&lt;/span&gt; @on-change=&lt;span class=&quot;string&quot;&gt;&quot;handleBankCard&quot;&lt;/span&gt; :data=&lt;span class=&quot;string&quot;&gt;&quot;cardList&quot;&lt;/span&gt; v-model=&lt;span class=&quot;string&quot;&gt;&quot;cardNumber&quot;&lt;/span&gt;&amp;gt;&amp;lt;/popup-picker&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;于是找到了一个方法&lt;br&gt;&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.$options.filters[filter](...args)   &lt;span class=&quot;comment&quot;&gt;//这种方法很简单,也很实用&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//实践&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;bankList.map(&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;params&quot;&gt;item&lt;/span&gt; =&amp;gt;&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      arr.push(&lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.$options.filters[&lt;span class=&quot;string&quot;&gt;&#39;cardnoFilter&#39;&lt;/span&gt;](item.bdacct));&lt;span class=&quot;comment&quot;&gt;// 如果要在methods里面用filter的方法 这样写&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.telNum = item.phonno;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="笔记" scheme="https://www.jonathon.cn/categories/%E7%AC%94%E8%AE%B0/"/>
-    
-    
-      <category term="vue" scheme="https://www.jonathon.cn/tags/vue/"/>
-    
-      <category term="javascript" scheme="https://www.jonathon.cn/tags/javascript/"/>
     
   </entry>
   
