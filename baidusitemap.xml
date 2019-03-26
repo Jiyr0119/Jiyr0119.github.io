@@ -5,7 +5,7 @@
     
   <url>
     <loc>https://www.jonathon.cn/vue-dll.html</loc>
-    <lastmod>2019-03-26T12:35:35.245Z</lastmod>
+    <lastmod>2019-03-26T12:39:32.509Z</lastmod>
     <data>
         <display>
         <title>Vue性能优化与构建优化</title>
@@ -134,12 +134,12 @@
 
     
   <url>
-    <loc>https://www.jonathon.cn/js2.html</loc>
+    <loc>https://www.jonathon.cn/js4.html</loc>
     <lastmod>2019-01-31T06:46:32.376Z</lastmod>
     <data>
         <display>
-        <title>JavascriptDom</title>
-        <pubTime>2018-11-21T02:26:55.000Z</pubTime>
+        <title>Javascript事件流</title>
+        <pubTime>2019-01-31T05:43:12.000Z</pubTime>
         
         <tag>JavaScript</tag>
          
@@ -178,12 +178,12 @@
 
     
   <url>
-    <loc>https://www.jonathon.cn/js4.html</loc>
+    <loc>https://www.jonathon.cn/js2.html</loc>
     <lastmod>2019-01-31T06:46:32.376Z</lastmod>
     <data>
         <display>
-        <title>Javascript事件流</title>
-        <pubTime>2019-01-31T05:43:12.000Z</pubTime>
+        <title>JavascriptDom</title>
+        <pubTime>2018-11-21T02:26:55.000Z</pubTime>
         
         <tag>JavaScript</tag>
          
