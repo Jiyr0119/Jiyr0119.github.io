@@ -4,16 +4,31 @@
 
     
   <url>
+    <loc>https://www.jonathon.cn/vue-component.html</loc>
+    <lastmod>2019-06-04T08:13:14.163Z</lastmod>
+    <data>
+        <display>
+        <title>陪你写一个Vue全局拖拽组件</title>
+        <pubTime>2019-06-04T07:53:42.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://www.jonathon.cn/Vue%E5%AE%9E%E6%88%98%E6%8A%80%E5%B7%A7.html</loc>
-    <lastmod>2019-05-22T09:22:49.758Z</lastmod>
+    <lastmod>2019-06-04T07:50:51.599Z</lastmod>
     <data>
         <display>
         <title>Vue实战问题记录</title>
         <pubTime>2018-07-18T09:14:08.000Z</pubTime>
         
-        <tag>javascript</tag>
-         
         <tag>vue</tag>
+         
+        <tag>javascript</tag>
          
          
            
@@ -33,9 +48,9 @@
         <title>Vue性能优化与构建优化</title>
         <pubTime>2019-03-26T11:33:25.000Z</pubTime>
         
-        <tag>javascript</tag>
-         
         <tag>vue</tag>
+         
+        <tag>javascript</tag>
          
          
            
@@ -156,12 +171,12 @@
 
     
   <url>
-    <loc>https://www.jonathon.cn/js2.html</loc>
+    <loc>https://www.jonathon.cn/js5.html</loc>
     <lastmod>2019-01-31T06:46:32.376Z</lastmod>
     <data>
         <display>
-        <title>JavascriptDom</title>
-        <pubTime>2018-11-21T02:26:55.000Z</pubTime>
+        <title>Javascript Cookie</title>
+        <pubTime>2019-01-31T06:34:52.000Z</pubTime>
         
         <tag>JavaScript</tag>
          
@@ -178,12 +193,12 @@
 
     
   <url>
-    <loc>https://www.jonathon.cn/js5.html</loc>
+    <loc>https://www.jonathon.cn/js2.html</loc>
     <lastmod>2019-01-31T06:46:32.376Z</lastmod>
     <data>
         <display>
-        <title>Javascript Cookie</title>
-        <pubTime>2019-01-31T06:34:52.000Z</pubTime>
+        <title>JavascriptDom</title>
+        <pubTime>2018-11-21T02:26:55.000Z</pubTime>
         
         <tag>JavaScript</tag>
          
@@ -418,9 +433,9 @@
         <title>认识Vuex</title>
         <pubTime>2018-08-28T12:59:09.192Z</pubTime>
         
-        <tag>javascript</tag>
-         
         <tag>vue</tag>
+         
+        <tag>javascript</tag>
          
          
            
@@ -460,9 +475,9 @@
         <title>我眼中的Vue</title>
         <pubTime>2018-07-17T04:24:49.143Z</pubTime>
         
-        <tag>javascript</tag>
-         
         <tag>vue</tag>
+         
+        <tag>javascript</tag>
          
          
            

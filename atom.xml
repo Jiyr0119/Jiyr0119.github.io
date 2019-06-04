@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.jonathon.cn/"/>
-  <updated>2019-03-26T12:45:22.096Z</updated>
+  <updated>2019-06-04T08:13:14.163Z</updated>
   <id>https://www.jonathon.cn/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>陪你写一个Vue全局拖拽组件</title>
+    <link href="https://www.jonathon.cn/vue-component.html"/>
+    <id>https://www.jonathon.cn/vue-component.html</id>
+    <published>2019-06-04T07:53:42.000Z</published>
+    <updated>2019-06-04T08:13:14.163Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>大佬们，都是手摸手带你们学习，而我就摸不了你们的小手了。因为可能我分享的内容，是一些大家早已知悉的内容，只不过这个需求，挺有意思的，我实现完之后。写这个文章为了分享一些能帮助到别人的内容，也是为了归档一下自己的知识点。有写的不好的地方望指正。</p><h2 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h2><p>大家在浏览电商的app的时候，大多数在详情页的右下角上方，会有一个悬浮的按钮。用来分享商品详情、或者回到首页等功能的实现。我们的项目呢是，基于小程序的一款金融平台，应用了小程序原声+webview的方案。因为webview里面路由跳转是vue的跳转，小程序并没有navigateto，在不同系统，机型上，小程序的webview实现方式有所不同，而且页面层级增加之后。就会导致用户回退的时候，可能会点很多次才能回到小程序的原生页面。所以我们也采用了这一方案。</p><p><img src="https://user-gold-cdn.xitu.io/2018/5/29/163aa02a511249dd?imageView2/0/w/1280/h/960/format/webp/ignore-error/1"></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;大佬们，都是手摸手带你们学习，而我就摸不了你们的小手了。因为可能我分享的内容，是一些大家早已知悉的内容，只不过这个需求，挺有意思的，我实现完
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Vue性能优化与构建优化</title>
@@ -38,9 +59,9 @@
       <category term="笔记" scheme="https://www.jonathon.cn/categories/%E7%AC%94%E8%AE%B0/"/>
     
     
-      <category term="javascript" scheme="https://www.jonathon.cn/tags/javascript/"/>
-    
       <category term="vue" scheme="https://www.jonathon.cn/tags/vue/"/>
+    
+      <category term="javascript" scheme="https://www.jonathon.cn/tags/javascript/"/>
     
   </entry>
   
@@ -403,9 +424,9 @@
       <category term="笔记" scheme="https://www.jonathon.cn/categories/%E7%AC%94%E8%AE%B0/"/>
     
     
-      <category term="javascript" scheme="https://www.jonathon.cn/tags/javascript/"/>
-    
       <category term="vue" scheme="https://www.jonathon.cn/tags/vue/"/>
+    
+      <category term="javascript" scheme="https://www.jonathon.cn/tags/javascript/"/>
     
   </entry>
   
@@ -554,29 +575,6 @@
       &lt;p&gt;本文全部内容是基于next主题。&lt;/p&gt;
 &lt;h2 id=&quot;起步&quot;&gt;&lt;a href=&quot;#起步&quot; class=&quot;headerlink&quot; title=&quot;起步&quot;&gt;&lt;/a&gt;起步&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://www.jianshu.com/p/189fd945f38f&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;搭建个人博客-hexo+github详细完整步骤&lt;/a&gt;&lt;br&gt;大神这里已经写的很清楚了，我就不一一赘述了。送给大神一朵小发发～&lt;/p&gt;
 &lt;h2 id=&quot;在右上角或者左上角实现fork-me-on-github&quot;&gt;&lt;a href=&quot;#在右上角或者左上角实现fork-me-on-github&quot; class=&quot;headerlink&quot; title=&quot;在右上角或者左上角实现fork me on github&quot;&gt;&lt;/a&gt;在右上角或者左上角实现fork me on github&lt;/h2&gt;&lt;p&gt;点击&lt;a href=&quot;http://tholman.com/github-corners/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;这里&lt;/a&gt;或者&lt;a href=&quot;https://blog.github.com/2008-12-19-github-ribbons/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;这里&lt;/a&gt;挑选自己喜欢的样式，并复制代码。 例如，我是复制如下代码：&lt;br&gt;
-    
-    </summary>
-    
-      <category term="博客搭建" scheme="https://www.jonathon.cn/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
-    
-    
-      <category term="hexo" scheme="https://www.jonathon.cn/tags/hexo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>hexo seo优化</title>
-    <link href="https://www.jonathon.cn/hexo-seo%E4%BC%98%E5%8C%96.html"/>
-    <id>https://www.jonathon.cn/hexo-seo优化.html</id>
-    <published>2018-07-19T03:25:46.000Z</published>
-    <updated>2018-09-16T02:44:54.889Z</updated>
-    
-    <content type="html"><![CDATA[<p>SEO (Search Engine Optimization)，即搜索引擎优化。简单来说，SEO就是您可以使用提升网站排名的所有方法的总称，SEO用于确保您的网站及其内容在搜索引擎结果页面（SERP）上的可见性。</p><h2 id="验证你的网站-让你博客被搜索引擎找到"><a href="#验证你的网站-让你博客被搜索引擎找到" class="headerlink" title="验证你的网站(让你博客被搜索引擎找到)"></a>验证你的网站(让你博客被搜索引擎找到)</h2><p>在谷歌或者百度的搜索链接中，使用以下格式可以直接搜索自己的域名， 如果能搜索到就说明已经被收录，反之则没有。可以直接搜索自己的域名，或者加一些关键词来更好地判断，例如：<br>site: <a href="https://www.jonathon.cn/">https://www.jonathon.cn/</a><br><a id="more"></a></p><h2 id="提交我们的网站"><a href="#提交我们的网站" class="headerlink" title="提交我们的网站"></a>提交我们的网站</h2><p>若未被搜索引擎收录，则需进行以下配置，首先要让搜索引擎先验证我们对网站的所有权，两个搜索引擎提交的入口分别为：<br><a href="https://www.google.com/webmasters/" target="_blank" rel="noopener">Google Search Console</a><br><a href="https://ziyuan.baidu.com/site/" target="_blank" rel="noopener">baidu</a><br>网上有很多验证方式，下载html部署的。<br>但是我验证的时候，老是失败。<br>我就选择了meta标签验证方式<br>打开 themes/next/layout/_partials/head/head.swig 添加两行标签就可以了。也是很方便的～<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta name=<span class="string">"baidu-site-verification"</span> content=<span class="string">"your code"</span> /&gt;</span><br><span class="line">&lt;meta name=<span class="string">"google-site-verification"</span> content=<span class="string">"your code"</span> /&gt;</span><br><span class="line">然后执行 hexo 部署命令</span><br><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</span><br></pre></td></tr></table></figure></p><p>最后返回验证页面，就可以查看验证是否通过了</p><h2 id="Sitemap"><a href="#Sitemap" class="headerlink" title="Sitemap"></a>Sitemap</h2><p>Sitemap即网站地图，它的作用在于便于搜索引擎更加智能地抓取网站。最简单和常见的sitemap形式，是XML文件，在其中列出网站中的网址以及关于每个网址的其他元数据</p><h3 id="安装sitemap生成插件"><a href="#安装sitemap生成插件" class="headerlink" title="安装sitemap生成插件"></a>安装sitemap生成插件</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-generator-sitemap --save</span><br><span class="line">npm install hexo-generator-baidu-sitemap --save</span><br></pre></td></tr></table></figure><h3 id="编辑站点目录下的-config-yml，添加一下字段"><a href="#编辑站点目录下的-config-yml，添加一下字段" class="headerlink" title="编辑站点目录下的_config.yml，添加一下字段"></a>编辑站点目录下的_config.yml，添加一下字段</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">#hexo sitemap</span><br><span class="line">sitemap:</span><br><span class="line">  path: sitemap.xml</span><br><span class="line">baidusitemap:</span><br><span class="line">  path: baidusitemap.xml</span><br><span class="line">  之后在执行 hexo g 后， public目录下发现生成了 sitemap.xml和baidusitemap.xml 就表示配置成功了。</span><br></pre></td></tr></table></figure><h3 id="提交sitemap"><a href="#提交sitemap" class="headerlink" title="提交sitemap"></a>提交sitemap</h3><h4 id="向谷歌提交"><a href="#向谷歌提交" class="headerlink" title="向谷歌提交"></a>向谷歌提交</h4><p>向谷歌提交 sitemap 比较简单，登录 <a href="https://www.google.com/webmasters/" target="_blank" rel="noopener">Google Search Console</a> ，选择已经验证过的站点，在抓取 -&gt; 站点地图 中，右上角可看到 添加 / 测试站点地图，添加 sitemap.xml 的链接即可，谷歌效率较高，一般当天或者第二天就能搜到微博了。如图：<br><img src="https://upload-images.jianshu.io/upload_images/6210783-db1d1482aaa09886.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/700"></p><h4 id="向百度提交"><a href="#向百度提交" class="headerlink" title="向百度提交"></a>向百度提交</h4><p>与谷歌类似，我们可以直接向百度交 sitemap，登录 <a href="https://ziyuan.baidu.com/" target="_blank" rel="noopener">百度站长平台</a>，点击 网页抓取-&gt; 链接提交，在 自动提交中选择 sitemap，输入自己的域名加 baidusitemap.xml 即可，之后可查看 url 提取是否成功。<br>由于 GitHub 屏蔽了百度的爬虫，即使提交成功，百度知道这里有可供抓取的链接，也不一定能抓取成功。 首先我们先检测一下百度爬虫是否可以抓取网页。在百度站长平台网页抓取-&gt;抓取诊断 中，选择PC UA点击抓取 , 查看抓取状态， 如果显示 抓取失败， 则需要进一步的配置。</p><h5 id="推送方式"><a href="#推送方式" class="headerlink" title="推送方式"></a>推送方式</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">如何选择链接提交方式</span><br><span class="line"><span class="number">1</span>、主动推送：最为快速的提交方式，推荐您将站点当天新产出链接立即通过此方式推送给百度，以保证新链接可以及时被百度收录。</span><br><span class="line"><span class="number">2</span>、自动推送：最为便捷的提交方式，请将自动推送的 JS 代码部署在站点的每一个页面源代码中，部署代码的页面在每次被浏览时，链接会被自动推送给百度。可以与主动推送配合使用。</span><br><span class="line"><span class="number">3</span>、sitemap：您可以定期将网站链接放到 sitemap 中，然后将 sitemap 提交给百度。百度会周期性的抓取检查您提交的 sitemap，对其中的链接进行处理，但收录速度慢于主动推送。</span><br><span class="line"><span class="number">4</span>、手动提交：一次性提交链接给百度，可以使用此种方式</span><br><span class="line">next 主题已经部署了自动推送的代码，我们只需在主题配置文件 中找到 baidu_push 字段 , 设置其为 <span class="literal">true</span> 即可。</span><br></pre></td></tr></table></figure><h2 id="添加robots-txt"><a href="#添加robots-txt" class="headerlink" title="添加robots.txt"></a>添加robots.txt</h2><p>robots.txt（统一小写）是一种存放于网站根目录下的ASCII编码的文本文件，它的作用是告诉搜索引擎此网站中哪些内容是可以被爬取的，哪些是禁止爬取的。<br>在 source 目录下增加 rebots.txt 文件，网站生成后在网站的根目录(站点目录/public/)下。<br>（请将域名改为自己的网站）<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">User-agent: *</span><br><span class="line">Allow: <span class="regexp">/</span></span><br><span class="line"><span class="regexp">Allow: /</span>archives/</span><br><span class="line">Allow: <span class="regexp">/categories/</span></span><br><span class="line">Allow: <span class="regexp">/tags/</span></span><br><span class="line"></span><br><span class="line">Disallow: <span class="regexp">/vendors/</span></span><br><span class="line">Disallow: <span class="regexp">/js/</span></span><br><span class="line">Disallow: <span class="regexp">/css/</span></span><br><span class="line">Disallow: <span class="regexp">/fonts/</span></span><br><span class="line">Disallow: <span class="regexp">/vendors/</span></span><br><span class="line">Disallow: <span class="regexp">/fancybox/</span></span><br><span class="line"></span><br><span class="line">Sitemap: https:<span class="comment">//你的域名/sitemap.xml</span></span><br><span class="line">Sitemap: https:<span class="comment">//你的域名/baidusitemap.xml</span></span><br></pre></td></tr></table></figure></p><p>Allow表示允许被访问的，Disallow是不允许的意思。注意后面两个Sitemap就是网站地图了。而网站地图前面说了是给爬虫用的。这里配置在robots中。</p><h2 id="Next主题自带SEO优化选项"><a href="#Next主题自带SEO优化选项" class="headerlink" title="Next主题自带SEO优化选项"></a>Next主题自带SEO优化选项</h2><p>主题配置文件_config.yml中有个选项是seo，默认是false，改成true 即开启了seo优化，如改变博文title等，然后相同文件下有个关键字选项keywords填充上，写博文时最好每篇博文都加上keywords。hexo的根目录配置文件_config.yml中title、subtitle和description也建议填上。</p><h1 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h1><p><a href="https://juejin.im/post/590b451a0ce46300588c43a0" target="_blank" rel="noopener">hexo高阶教程：教你怎么让你的hexo博客在搜索引擎中排第一</a><br><a href="http://www.jning.xin/" target="_blank" rel="noopener">Hexo博客之后续SEO优化</a><br><a href="http://www.yuan-ji.me/Hexo-%E4%BC%98%E5%8C%96%EF%BC%9A%E6%8F%90%E4%BA%A4sitemap%E5%8F%8A%E8%A7%A3%E5%86%B3%E7%99%BE%E5%BA%A6%E7%88%AC%E8%99%AB%E6%8A%93%E5%8F%96-GitHub-Pages-%E9%97%AE%E9%A2%98/" target="_blank" rel="noopener">提交 sitemap 及解决百度爬虫无法抓取 GitHub Pages 链接问题</a><br><a href="https://fedoryx.github.io/Hexo-%E5%8D%9A%E5%AE%A2%E6%90%9C%E7%B4%A2-SEO-%E4%BC%98%E5%8C%96-%E8%B0%B7%E6%AD%8C%E7%AF%87/" target="_blank" rel="noopener">Hexo 博客搜索 SEO 优化 – 谷歌篇</a></p><h2 id="小程序"><a href="#小程序" class="headerlink" title="小程序"></a>小程序</h2><p><img src="https://user-gold-cdn.xitu.io/2018/5/29/163aa02a511249dd?imageView2/0/w/1280/h/960/format/webp/ignore-error/1"></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;SEO (Search Engine Optimization)，即搜索引擎优化。简单来说，SEO就是您可以使用提升网站排名的所有方法的总称，SEO用于确保您的网站及其内容在搜索引擎结果页面（SERP）上的可见性。&lt;/p&gt;
-&lt;h2 id=&quot;验证你的网站-让你博客被搜索引擎找到&quot;&gt;&lt;a href=&quot;#验证你的网站-让你博客被搜索引擎找到&quot; class=&quot;headerlink&quot; title=&quot;验证你的网站(让你博客被搜索引擎找到)&quot;&gt;&lt;/a&gt;验证你的网站(让你博客被搜索引擎找到)&lt;/h2&gt;&lt;p&gt;在谷歌或者百度的搜索链接中，使用以下格式可以直接搜索自己的域名， 如果能搜索到就说明已经被收录，反之则没有。可以直接搜索自己的域名，或者加一些关键词来更好地判断，例如：&lt;br&gt;site: &lt;a href=&quot;https://www.jonathon.cn/&quot;&gt;https://www.jonathon.cn/&lt;/a&gt;&lt;br&gt;
     
     </summary>
     
