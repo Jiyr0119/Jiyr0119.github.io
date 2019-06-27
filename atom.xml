@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.jonathon.cn/"/>
-  <updated>2019-06-27T07:49:55.986Z</updated>
+  <updated>2019-06-27T08:43:16.367Z</updated>
   <id>https://www.jonathon.cn/</id>
   
   <author>
@@ -18,12 +18,12 @@
   
   <entry>
     <title>陪你写一个Vue全局拖拽组件</title>
-    <link href="https://www.jonathon.cn/vue-component.html"/>
-    <id>https://www.jonathon.cn/vue-component.html</id>
+    <link href="https://www.jonathon.cn/vue-components.html"/>
+    <id>https://www.jonathon.cn/vue-components.html</id>
     <published>2019-06-04T07:53:42.000Z</published>
-    <updated>2019-06-27T07:49:55.986Z</updated>
+    <updated>2019-06-27T08:43:16.367Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>大佬们，都是手摸手带你们学习，而我就摸不了你们的小手了。因为可能我分享的内容，是一些大家早已知悉的内容，只不过这个需求，挺有意思的，我实现完之后。写这个文章为了分享一些能帮助到别人的内容，也是为了归档一下自己的知识点。有写的不好的地方望指正。</p><h2 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h2><p>大家在浏览电商的 app 的时候，大多数在详情页的右下角上方，会有一个悬浮的按钮。用来分享商品详情、或者回到首页等功能的实现。我们的项目呢是，基于小程序的一款金融平台，应用了小程序原声+webview 的方案。因为 webview 里面路由跳转是 vue 的跳转，小程序并没有 navigateto，在不同系统，机型上，小程序的 webview 实现方式有所不同，而且页面层级增加之后。就会导致用户回退的时候，可能会点很多次才能回到小程序的原生页面。<a id="more"></a> 所以我们也采用了这一方案。</p><h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2><p>组件好多的内容，很多大神都有文章来写的用法概念什么，我就不一一赘述了。首先这种组件在我们项目里面是 webview 里面所有页面都要用的，肯定得是一个全局组件，如果一个个引入那真滴是太 low 了。</p><p><img src="public/images/t9.jpeg"></p>]]></content>
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>大佬们，都是手摸手带你们学习，而我就摸不了你们的小手了。因为可能我分享的内容，是一些大家早已知悉的内容，只不过这个需求，挺有意思的，我实现完之后。写这个文章为了分享一些能帮助到别人的内容，也是为了归档一下自己的知识点。有写的不好的地方望指正。</p><h2 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h2><p>大家在浏览电商的 app 的时候，大多数在详情页的右下角上方，会有一个悬浮的按钮。用来分享商品详情、或者回到首页等功能的实现。我们的项目呢是，基于小程序的一款金融平台，应用了小程序原声+webview 的方案。因为 webview 里面路由跳转是 vue 的跳转，小程序并没有 navigateto，在不同系统，机型上，小程序的 webview 实现方式有所不同，而且页面层级增加之后。就会导致用户回退的时候，可能会点很多次才能回到小程序的原生页面。<a id="more"></a> 所以我们也采用了这一方案。</p><h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2><p>组件好多的内容，很多大神都有文章来写的用法概念什么，我就不一一赘述了。首先这种组件在我们项目里面是 webview 里面所有页面都要用的，肯定得是一个全局组件，如果一个个引入那真滴是太 low 了。</p><p><img src="/vue-components/t9.jpeg"></p>]]></content>
     
     <summary type="html">
     
