@@ -840,7 +840,7 @@
 </li>
 <li><p>null 和 undefined 为 假</p>
 </li>
-<li><p>所有对象为真</p>
+<li><p>所有对象为真</p></li></ul>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/js0.html#more" rel="contents">
@@ -1424,7 +1424,7 @@
 <h2 id="小程序自定义导航栏开发注意点与参考文档"><a href="#小程序自定义导航栏开发注意点与参考文档" class="headerlink" title="小程序自定义导航栏开发注意点与参考文档"></a>小程序自定义导航栏开发注意点与参考文档</h2><p>微信官方设计指导中关于胶囊按钮的描述 由此推测胶囊宽度87pt=116px，设置之后，的确能产生较好的兼容性效果<br>[2018-07-06]根据测试截图发现微信胶囊宽度应该在96px左右，还有待研究<br>社区相关Q&amp;A：<a href="https://developers.weixin.qq.com/blogdetail?action=get_post_info&amp;docid=0008661e8a4b5047e6765eaa356000&amp;highline=statusBarHeight" target="_blank" rel="noopener">自定义标题栏高度计算</a><br>使用时注意方法与属性版本兼容性<br>完善之路：</p>
 <ol>
 <li>开一个项目采集设备的screenHeight,windowHeight,pixelRatio等信息到一个数据库中</li>
-<li>微信提供这样一个数据库便于计算，或者微信优化自定义标题栏（譬如通知栏可以改变颜色但不要算在自定义范围内，给出胶囊宽高到通知栏距离到右侧屏幕边框距离等相关参数）
+<li>微信提供这样一个数据库便于计算，或者微信优化自定义标题栏（譬如通知栏可以改变颜色但不要算在自定义范围内，给出胶囊宽高到通知栏距离到右侧屏幕边框距离等相关参数）</li></ol>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/topbar.html#more" rel="contents">
@@ -1604,7 +1604,7 @@
         
           <p><img src="https://user-gold-cdn.xitu.io/2018/8/20/1655729929eb308e?imageView2/1/w/1080/h/320/q/85/format/webp/interlace/1"></p>
 <h2 id="缘由"><a href="#缘由" class="headerlink" title="缘由"></a>缘由</h2><p>因为公司项目是链接银行业务的这种需求，所以存在一些监管方面的问题，然后就有了小程序里面嵌套h5的这种解决方式。</p>
-<h2 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h2><p>那些什么官方配置的什么，就不在这里说了。 跟着文档走，细心的慢慢配置的就好。思考一下，其实跳webview 全是一个页面只不过是不同的参数拼接成不同的url。在这个前提下呢，就可以开始封装方法辣～<br>
+<h2 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h2><p>那些什么官方配置的什么，就不在这里说了。 跟着文档走，细心的慢慢配置的就好。思考一下，其实跳webview 全是一个页面只不过是不同的参数拼接成不同的url。在这个前提下呢，就可以开始封装方法辣～<br></p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/webview.html#more" rel="contents">
@@ -1797,7 +1797,7 @@
           <p><img src="https://user-gold-cdn.xitu.io/2018/8/4/16502e26580f2d94?imageView2/1/w/1080/h/320/q/85/format/webp/interlace/1"></p>
 <p>这个是带参数小程序码，我们项目里用到的就是，身份不同带不同参数，然后请求接口。代码如下：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">onLoad(options) &#123;<span class="comment">//用户授权操作</span></span><br><span class="line">options.db ? wx.setStorageSync(<span class="string">'dbid'</span>, options.db) : <span class="string">''</span>; <span class="comment">//分享功能逻辑</span></span><br><span class="line">wx.setStorageSync(<span class="string">'scene'</span>, options.scene)<span class="comment">// 这里就是从url获取的的参数，发送给后端大哥，然后让他去请求接口生成。</span></span><br><span class="line">utils.login(<span class="keyword">this</span>.handleLogin.bind(<span class="keyword">this</span>),<span class="keyword">this</span>.handleReset.bind(<span class="keyword">this</span>));</span><br><span class="line"><span class="keyword">let</span> card = wx.getStorageSync(<span class="string">'UserCard'</span>),</span><br><span class="line">show = wx.getStorageSync(<span class="string">'seller'</span>),</span><br><span class="line">db = wx.getStorageSync(<span class="string">'dbid'</span>),</span><br><span class="line">ifHave = <span class="literal">false</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span>(card.distribution_id!=<span class="string">''</span>)&#123;</span><br><span class="line">        ifHave = <span class="literal">true</span>;  </span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;    </span><br><span class="line">        ifHave = <span class="literal">false</span>;</span><br><span class="line">    &#125; </span><br><span class="line">    <span class="keyword">this</span>.setData(&#123;     </span><br><span class="line">        userId:card.user_id,     </span><br><span class="line">        dbShow:ifHave &#125;)</span><br><span class="line">    &#125;,</span><br></pre></td></tr></table></figure>
-<p>其实很简单，主要当时调试的时候，有一个坑提醒一下。小程序码唤醒的是你线上发布过的小程序，也怪自己当时没有好好读文档吃的亏。哈哈 。所以我就总结了一下。<br>
+<p>其实很简单，主要当时调试的时候，有一个坑提醒一下。小程序码唤醒的是你线上发布过的小程序，也怪自己当时没有好好读文档吃的亏。哈哈 。所以我就总结了一下。<br></p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/wechat-qrcode.html#more" rel="contents">

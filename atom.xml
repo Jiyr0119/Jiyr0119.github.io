@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.jonathon.cn/"/>
-  <updated>2019-06-11T07:35:42.092Z</updated>
+  <updated>2019-06-27T07:49:55.986Z</updated>
   <id>https://www.jonathon.cn/</id>
   
   <author>
@@ -21,14 +21,14 @@
     <link href="https://www.jonathon.cn/vue-component.html"/>
     <id>https://www.jonathon.cn/vue-component.html</id>
     <published>2019-06-04T07:53:42.000Z</published>
-    <updated>2019-06-11T07:35:42.092Z</updated>
+    <updated>2019-06-27T07:49:55.986Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>大佬们，都是手摸手带你们学习，而我就摸不了你们的小手了。因为可能我分享的内容，是一些大家早已知悉的内容，只不过这个需求，挺有意思的，我实现完之后。写这个文章为了分享一些能帮助到别人的内容，也是为了归档一下自己的知识点。有写的不好的地方望指正。</p><h2 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h2><p>大家在浏览电商的 app 的时候，大多数在详情页的右下角上方，会有一个悬浮的按钮。用来分享商品详情、或者回到首页等功能的实现。我们的项目呢是，基于小程序的一款金融平台，应用了小程序原声+webview 的方案。因为 webview 里面路由跳转是 vue 的跳转，小程序并没有 navigateto，在不同系统，机型上，小程序的 webview 实现方式有所不同，而且页面层级增加之后。就会导致用户回退的时候，可能会点很多次才能回到小程序的原生页面。<a id="more"></a> 所以我们也采用了这一方案。</p><h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2><p>组件好多的内容，很多大神都有文章来写的用法概念什么，我就不一一赘述了。首先这种组件在我们项目里面是 webview 里面所有页面都要用的，肯定得是一个全局组件，如果一个个引入那真滴是太 low 了。</p><p><img src="../../public/images/t9.jpeg"></p>]]></content>
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>大佬们，都是手摸手带你们学习，而我就摸不了你们的小手了。因为可能我分享的内容，是一些大家早已知悉的内容，只不过这个需求，挺有意思的，我实现完之后。写这个文章为了分享一些能帮助到别人的内容，也是为了归档一下自己的知识点。有写的不好的地方望指正。</p><h2 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h2><p>大家在浏览电商的 app 的时候，大多数在详情页的右下角上方，会有一个悬浮的按钮。用来分享商品详情、或者回到首页等功能的实现。我们的项目呢是，基于小程序的一款金融平台，应用了小程序原声+webview 的方案。因为 webview 里面路由跳转是 vue 的跳转，小程序并没有 navigateto，在不同系统，机型上，小程序的 webview 实现方式有所不同，而且页面层级增加之后。就会导致用户回退的时候，可能会点很多次才能回到小程序的原生页面。<a id="more"></a> 所以我们也采用了这一方案。</p><h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2><p>组件好多的内容，很多大神都有文章来写的用法概念什么，我就不一一赘述了。首先这种组件在我们项目里面是 webview 里面所有页面都要用的，肯定得是一个全局组件，如果一个个引入那真滴是太 low 了。</p><p><img src="public/images/t9.jpeg"></p>]]></content>
     
     <summary type="html">
     
       &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;大佬们，都是手摸手带你们学习，而我就摸不了你们的小手了。因为可能我分享的内容，是一些大家早已知悉的内容，只不过这个需求，挺有意思的，我实现完之后。写这个文章为了分享一些能帮助到别人的内容，也是为了归档一下自己的知识点。有写的不好的地方望指正。&lt;/p&gt;
-&lt;h2 id=&quot;需求&quot;&gt;&lt;a href=&quot;#需求&quot; class=&quot;headerlink&quot; title=&quot;需求&quot;&gt;&lt;/a&gt;需求&lt;/h2&gt;&lt;p&gt;大家在浏览电商的 app 的时候，大多数在详情页的右下角上方，会有一个悬浮的按钮。用来分享商品详情、或者回到首页等功能的实现。我们的项目呢是，基于小程序的一款金融平台，应用了小程序原声+webview 的方案。因为 webview 里面路由跳转是 vue 的跳转，小程序并没有 navigateto，在不同系统，机型上，小程序的 webview 实现方式有所不同，而且页面层级增加之后。就会导致用户回退的时候，可能会点很多次才能回到小程序的原生页面。
+&lt;h2 id=&quot;需求&quot;&gt;&lt;a href=&quot;#需求&quot; class=&quot;headerlink&quot; title=&quot;需求&quot;&gt;&lt;/a&gt;需求&lt;/h2&gt;&lt;p&gt;大家在浏览电商的 app 的时候，大多数在详情页的右下角上方，会有一个悬浮的按钮。用来分享商品详情、或者回到首页等功能的实现。我们的项目呢是，基于小程序的一款金融平台，应用了小程序原声+webview 的方案。因为 webview 里面路由跳转是 vue 的跳转，小程序并没有 navigateto，在不同系统，机型上，小程序的 webview 实现方式有所不同，而且页面层级增加之后。就会导致用户回退的时候，可能会点很多次才能回到小程序的原生页面。&lt;/p&gt;
     
     </summary>
     
@@ -205,7 +205,7 @@
     
       &lt;h2 id=&quot;事件流&quot;&gt;&lt;a href=&quot;#事件流&quot; class=&quot;headerlink&quot; title=&quot;事件流&quot;&gt;&lt;/a&gt;事件流&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;http://p99.pstatp.com/large/4711000441cc4ea237bb&quot;&gt;&lt;/p&gt;
 &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;当触发某个事件时（某个事件发生了），从子元素向父级元素触发 或 从父级元素向子元素触发的过程 ，这个过程 称为事件流&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;事件流有两种模式：&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;事件冒泡：从子元素向父级元素触发 small --- big ---body --- document -- window&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;事件捕获：从父级元素向子元素触发 window --- document --- body --- big --- small&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;&lt;img src=&quot;http://p1.pstatp.com/large/4ad70002b362ba3ccd37&quot;&gt;&lt;br&gt;
+&lt;p&gt;&lt;img src=&quot;http://p1.pstatp.com/large/4ad70002b362ba3ccd37&quot;&gt;&lt;br&gt;&lt;/p&gt;
     
     </summary>
     
@@ -235,7 +235,7 @@
 &lt;p&gt;2、设置属性值&lt;/p&gt;
 &lt;p&gt;对象.setAttribute(“属性名”,”值”);&lt;/p&gt;
 &lt;p&gt;3、移出某个对象的属性&lt;/p&gt;
-&lt;p&gt;对象.removeAttribute(“属性名”);&lt;br&gt;
+&lt;p&gt;对象.removeAttribute(“属性名”);&lt;br&gt;&lt;/p&gt;
     
     </summary>
     
@@ -358,7 +358,7 @@
 &lt;/li&gt;
 &lt;li&gt;&lt;p&gt;null 和 undefined 为 假&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;所有对象为真&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;所有对象为真&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;
     
     </summary>
     
@@ -444,7 +444,7 @@
 &lt;h2 id=&quot;小程序自定义导航栏开发注意点与参考文档&quot;&gt;&lt;a href=&quot;#小程序自定义导航栏开发注意点与参考文档&quot; class=&quot;headerlink&quot; title=&quot;小程序自定义导航栏开发注意点与参考文档&quot;&gt;&lt;/a&gt;小程序自定义导航栏开发注意点与参考文档&lt;/h2&gt;&lt;p&gt;微信官方设计指导中关于胶囊按钮的描述 由此推测胶囊宽度87pt=116px，设置之后，的确能产生较好的兼容性效果&lt;br&gt;[2018-07-06]根据测试截图发现微信胶囊宽度应该在96px左右，还有待研究&lt;br&gt;社区相关Q&amp;amp;A：&lt;a href=&quot;https://developers.weixin.qq.com/blogdetail?action=get_post_info&amp;amp;docid=0008661e8a4b5047e6765eaa356000&amp;amp;highline=statusBarHeight&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;自定义标题栏高度计算&lt;/a&gt;&lt;br&gt;使用时注意方法与属性版本兼容性&lt;br&gt;完善之路：&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;开一个项目采集设备的screenHeight,windowHeight,pixelRatio等信息到一个数据库中&lt;/li&gt;
-&lt;li&gt;微信提供这样一个数据库便于计算，或者微信优化自定义标题栏（譬如通知栏可以改变颜色但不要算在自定义范围内，给出胶囊宽高到通知栏距离到右侧屏幕边框距离等相关参数）
+&lt;li&gt;微信提供这样一个数据库便于计算，或者微信优化自定义标题栏（譬如通知栏可以改变颜色但不要算在自定义范围内，给出胶囊宽高到通知栏距离到右侧屏幕边框距离等相关参数）&lt;/li&gt;&lt;/ol&gt;
     
     </summary>
     
@@ -470,7 +470,7 @@
     
       &lt;p&gt;&lt;img src=&quot;https://user-gold-cdn.xitu.io/2018/8/20/1655729929eb308e?imageView2/1/w/1080/h/320/q/85/format/webp/interlace/1&quot;&gt;&lt;/p&gt;
 &lt;h2 id=&quot;缘由&quot;&gt;&lt;a href=&quot;#缘由&quot; class=&quot;headerlink&quot; title=&quot;缘由&quot;&gt;&lt;/a&gt;缘由&lt;/h2&gt;&lt;p&gt;因为公司项目是链接银行业务的这种需求，所以存在一些监管方面的问题，然后就有了小程序里面嵌套h5的这种解决方式。&lt;/p&gt;
-&lt;h2 id=&quot;开始&quot;&gt;&lt;a href=&quot;#开始&quot; class=&quot;headerlink&quot; title=&quot;开始&quot;&gt;&lt;/a&gt;开始&lt;/h2&gt;&lt;p&gt;那些什么官方配置的什么，就不在这里说了。 跟着文档走，细心的慢慢配置的就好。思考一下，其实跳webview 全是一个页面只不过是不同的参数拼接成不同的url。在这个前提下呢，就可以开始封装方法辣～&lt;br&gt;
+&lt;h2 id=&quot;开始&quot;&gt;&lt;a href=&quot;#开始&quot; class=&quot;headerlink&quot; title=&quot;开始&quot;&gt;&lt;/a&gt;开始&lt;/h2&gt;&lt;p&gt;那些什么官方配置的什么，就不在这里说了。 跟着文档走，细心的慢慢配置的就好。思考一下，其实跳webview 全是一个页面只不过是不同的参数拼接成不同的url。在这个前提下呢，就可以开始封装方法辣～&lt;br&gt;&lt;/p&gt;
     
     </summary>
     
@@ -495,7 +495,7 @@
       &lt;p&gt;&lt;img src=&quot;https://user-gold-cdn.xitu.io/2018/8/4/16502e26580f2d94?imageView2/1/w/1080/h/320/q/85/format/webp/interlace/1&quot;&gt;&lt;/p&gt;
 &lt;p&gt;这个是带参数小程序码，我们项目里用到的就是，身份不同带不同参数，然后请求接口。代码如下：&lt;/p&gt;
 &lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;onLoad(options) &amp;#123;&lt;span class=&quot;comment&quot;&gt;//用户授权操作&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;options.db ? wx.setStorageSync(&lt;span class=&quot;string&quot;&gt;&#39;dbid&#39;&lt;/span&gt;, options.db) : &lt;span class=&quot;string&quot;&gt;&#39;&#39;&lt;/span&gt;; &lt;span class=&quot;comment&quot;&gt;//分享功能逻辑&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;wx.setStorageSync(&lt;span class=&quot;string&quot;&gt;&#39;scene&#39;&lt;/span&gt;, options.scene)&lt;span class=&quot;comment&quot;&gt;// 这里就是从url获取的的参数，发送给后端大哥，然后让他去请求接口生成。&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;utils.login(&lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.handleLogin.bind(&lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;),&lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.handleReset.bind(&lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;));&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; card = wx.getStorageSync(&lt;span class=&quot;string&quot;&gt;&#39;UserCard&#39;&lt;/span&gt;),&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;show = wx.getStorageSync(&lt;span class=&quot;string&quot;&gt;&#39;seller&#39;&lt;/span&gt;),&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;db = wx.getStorageSync(&lt;span class=&quot;string&quot;&gt;&#39;dbid&#39;&lt;/span&gt;),&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;ifHave = &lt;span class=&quot;literal&quot;&gt;false&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(card.distribution_id!=&lt;span class=&quot;string&quot;&gt;&#39;&#39;&lt;/span&gt;)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        ifHave = &lt;span class=&quot;literal&quot;&gt;true&lt;/span&gt;;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;span class=&quot;keyword&quot;&gt;else&lt;/span&gt;&amp;#123;    &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        ifHave = &lt;span class=&quot;literal&quot;&gt;false&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.setData(&amp;#123;     &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        userId:card.user_id,     &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        dbShow:ifHave &amp;#125;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;,&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;其实很简单，主要当时调试的时候，有一个坑提醒一下。小程序码唤醒的是你线上发布过的小程序，也怪自己当时没有好好读文档吃的亏。哈哈 。所以我就总结了一下。&lt;br&gt;
+&lt;p&gt;其实很简单，主要当时调试的时候，有一个坑提醒一下。小程序码唤醒的是你线上发布过的小程序，也怪自己当时没有好好读文档吃的亏。哈哈 。所以我就总结了一下。&lt;br&gt;&lt;/p&gt;
     
     </summary>
     
@@ -572,7 +572,7 @@
     
       &lt;p&gt;本文全部内容是基于next主题。&lt;/p&gt;
 &lt;h2 id=&quot;起步&quot;&gt;&lt;a href=&quot;#起步&quot; class=&quot;headerlink&quot; title=&quot;起步&quot;&gt;&lt;/a&gt;起步&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://www.jianshu.com/p/189fd945f38f&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;搭建个人博客-hexo+github详细完整步骤&lt;/a&gt;&lt;br&gt;大神这里已经写的很清楚了，我就不一一赘述了。送给大神一朵小发发～&lt;/p&gt;
-&lt;h2 id=&quot;在右上角或者左上角实现fork-me-on-github&quot;&gt;&lt;a href=&quot;#在右上角或者左上角实现fork-me-on-github&quot; class=&quot;headerlink&quot; title=&quot;在右上角或者左上角实现fork me on github&quot;&gt;&lt;/a&gt;在右上角或者左上角实现fork me on github&lt;/h2&gt;&lt;p&gt;点击&lt;a href=&quot;http://tholman.com/github-corners/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;这里&lt;/a&gt;或者&lt;a href=&quot;https://blog.github.com/2008-12-19-github-ribbons/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;这里&lt;/a&gt;挑选自己喜欢的样式，并复制代码。 例如，我是复制如下代码：&lt;br&gt;
+&lt;h2 id=&quot;在右上角或者左上角实现fork-me-on-github&quot;&gt;&lt;a href=&quot;#在右上角或者左上角实现fork-me-on-github&quot; class=&quot;headerlink&quot; title=&quot;在右上角或者左上角实现fork me on github&quot;&gt;&lt;/a&gt;在右上角或者左上角实现fork me on github&lt;/h2&gt;&lt;p&gt;点击&lt;a href=&quot;http://tholman.com/github-corners/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;这里&lt;/a&gt;或者&lt;a href=&quot;https://blog.github.com/2008-12-19-github-ribbons/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;这里&lt;/a&gt;挑选自己喜欢的样式，并复制代码。 例如，我是复制如下代码：&lt;br&gt;&lt;/p&gt;
     
     </summary>
     
