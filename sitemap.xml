@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.jonathon.cn/hexo-img.html</loc>
+    
+    <lastmod>2019-07-01T01:00:06.963Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.jonathon.cn/vue-components.html</loc>
     
     <lastmod>2019-06-27T09:10:26.234Z</lastmod>
@@ -58,13 +65,6 @@
   </url>
   
   <url>
-    <loc>https://www.jonathon.cn/js4.html</loc>
-    
-    <lastmod>2019-01-31T06:46:32.376Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://www.jonathon.cn/js2.html</loc>
     
     <lastmod>2019-01-31T06:46:32.376Z</lastmod>
@@ -73,6 +73,13 @@
   
   <url>
     <loc>https://www.jonathon.cn/js5.html</loc>
+    
+    <lastmod>2019-01-31T06:46:32.376Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.jonathon.cn/js4.html</loc>
     
     <lastmod>2019-01-31T06:46:32.376Z</lastmod>
     
