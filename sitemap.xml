@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.jonathon.cn/vue-components.html</loc>
+    
+    <lastmod>2019-07-21T05:24:24.485Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.jonathon.cn/%E9%80%81%E7%BB%99%E5%86%99%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%9A%84%E4%BD%A0.html</loc>
     
     <lastmod>2019-07-08T02:55:42.806Z</lastmod>
@@ -12,13 +19,6 @@
     <loc>https://www.jonathon.cn/hexo-img.html</loc>
     
     <lastmod>2019-07-01T01:10:58.696Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.jonathon.cn/vue-components.html</loc>
-    
-    <lastmod>2019-06-27T09:10:26.234Z</lastmod>
     
   </url>
   
