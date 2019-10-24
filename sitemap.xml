@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.jonathon.cn/jsmianshi.html</loc>
+    
+    <lastmod>2019-10-24T07:50:10.110Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.jonathon.cn/vue-components.html</loc>
     
     <lastmod>2019-07-21T07:55:23.211Z</lastmod>
@@ -72,14 +79,14 @@
   </url>
   
   <url>
-    <loc>https://www.jonathon.cn/js2.html</loc>
+    <loc>https://www.jonathon.cn/js4.html</loc>
     
     <lastmod>2019-01-31T06:46:32.376Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.jonathon.cn/js4.html</loc>
+    <loc>https://www.jonathon.cn/js2.html</loc>
     
     <lastmod>2019-01-31T06:46:32.376Z</lastmod>
     
