@@ -579,7 +579,7 @@
                 
               
 
-              <time title="创建时间：2019-10-24 16:02:45 / 修改时间：17:15:03" itemprop="dateCreated datePublished" datetime="2019-10-24T16:02:45+08:00">2019-10-24</time>
+              <time title="创建时间：2019-10-24 16:02:45 / 修改时间：20:56:58" itemprop="dateCreated datePublished" datetime="2019-10-24T16:02:45+08:00">2019-10-24</time>
             
 
             
@@ -643,6 +643,16 @@
 <p>Ps：为什么会出现这种情况呢？因为在 Js 的最初版本中，使用的是 32 位系统，为了性能考虑使用低位存储变量的类型信息，000 开头代表对象，然后 null 表示为全零，所以将它错误的判断为 object。虽然现在内部类型判断代码已经改变了，但是这个 bug 却一直流传下来。</p>
 <p>如果我们想获得一个变量的正确类型，可以通过 Object.prototype.toString.call(xx)。这样我们就可以获得类型[object Type] 的字符串。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> a;</span><br><span class="line"><span class="comment">// 我们也可以这样判断 undefined</span></span><br><span class="line">a === <span class="literal">undefined</span>;</span><br><span class="line"><span class="comment">// 但是 undefined 不是保留字，能够在低版本浏览器被赋值</span></span><br><span class="line"><span class="keyword">let</span> <span class="literal">undefined</span> = <span class="number">1</span>;</span><br><span class="line"><span class="comment">// 这样判断就会出错</span></span><br><span class="line"><span class="comment">// 所以可以用下面的方式来判断，并且代码量更少</span></span><br><span class="line"><span class="comment">// 因为 void 后面随便跟上一个组成表达式</span></span><br><span class="line"><span class="comment">// 返回就是 undefined</span></span><br><span class="line">a === <span class="keyword">void</span> <span class="number">0</span>;</span><br></pre></td></tr></table></figure>
+<h2 id="类型转换"><a href="#类型转换" class="headerlink" title="类型转换"></a>类型转换</h2><h3 id="转-Boolean"><a href="#转-Boolean" class="headerlink" title="转 Boolean"></a>转 Boolean</h3><p>在条件判断时，除了 undefined，null，false，NaN，’’,0,-0,其他所有值都转为 true，包括所有对象。</p>
+<h3 id="对象转基本类型"><a href="#对象转基本类型" class="headerlink" title="对象转基本类型"></a>对象转基本类型</h3><p>对象在转换基本类型时，首先会调用 vlaueOf 然后调用 toString。并且这两个方法你是可以重写的。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> a = &#123;</span><br><span class="line">  valueOf() &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>但让你也可以重写 Sybol.toPrimtive,该方法在转基本类型时调用优先级最高。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> a = &#123;</span><br><span class="line">  valueOf() &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">  &#125;,</span><br><span class="line">  toString() &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">'1'</span>;</span><br><span class="line">  &#125;,</span><br><span class="line">  [<span class="built_in">Symbol</span>.toPrimitive]() &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">2</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="number">1</span> + a; <span class="comment">// =&gt; 3</span></span><br><span class="line"><span class="string">'1'</span> + a; <span class="comment">// =&gt; '12'</span></span><br></pre></td></tr></table></figure>
+<h2 id="四则运算符"><a href="#四则运算符" class="headerlink" title="四则运算符"></a>四则运算符</h2><p>只有当加法运算时，其中一方时字符串类型，就会把另一个也转为字符串类型。其他运算只要是其中一方是数字，那么另一方就转为数字。并且加法运算会出发三种类型转换；将值转换为原始值，转换为数字，转换为字母。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span> + <span class="string">'1'</span>; <span class="comment">// '11'</span></span><br><span class="line"><span class="number">2</span> * <span class="string">'2'</span>[(<span class="number">1</span>, <span class="number">2</span>)] + <span class="comment">// 4</span></span><br><span class="line">  [<span class="number">2</span>, <span class="number">1</span>]; <span class="comment">// '1,22,1'</span></span><br><span class="line"><span class="comment">// [1, 2].toString() -&gt; '1,2'</span></span><br><span class="line"><span class="comment">// [2, 1].toString() -&gt; '2,1'</span></span><br><span class="line"><span class="comment">// '1,2' + '2,1' = '1,22,1'</span></span><br></pre></td></tr></table></figure>
+<p>对于加号需要注意这个表达式 ‘a’ + + ‘b’</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'a'</span> + +<span class="string">'b'</span>; <span class="comment">// -&gt; "aNaN"</span></span><br><span class="line"><span class="comment">// 因为 + 'b' -&gt; NaN</span></span><br><span class="line"><span class="comment">// 你也许在一些代码中看到过 + '1' -&gt; 1</span></span><br></pre></td></tr></table></figure>
+<h2 id="操作符"><a href="#操作符" class="headerlink" title="==操作符"></a>==操作符</h2><p>比较运算x==y，其中x和y是值，产生true或者false。这样的比较按如下方式进行；<br>1.若type（x）与type（y）相同，则<br>    a.若type（x）为Undefined，返回true。<br>    b.若type（x）为null，返回true。<br>    c.若type（x）为Number</p>
 
           
         
@@ -2385,7 +2395,7 @@
 -->
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共37.2k字</span>
+  <span class="post-count">博客全站共37.6k字</span>
 </div>
 
         
