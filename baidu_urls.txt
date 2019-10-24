@@ -1,4 +1,3 @@
-https://www.jonathon.cn/jsmianshi.html
 https://www.jonathon.cn/hexo-img.html
 https://www.jonathon.cn/vue-components.html
 https://www.jonathon.cn/vue-dll.html
