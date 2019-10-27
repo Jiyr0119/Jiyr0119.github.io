@@ -139,7 +139,7 @@
 <meta property="og:site_name" content="Jonathon&#39;s Blog">
 <meta property="og:description" content="内置类型Js 中分为七种内置类型，七种内置类型又分为两大类型：基本类型和对象（Object）。基本类型有六种： null、undefined、boolean、number、string、symbol。其中 js 的数字类型是浮点类型的，没有整型。并且浮点类型基于 IEEE 754 标准实现，在使用中会遇到某些 Bug。NaN 也属于 number 类型，并且 NaN 不等于自身。对于基本类型来说，">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-25T01:47:55.530Z">
+<meta property="og:updated_time" content="2019-10-27T05:31:37.222Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="进阶之道-js">
 <meta name="twitter:description" content="内置类型Js 中分为七种内置类型，七种内置类型又分为两大类型：基本类型和对象（Object）。基本类型有六种： null、undefined、boolean、number、string、symbol。其中 js 的数字类型是浮点类型的，没有整型。并且浮点类型基于 IEEE 754 标准实现，在使用中会遇到某些 Bug。NaN 也属于 number 类型，并且 NaN 不等于自身。对于基本类型来说，">
@@ -397,7 +397,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-10-25 09:47:55" itemprop="dateModified" datetime="2019-10-25T09:47:55+08:00">2019-10-25</time>
+                <time title="修改时间：2019-10-27 13:31:37" itemprop="dateModified" datetime="2019-10-27T13:31:37+08:00">2019-10-27</time>
               
             
           </span>
@@ -463,7 +463,21 @@
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span> + <span class="string">'1'</span>; <span class="comment">// '11'</span></span><br><span class="line"><span class="number">2</span> * <span class="string">'2'</span>[(<span class="number">1</span>, <span class="number">2</span>)] + <span class="comment">// 4</span></span><br><span class="line">  [<span class="number">2</span>, <span class="number">1</span>]; <span class="comment">// '1,22,1'</span></span><br><span class="line"><span class="comment">// [1, 2].toString() -&gt; '1,2'</span></span><br><span class="line"><span class="comment">// [2, 1].toString() -&gt; '2,1'</span></span><br><span class="line"><span class="comment">// '1,2' + '2,1' = '1,22,1'</span></span><br></pre></td></tr></table></figure>
 <p>对于加号需要注意这个表达式 ‘a’ + + ‘b’</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'a'</span> + +<span class="string">'b'</span>; <span class="comment">// -&gt; "aNaN"</span></span><br><span class="line"><span class="comment">// 因为 + 'b' -&gt; NaN</span></span><br><span class="line"><span class="comment">// 你也许在一些代码中看到过 + '1' -&gt; 1</span></span><br></pre></td></tr></table></figure>
-<h2 id="操作符"><a href="#操作符" class="headerlink" title="==操作符"></a>==操作符</h2><p>比较运算x==y，其中x和y是值，产生true或者false。这样的比较按如下方式进行；<br>1.若type（x）与type（y）相同，则<br>    a.若type（x）为Undefined，返回true。<br>    b.若type（x）为null，返回true。<br>    c.若type（x）为Number</p>
+<h2 id="操作符"><a href="#操作符" class="headerlink" title="==操作符"></a>==操作符</h2><p>比较运算 x==y，其中 x 和 y 是值，产生 true 或者 false。这样的比较按如下方式进行；</p>
+<h3 id="1-若-type（x）与-type（y）相同，则"><a href="#1-若-type（x）与-type（y）相同，则" class="headerlink" title="1.若 type（x）与 type（y）相同，则"></a>1.若 type（x）与 type（y）相同，则</h3><pre><code>a.若type（x）为Undefined，返回true。
+b.若type（x）为null，返回true。
+c.若type（x）为Number 则
+                i.若x为NaN，返回false。
+                ii.若y为NaN，返回false。
+                iii.若x，y数值相等，返回true。
+                iv.若x为+0，y为-0，返回true。
+                v.若x为-0，y为+0，返回true。
+                vi.返回false。
+d.若type（x）为String，则当x和y为完全相同的字符序列（长度相等且相同字符在相同位置）是返回true。否则，返回false。
+e.若type（x）为Boolean，当x和y同时为true或者false时返回true，否则返回false。
+f.当x和y为同一引用对象时返回true，否则返回false。
+</code></pre><h3 id="2-若-x-为-null-且-y-为-undefined-时，返回-true。"><a href="#2-若-x-为-null-且-y-为-undefined-时，返回-true。" class="headerlink" title="2.若 x 为 null 且 y 为 undefined 时，返回 true。"></a>2.若 x 为 null 且 y 为 undefined 时，返回 true。</h3><h3 id="3-若-x-为-undefined-且-y-为-null-时，返回-true。"><a href="#3-若-x-为-undefined-且-y-为-null-时，返回-true。" class="headerlink" title="3.若 x 为 undefined 且 y 为 null 时，返回 true。"></a>3.若 x 为 undefined 且 y 为 null 时，返回 true。</h3><h3 id="4-若-type（x）为-Number-且-Type（y）为-String，返回-comparsion-x-ToNumber（y）的结果。"><a href="#4-若-type（x）为-Number-且-Type（y）为-String，返回-comparsion-x-ToNumber（y）的结果。" class="headerlink" title="4.若 type（x）为 Number 且 Type（y）为 String，返回 comparsion x == ToNumber（y）的结果。"></a>4.若 type（x）为 Number 且 Type（y）为 String，返回 comparsion x == ToNumber（y）的结果。</h3><h3 id="5-若-type（x）为-String-且-Type（y）为-Number，返回-ToNumber（x）-y-的结果。"><a href="#5-若-type（x）为-String-且-Type（y）为-Number，返回-ToNumber（x）-y-的结果。" class="headerlink" title="5.若 type（x）为 String 且 Type（y）为 Number，返回 ToNumber（x）== y 的结果。"></a>5.若 type（x）为 String 且 Type（y）为 Number，返回 ToNumber（x）== y 的结果。</h3><h3 id="6-若-type（x）为-Boolean，返回-x-ToNumber（y）的结果。"><a href="#6-若-type（x）为-Boolean，返回-x-ToNumber（y）的结果。" class="headerlink" title="6.若 type（x）为 Boolean，返回 x == ToNumber（y）的结果。"></a>6.若 type（x）为 Boolean，返回 x == ToNumber（y）的结果。</h3><h3 id="7-若-type（y）为-Boolean，返回-ToNumber（x）-y-的结果。"><a href="#7-若-type（y）为-Boolean，返回-ToNumber（x）-y-的结果。" class="headerlink" title="7.若 type（y）为 Boolean，返回 ToNumber（x）== y 的结果。"></a>7.若 type（y）为 Boolean，返回 ToNumber（x）== y 的结果。</h3><h3 id="8-若-type（x）为-String-或为-Number，且-Type（y）为-Object，返回比较-x-ToPrimitive（y）的结果。"><a href="#8-若-type（x）为-String-或为-Number，且-Type（y）为-Object，返回比较-x-ToPrimitive（y）的结果。" class="headerlink" title="8.若 type（x）为 String 或为 Number，且 Type（y）为 Object，返回比较 x == ToPrimitive（y）的结果。"></a>8.若 type（x）为 String 或为 Number，且 Type（y）为 Object，返回比较 x == ToPrimitive（y）的结果。</h3><h3 id="9-若-type（y）为-String-或为-Number，且-Type（x）为-Object，返回比较-y-ToPrimitive（x）的结果。"><a href="#9-若-type（y）为-String-或为-Number，且-Type（x）为-Object，返回比较-y-ToPrimitive（x）的结果。" class="headerlink" title="9.若 type（y）为 String 或为 Number，且 Type（x）为 Object，返回比较 y == ToPrimitive（x）的结果。"></a>9.若 type（y）为 String 或为 Number，且 Type（x）为 Object，返回比较 y == ToPrimitive（x）的结果。</h3><h3 id="10-返回-false。"><a href="#10-返回-false。" class="headerlink" title="10.返回 false。"></a>10.返回 false。</h3><p>上面的 toPrimitive 就是对象转基本类型。<br>这里来解析一道题目 [] == ![] // -&gt; true ，下面是这个表达式为何为 true 的步骤：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// [] 转成 true，然后取反变成 false</span></span><br><span class="line">[] == <span class="literal">false</span></span><br><span class="line"><span class="comment">// 根据第 8 条得出</span></span><br><span class="line">[] == ToNumber(<span class="literal">false</span>)</span><br><span class="line">[] == <span class="number">0</span></span><br><span class="line"><span class="comment">// 根据第 10 条得出</span></span><br><span class="line">ToPrimitive([]) == <span class="number">0</span></span><br><span class="line"><span class="comment">// [].toString() -&gt; ''</span></span><br><span class="line"><span class="string">''</span> == <span class="number">0</span></span><br><span class="line"><span class="comment">// 根据第 6 条得出</span></span><br><span class="line"><span class="number">0</span> == <span class="number">0</span> <span class="comment">// -&gt; true</span></span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -488,7 +502,7 @@
   <p><span>本文标题:</span><a href="/fe-js.html">进阶之道-js</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 Jonathon 的个人博客">Jonathon</a></p>
   <p><span>发布时间:</span>2019年10月24日 - 16:10</p>
-  <p><span>最后更新:</span>2019年10月25日 - 09:10</p>
+  <p><span>最后更新:</span>2019年10月27日 - 13:10</p>
   <p><span>原始链接:</span><a href="/fe-js.html" title="进阶之道-js">https://www.jonathon.cn/fe-js.html</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://www.jonathon.cn/fe-js.html"  aria-label="复制成功！"></i></span>
   </p>
@@ -811,7 +825,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#内置类型"><span class="nav-number">1.</span> <span class="nav-text">内置类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Typeof"><span class="nav-number">2.</span> <span class="nav-text">Typeof</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#类型转换"><span class="nav-number">3.</span> <span class="nav-text">类型转换</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#转-Boolean"><span class="nav-number">3.1.</span> <span class="nav-text">转 Boolean</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#对象转基本类型"><span class="nav-number">3.2.</span> <span class="nav-text">对象转基本类型</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#四则运算符"><span class="nav-number">4.</span> <span class="nav-text">四则运算符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#操作符"><span class="nav-number">5.</span> <span class="nav-text">==操作符</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#内置类型"><span class="nav-number">1.</span> <span class="nav-text">内置类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Typeof"><span class="nav-number">2.</span> <span class="nav-text">Typeof</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#类型转换"><span class="nav-number">3.</span> <span class="nav-text">类型转换</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#转-Boolean"><span class="nav-number">3.1.</span> <span class="nav-text">转 Boolean</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#对象转基本类型"><span class="nav-number">3.2.</span> <span class="nav-text">对象转基本类型</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#四则运算符"><span class="nav-number">4.</span> <span class="nav-text">四则运算符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#操作符"><span class="nav-number">5.</span> <span class="nav-text">==操作符</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-若-type（x）与-type（y）相同，则"><span class="nav-number">5.1.</span> <span class="nav-text">1.若 type（x）与 type（y）相同，则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-若-x-为-null-且-y-为-undefined-时，返回-true。"><span class="nav-number">5.2.</span> <span class="nav-text">2.若 x 为 null 且 y 为 undefined 时，返回 true。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-若-x-为-undefined-且-y-为-null-时，返回-true。"><span class="nav-number">5.3.</span> <span class="nav-text">3.若 x 为 undefined 且 y 为 null 时，返回 true。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-若-type（x）为-Number-且-Type（y）为-String，返回-comparsion-x-ToNumber（y）的结果。"><span class="nav-number">5.4.</span> <span class="nav-text">4.若 type（x）为 Number 且 Type（y）为 String，返回 comparsion x == ToNumber（y）的结果。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-若-type（x）为-String-且-Type（y）为-Number，返回-ToNumber（x）-y-的结果。"><span class="nav-number">5.5.</span> <span class="nav-text">5.若 type（x）为 String 且 Type（y）为 Number，返回 ToNumber（x）== y 的结果。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-若-type（x）为-Boolean，返回-x-ToNumber（y）的结果。"><span class="nav-number">5.6.</span> <span class="nav-text">6.若 type（x）为 Boolean，返回 x == ToNumber（y）的结果。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-若-type（y）为-Boolean，返回-ToNumber（x）-y-的结果。"><span class="nav-number">5.7.</span> <span class="nav-text">7.若 type（y）为 Boolean，返回 ToNumber（x）== y 的结果。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-若-type（x）为-String-或为-Number，且-Type（y）为-Object，返回比较-x-ToPrimitive（y）的结果。"><span class="nav-number">5.8.</span> <span class="nav-text">8.若 type（x）为 String 或为 Number，且 Type（y）为 Object，返回比较 x == ToPrimitive（y）的结果。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-若-type（y）为-String-或为-Number，且-Type（x）为-Object，返回比较-y-ToPrimitive（x）的结果。"><span class="nav-number">5.9.</span> <span class="nav-text">9.若 type（y）为 String 或为 Number，且 Type（x）为 Object，返回比较 y == ToPrimitive（x）的结果。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-返回-false。"><span class="nav-number">5.10.</span> <span class="nav-text">10.返回 false。</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -858,7 +872,7 @@
 -->
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共37.9k字</span>
+  <span class="post-count">博客全站共38.3k字</span>
 </div>
 
         
