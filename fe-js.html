@@ -139,7 +139,7 @@
 <meta property="og:site_name" content="Jonathon&#39;s Blog">
 <meta property="og:description" content="内置类型Js 中分为七种内置类型，七种内置类型又分为两大类型：基本类型和对象（Object）。基本类型有六种： null、undefined、boolean、number、string、symbol。其中 js 的数字类型是浮点类型的，没有整型。并且浮点类型基于 IEEE 754 标准实现，在使用中会遇到某些 Bug。NaN 也属于 number 类型，并且 NaN 不等于自身。对于基本类型来说，">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-11-17T02:01:39.677Z">
+<meta property="og:updated_time" content="2019-11-17T09:43:39.341Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="进阶之道-js">
 <meta name="twitter:description" content="内置类型Js 中分为七种内置类型，七种内置类型又分为两大类型：基本类型和对象（Object）。基本类型有六种： null、undefined、boolean、number、string、symbol。其中 js 的数字类型是浮点类型的，没有整型。并且浮点类型基于 IEEE 754 标准实现，在使用中会遇到某些 Bug。NaN 也属于 number 类型，并且 NaN 不等于自身。对于基本类型来说，">
@@ -397,7 +397,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-11-17 10:01:39" itemprop="dateModified" datetime="2019-11-17T10:01:39+08:00">2019-11-17</time>
+                <time title="修改时间：2019-11-17 17:43:39" itemprop="dateModified" datetime="2019-11-17T17:43:39+08:00">2019-11-17</time>
               
             
           </span>
@@ -553,6 +553,18 @@ f.当x和y为同一引用对象时返回true，否则返回false。
 <p>浅拷贝只解决了第一层的问题，如果接下去的值中还有对象的话，那么就又回到刚开始的话题了，两者享有相同的引用。要解决这个问题，我们需要引入深拷贝。</p>
 <h2 id="深拷贝"><a href="#深拷贝" class="headerlink" title="深拷贝"></a>深拷贝</h2><p>这个问题通常可以通过 JSON.parse(JSON.stringify(object)) 来解决。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> a = &#123;</span><br><span class="line">  age: <span class="number">1</span>,</span><br><span class="line">  jobs: &#123;</span><br><span class="line">    first: <span class="string">"FE"</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">let</span> b = <span class="built_in">JSON</span>.parse(<span class="built_in">JSON</span>.stringify(a));</span><br><span class="line">a.jobs.first = <span class="string">"native"</span>;</span><br><span class="line"><span class="built_in">console</span>.log(b.jobs.first); <span class="comment">// FE</span></span><br></pre></td></tr></table></figure>
+<p>但是该方法也是又局限性的：</p>
+<ul>
+<li>会忽略 undefined</li>
+<li>会忽略 symbol</li>
+<li>不能序列化函数</li>
+<li>不能解决循环引用的对象</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> obj = &#123;</span><br><span class="line">  a: <span class="number">1</span>,</span><br><span class="line">  b: &#123;</span><br><span class="line">    c: <span class="number">2</span>,</span><br><span class="line">    d: <span class="number">3</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line">obj.c = obj.b;</span><br><span class="line">obj.e = obj.a;</span><br><span class="line">obj.b.c = obj.c;</span><br><span class="line">obj.b.d = obj.b;</span><br><span class="line">obj.b.e = obj.b.c;</span><br><span class="line"><span class="keyword">let</span> newObj = <span class="built_in">JSON</span>.parse(<span class="built_in">JSON</span>.stringify(obj));</span><br><span class="line"><span class="built_in">console</span>.log(newObj);</span><br></pre></td></tr></table></figure>
+<p>如果你有这么一个循环引用对象，你会发现你不能通过该方法深拷贝<br>在遇到函数、 undefined 或者 symbol 的时候，该对象也不能正常的序列化</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> a = &#123;</span><br><span class="line">  age: <span class="literal">undefined</span>,</span><br><span class="line">  sex: <span class="built_in">Symbol</span>(<span class="string">"male"</span>),</span><br><span class="line">  jobs: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;&#125;,</span><br><span class="line">  name: <span class="string">"yck"</span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">let</span> b = <span class="built_in">JSON</span>.parse(<span class="built_in">JSON</span>.stringify(a));</span><br><span class="line"><span class="built_in">console</span>.log(b); <span class="comment">// &#123;name: "yck"&#125;</span></span><br></pre></td></tr></table></figure>
+<p>你会发现在上述情况中，该方法会忽略掉函数和 undefined 。</p>
+<p>但是在通常情况下，复杂数据都是可以序列化的，所以这个函数可以解决大部分问题，并且该函数是内置函数中处理深拷贝性能最快的。当然如果你的数据中含有以上三种情况下，可以使用 lodash 的深拷贝函数。</p>
 
       
     </div>
@@ -577,7 +589,7 @@ f.当x和y为同一引用对象时返回true，否则返回false。
   <p><span>本文标题:</span><a href="/fe-js.html">进阶之道-js</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 Jonathon 的个人博客">Jonathon</a></p>
   <p><span>发布时间:</span>2019年10月24日 - 16:10</p>
-  <p><span>最后更新:</span>2019年11月17日 - 10:11</p>
+  <p><span>最后更新:</span>2019年11月17日 - 17:11</p>
   <p><span>原始链接:</span><a href="/fe-js.html" title="进阶之道-js">https://www.jonathon.cn/fe-js.html</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://www.jonathon.cn/fe-js.html"  aria-label="复制成功！"></i></span>
   </p>
@@ -947,7 +959,7 @@ f.当x和y为同一引用对象时返回true，否则返回false。
 -->
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共40.9k字</span>
+  <span class="post-count">博客全站共41.2k字</span>
 </div>
 
         
